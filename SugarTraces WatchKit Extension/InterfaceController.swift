@@ -37,7 +37,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         //I can do something after I send a message from the iPhone here
-        lastReadingLabel.setText(message["message"] as? String)
+//        lastReadingLabel.setText(message["readings"] as? String)
+        var strArrReadings = message["readings"] as! [String]
+//        var strArrDates = [String]()
+//        strArrDates = message["dates"] as! [String]
+        print(strArrReadings)
+        lastReadingLabel.setText(strArrReadings[0])
+//        print(strArrDates)
+//        print(strArrDates[0])
         
         //if i want to send something over, it's just
         //the same command for watch to iOS as well!

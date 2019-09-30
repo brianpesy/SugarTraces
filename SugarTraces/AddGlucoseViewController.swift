@@ -168,8 +168,8 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         //Flash animation when pressed
         sendAnim.flash()
         
-        //Empty case with nothing inputted
-        if (glucoseInput.text == ""){
+        //Empty case with nothing inputted or anything that is not a number
+        if (glucoseInput.text == "" || Int(glucoseInput.text!) == nil){
             return
         }
         
@@ -178,7 +178,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         //Normal reading (70-150)
         if (num! > 69 && num! < 151) {
             //Changed the image
-            imageFeedback.image = UIImage(named: "star")
+            imageFeedback.image = UIImage(named: "smile-g")
             
             //Shuffling in regards to what is inputted
             normalFeedback.shuffle()
@@ -188,9 +188,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //Adding confetti to a normal reading
             let confettiView = SAConfettiView(frame: self.view.bounds)
             self.view.addSubview(confettiView)
-            
-            //change color of button to graying out instead, put animation on button
-            
+                        
             //Confetti settings
             confettiView.intensity = 0.2
             confettiView.startConfetti()
@@ -220,17 +218,25 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //Save Data
             saveLoggedData()
             
+            glucoseInput.text = ""
+            
             print(loggedReadings)
             print(loggedDates)
         }
         //Below reading (below 70)
         else if (num! < 70){
-            imageFeedback.image = UIImage(named: "sad")
+            imageFeedback.image = UIImage(named: "sad-g")
+            
+            belowFeedback.shuffle()
+            feedback.text = belowFeedback[0]
             
         }
         //Above reading (above 150)
         else if (num! > 150){
-            imageFeedback.image = UIImage(named: "angry")
+            imageFeedback.image = UIImage(named: "angry-g")
+            
+            aboveFeedback.shuffle()
+            feedback.text = aboveFeedback[0]
             
         }
         
@@ -239,12 +245,17 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         //This can check if the watch is reachable. It'll have an error if it isn't!
         print(wcSession.isReachable)
 
+        //NOT WORKING YET
+        
         //I need my values to have a key! This is a dictionary
-        let message = ["message": glucoseInput.text!]
+        let strReadings = "\(loggedReadings)"
+        let strDates = "\(loggedDates)"
+        let readings = ["readings": strReadings, "dates": strDates]
         
         //when I send a message over with the Text Field, I can send it to the WC Session.
         //the same command for watch to iOS as well!
-        wcSession.sendMessage(message, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
+        wcSession.sendMessage(readings, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
+
     }
     /*
     // MARK: - Navigation
