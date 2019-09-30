@@ -12,6 +12,8 @@
 		C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */; };
 		D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */; };
 		E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */; };
+		F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA72341D565003B4838 /* NSLayoutHelper.swift */; };
+		F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA92341D59D003B4838 /* DeviceHelper.swift */; };
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
 		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
 		F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B9012233B5313009FEED1 /* ComplicationController.swift */; };
@@ -35,6 +37,8 @@
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
 		F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */; };
 		F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */; };
+		F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */; };
+		F1EE6A942341D0AA0089EC66 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE6A932341D0AA0089EC66 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,8 @@
 		E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F1169DA72341D565003B4838 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
+		F1169DA92341D59D003B4838 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SugarTraces.entitlements; sourceTree = "<group>"; };
 		F12B8FF5233B14AA009FEED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../temp Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGlucoseViewController.swift; sourceTree = "<group>"; };
 		F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarViewController.swift; sourceTree = "<group>"; };
+		F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		F1EE6A932341D0AA0089EC66 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		FB247B5E31255A318F0BE59F /* Pods-SugarTracesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTracesTests.release.xcconfig"; path = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,9 +260,13 @@
 			children = (
 				F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */,
 				F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */,
+				F1EE6A932341D0AA0089EC66 /* UILabelExtension.swift */,
+				F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */,
 				F163C7FD2320DFB0001A9CF2 /* AppDelegate.swift */,
 				F163C7FF2320DFB0001A9CF2 /* ViewController.swift */,
 				F163C8012320DFB0001A9CF2 /* Main.storyboard */,
+				F1169DA72341D565003B4838 /* NSLayoutHelper.swift */,
+				F1169DA92341D59D003B4838 /* DeviceHelper.swift */,
 				F14B9BC3233C517E00C877F1 /* StatsViewController.swift */,
 				F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */,
 				F14B9BC7233C519600C877F1 /* InfoViewController.swift */,
@@ -639,10 +651,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */,
+				F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */,
 				F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */,
+				F1EE6A942341D0AA0089EC66 /* UILabelExtension.swift in Sources */,
+				F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */,
 				F163C8002320DFB0001A9CF2 /* ViewController.swift in Sources */,
 				F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */,
 				F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */,
+				F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */,
 				F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */,
 				F14B9BC8233C519700C877F1 /* InfoViewController.swift in Sources */,
 				F163C7FE2320DFB0001A9CF2 /* AppDelegate.swift in Sources */,

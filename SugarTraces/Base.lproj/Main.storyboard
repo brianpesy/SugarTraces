@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQ8-Md-ccu">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
                 <navigationController id="TZE-Wz-Gms" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stats" image="stats" id="nEC-kP-xG7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hew-NU-evD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,7 +29,7 @@
             <objects>
                 <viewController id="4tF-lM-344" customClass="StatsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCd-0d-Q44">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="X0S-fv-HrD"/>
@@ -46,7 +46,7 @@
                 <navigationController id="q8F-Ge-hLm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="7fs-Mi-SFx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SiW-Yl-Qat">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -62,7 +62,7 @@
             <objects>
                 <viewController id="PeB-xL-IjN" customClass="HomeViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78n-Ly-Jjt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9BF-Qa-acz"/>
@@ -100,7 +100,7 @@
                 <navigationController id="Fqe-bw-EwK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="ssg-mG-mm1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7LA-gw-O1i">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -116,7 +116,7 @@
             <objects>
                 <viewController id="sc5-es-Ghr" customClass="InfoViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ttj-Ew-ozf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
@@ -142,7 +142,7 @@
             <objects>
                 <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Vw-SN-uWO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0ls-Di-czQ"/>
@@ -187,7 +187,7 @@
                 <navigationController id="tky-22-VOQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Glucose" image="add-glucose" id="i3O-r2-Cfy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewi-XV-UBZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -204,7 +204,7 @@
                 <navigationController id="utu-Ov-e2w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Achievements" image="achievements" id="diC-xi-LKI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mv6-C6-tuh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -220,7 +220,7 @@
             <objects>
                 <viewController id="NwO-f4-5aJ" customClass="AchievementsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZO9-sv-j9y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
@@ -236,84 +236,143 @@
             <objects>
                 <viewController id="iuP-vL-y8a" customClass="AddGlucoseViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRh-F1-y9K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0w-kl-0Sv">
-                                <rect key="frame" x="20" y="263" width="374" height="520"/>
+                                <rect key="frame" x="20" y="199" width="335" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="jdm-4a-oGn"/>
-                                    <constraint firstAttribute="height" constant="520" id="rDW-Zt-0GW"/>
+                                    <constraint firstAttribute="width" constant="374" id="Jsw-jR-agQ"/>
+                                    <constraint firstAttribute="height" constant="536" id="Wy7-nS-JHS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3r-kq-6nb">
-                                <rect key="frame" x="190" y="579" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="send"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-mark-bg" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-kk-x6P">
+                                <rect key="frame" x="20" y="60" width="95" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="GTB-Po-96k" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="62.799999999999997"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="121" id="RcL-dn-5rl" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3r-kq-6nb">
+                                <rect key="frame" x="137.5" y="464.5" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Axl-vV-GYT" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZP7-fi-TNt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="send:" destination="iuP-vL-y8a" eventType="touchUpInside" id="93I-OG-NAp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your blood glucose today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="kFg-2o-tYH">
-                                <rect key="frame" x="123" y="128" width="271" height="121"/>
+                                <rect key="frame" x="123" y="60" width="232" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="Tyn-Gh-bGn"/>
-                                    <constraint firstAttribute="width" constant="271" id="nQ5-ST-TSg"/>
+                                    <constraint firstAttribute="height" constant="121" id="Obp-nq-8Qt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="80"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="271" id="bR9-ER-N2E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-mark-bg" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-kk-x6P">
-                                <rect key="frame" x="20" y="128" width="95" height="121"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="121" id="ClX-NO-FJ1"/>
-                                    <constraint firstAttribute="width" constant="95" id="SWY-PT-pVj"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insulin-pen" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-nt-Vaq">
-                                <rect key="frame" x="164.66666666666666" y="323" width="85" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="UWW-er-ibk"/>
-                                    <constraint firstAttribute="width" constant="85" id="nuF-VD-wIW"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My blood glucose is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-g8-XbS">
-                                <rect key="frame" x="52" y="438" width="310" height="26.666666666666686"/>
+                                <rect key="frame" x="95.5" y="369" width="184" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.670000000000002" id="otA-vN-2X4"/>
+                                    <constraint firstAttribute="width" constant="184" id="vzc-bp-pPd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Gk-4Z6">
-                                <rect key="frame" x="119" y="488" width="177" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insulin-pen" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-nt-Vaq">
+                                <rect key="frame" x="145" y="260" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="aW4-Qe-6c8" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="65"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="85" id="iM9-1b-tKR" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="65"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Gk-4Z6">
+                                <rect key="frame" x="94" y="415.5" width="187" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EH7-MB-Gco"/>
+                                    <constraint firstAttribute="width" constant="187" id="Fra-Da-5gJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="C0b-g8-XbS" firstAttribute="top" secondItem="EdP-nt-Vaq" secondAttribute="bottom" constant="30" id="06b-cW-Hsl"/>
-                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="45m-nP-EFj"/>
-                            <constraint firstItem="guH-kU-Hda" firstAttribute="bottom" secondItem="g0w-kl-0Sv" secondAttribute="bottom" constant="30" id="B99-c2-eOh"/>
-                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="top" secondItem="g0w-kl-0Sv" secondAttribute="top" constant="60" id="BA0-T8-sqZ"/>
-                            <constraint firstItem="kFg-2o-tYH" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="40" id="CcM-PF-Zee"/>
-                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="top" secondItem="kFg-2o-tYH" secondAttribute="bottom" constant="14" id="Dax-dT-I0l"/>
-                            <constraint firstItem="C0b-g8-XbS" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="EmM-Mn-NWh"/>
-                            <constraint firstItem="C0b-g8-XbS" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="52" id="FJr-Ps-I5d"/>
-                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="g0w-kl-0Sv" secondAttribute="trailing" constant="20" id="OSC-rq-k39"/>
-                            <constraint firstItem="wO7-kk-x6P" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="UOs-1p-NYX"/>
-                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="UgH-FG-fFU"/>
-                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="C0b-g8-XbS" secondAttribute="trailing" constant="52" id="bJ5-iD-sUQ"/>
-                            <constraint firstItem="wO7-kk-x6P" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="40" id="h39-4P-JQN"/>
-                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="kFg-2o-tYH" secondAttribute="trailing" constant="20" id="k2n-kn-PPq"/>
-                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="lc2-Vv-5WX"/>
-                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="yLw-64-bNg"/>
+                            <constraint firstItem="e3r-kq-6nb" firstAttribute="top" secondItem="GKN-Gk-4Z6" secondAttribute="bottom" constant="14.67" id="9MJ-gZ-hso"/>
+                            <constraint firstItem="e3r-kq-6nb" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="FiU-RO-E6e"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="g0w-kl-0Sv" secondAttribute="trailing" constant="20" id="Fyq-3V-h1M"/>
+                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="HTp-K8-Zuj"/>
+                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="HVU-DC-7in"/>
+                            <constraint firstItem="C0b-g8-XbS" firstAttribute="top" secondItem="EdP-nt-Vaq" secondAttribute="bottom" constant="24" id="RHs-mh-ZUh"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="16" id="RXk-4t-8WJ"/>
+                            <constraint firstItem="GKN-Gk-4Z6" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="Xvp-Nm-U4c"/>
+                            <constraint firstItem="GKN-Gk-4Z6" firstAttribute="top" secondItem="C0b-g8-XbS" secondAttribute="bottom" constant="20" id="aKb-k7-Aza"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="bXP-7d-KwP"/>
+                            <constraint firstItem="wO7-kk-x6P" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="16" id="d38-t1-FKV"/>
+                            <constraint firstItem="wO7-kk-x6P" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="e7G-jg-3Cf"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="16" id="fhc-3F-yNn"/>
+                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="fpm-sm-7Hn"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="bottom" secondItem="g0w-kl-0Sv" secondAttribute="bottom" constant="34" id="g53-Cb-qrG"/>
+                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="top" secondItem="kFg-2o-tYH" secondAttribute="bottom" constant="79" id="hVV-UX-3vl" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                        <real key="value" value="60"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="kv6-eg-eZC"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="kFg-2o-tYH" secondAttribute="trailing" constant="20" id="kzf-bh-Afj"/>
+                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="top" secondItem="wO7-kk-x6P" secondAttribute="bottom" constant="18" id="pOi-fL-MrY"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="kFg-2o-tYH" secondAttribute="trailing" constant="20" id="tGt-Fi-0wV"/>
+                            <constraint firstItem="C0b-g8-XbS" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="vA6-93-QJF"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="wv8-bR-6H5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="guH-kU-Hda"/>
                     </view>
@@ -323,6 +382,7 @@
                         <outlet property="glucoseInput" destination="GKN-Gk-4Z6" id="z56-28-teg"/>
                         <outlet property="imageFeedback" destination="wO7-kk-x6P" id="LM7-W2-u9A"/>
                         <outlet property="secondBox" destination="g0w-kl-0Sv" id="fJb-om-p3m"/>
+                        <outlet property="sendAnim" destination="e3r-kq-6nb" id="vZh-Q6-48M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2XJ-09-KME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,12 +391,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="achievements" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="add-glucose" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="home" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="info" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="insulin-pen" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="achievements" width="37.5" height="37.5"/>
+        <image name="add-glucose" width="37.5" height="37.5"/>
+        <image name="home" width="37.5" height="37.5"/>
+        <image name="info" width="37.5" height="37.5"/>
+        <image name="insulin-pen" width="50" height="50"/>
+        <image name="question-mark-bg" width="50" height="50"/>
+        <image name="stats" width="37.5" height="37.5"/>
     </resources>
 </document>

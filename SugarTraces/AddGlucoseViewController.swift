@@ -72,21 +72,6 @@ struct Keys {
     static let savedDates = "savedDates"
 }
 
-extension UILabel {
-    func textDropShadow() {
-        self.layer.masksToBounds = false
-        self.layer.shadowRadius = 2.0
-        self.layer.shadowOpacity = 0.2
-        self.layer.shadowOffset = CGSize(width: 1, height: 2)
-    }
-
-    static func createCustomLabel() -> UILabel {
-        let label = UILabel()
-        label.textDropShadow()
-        return label
-    }
-}
-
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -107,13 +92,21 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     @IBOutlet weak var feedback: UILabel!
     @IBOutlet weak var secondBox: UILabel!
     @IBOutlet weak var imageFeedback: UIImageView!
+    @IBOutlet weak var sendAnim: UIButton!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
             // Always adopt a light interface style.
             overrideUserInterfaceStyle = .light
         }
+        
+        //Initial animation and additional rendering for UIButton
+        sendAnim.pulsate()
+        sendAnim.layer.cornerRadius = sendAnim.frame.size.width/2
+        sendAnim.textDropShadow()
+        
         //Watch Connectivity
         self.wcSession = WCSession.default
         self.wcSession.delegate = self
@@ -140,7 +133,9 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         feedback.lineBreakMode = .byClipping
 
         //Changes the text field style to rounded
-        glucoseInput.layer.cornerRadius = 10.0
+        glucoseInput.layer.cornerRadius = 15.0
+        glucoseInput.layer.borderWidth = 2.0
+        glucoseInput.layer.borderColor = UIColor.gray.cgColor
         glucoseInput.clipsToBounds = true
         glucoseInput.placeholder = "Tap here to type"
         
@@ -150,6 +145,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         loadLoggedData()
                 
+//        self.tabBarItem.title = "Add Glucose"
     }
     
     func saveLoggedData(){
@@ -168,6 +164,9 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     @IBAction func send(_ sender: Any) {
         
         //Processing of the data, changing feedback depending on ranges, saving input and corresponding date to a dictionary.
+        
+        //Flash animation when pressed
+        sendAnim.flash()
         
         //Empty case with nothing inputted
         if (glucoseInput.text == ""){
@@ -189,15 +188,21 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //Adding confetti to a normal reading
             let confettiView = SAConfettiView(frame: self.view.bounds)
             self.view.addSubview(confettiView)
+            
+            //change color of button to graying out instead, put animation on button
+            
+            //Confetti settings
             confettiView.intensity = 0.2
             confettiView.startConfetti()
+            
+            //Sound clip
+            
             
             //Delay
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 confettiView.stopConfetti()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     confettiView.removeFromSuperview()
-                    //change color of button
                     
                 }
             }
