@@ -1,0 +1,6 @@
+framework module Pods_SugarTracesUITests {
+  umbrella header "Pods-SugarTracesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

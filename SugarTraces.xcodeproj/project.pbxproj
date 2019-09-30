@@ -1,0 +1,1128 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D31957CA0529E99FC4FC03E /* Pods_SugarTracesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CE33151BE6A50D57E1A270 /* Pods_SugarTracesUITests.framework */; };
+		6562B1F6302284454D949676 /* Pods_SugarTracesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDD03F7B1CB4029631FD572 /* Pods_SugarTracesTests.framework */; };
+		C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */; };
+		D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */; };
+		E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */; };
+		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
+		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
+		F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B9012233B5313009FEED1 /* ComplicationController.swift */; };
+		F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC1233C515700C877F1 /* HomeViewController.swift */; };
+		F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC3233C517E00C877F1 /* StatsViewController.swift */; };
+		F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */; };
+		F14B9BC8233C519700C877F1 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC7233C519600C877F1 /* InfoViewController.swift */; };
+		F163C7FE2320DFB0001A9CF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C7FD2320DFB0001A9CF2 /* AppDelegate.swift */; };
+		F163C8002320DFB0001A9CF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C7FF2320DFB0001A9CF2 /* ViewController.swift */; };
+		F163C8032320DFB0001A9CF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F163C8012320DFB0001A9CF2 /* Main.storyboard */; };
+		F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C8042320DFB3001A9CF2 /* Assets.xcassets */; };
+		F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F163C8062320DFB3001A9CF2 /* LaunchScreen.storyboard */; };
+		F163C8132320DFB4001A9CF2 /* SugarTracesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C8122320DFB4001A9CF2 /* SugarTracesTests.swift */; };
+		F163C81E2320DFB4001A9CF2 /* SugarTracesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C81D2320DFB4001A9CF2 /* SugarTracesUITests.swift */; };
+		F163C8232320DFB4001A9CF2 /* SugarTraces WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F163C8222320DFB4001A9CF2 /* SugarTraces WatchKit App.app */; };
+		F163C8292320DFB4001A9CF2 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F163C8272320DFB4001A9CF2 /* Interface.storyboard */; };
+		F163C82B2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C82A2320DFB4001A9CF2 /* Assets.xcassets */; };
+		F163C8322320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F163C8312320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C8362320DFB5001A9CF2 /* InterfaceController.swift */; };
+		F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C83A2320DFB5001A9CF2 /* NotificationController.swift */; };
+		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
+		F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */; };
+		F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F163C80F2320DFB4001A9CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F163C7F22320DFB0001A9CF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F163C7F92320DFB0001A9CF2;
+			remoteInfo = SugarTraces;
+		};
+		F163C81A2320DFB4001A9CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F163C7F22320DFB0001A9CF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F163C7F92320DFB0001A9CF2;
+			remoteInfo = SugarTraces;
+		};
+		F163C8242320DFB4001A9CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F163C7F22320DFB0001A9CF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F163C8212320DFB4001A9CF2;
+			remoteInfo = "SugarTraces WatchKit App";
+		};
+		F163C8332320DFB5001A9CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F163C7F22320DFB0001A9CF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F163C8302320DFB5001A9CF2;
+			remoteInfo = "SugarTraces WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F163C8452320DFB5001A9CF2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F163C8322320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C8492320DFB5001A9CF2 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F163C8232320DFB4001A9CF2 /* SugarTraces WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1412AC74179C79A9DFF57179 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		454C15BBDCF39B8B7E476E94 /* Pods-SugarTraces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces.debug.xcconfig"; sourceTree = "<group>"; };
+		455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CE33151BE6A50D57E1A270 /* Pods_SugarTracesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTracesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDD03F7B1CB4029631FD572 /* Pods_SugarTracesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTracesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		810F5782B48F686FB5910323 /* Pods-SugarTracesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTracesUITests.release.xcconfig"; path = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		853DB11CCCE2FBD17D31BDF6 /* Pods-SugarTracesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTracesTests.debug.xcconfig"; path = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A2F75AFBE27D339238E9074 /* Pods-SugarTracesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTracesUITests.debug.xcconfig"; path = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B969CAF7CA2C6B72750BE5C /* Pods-SugarTraces WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		B28979EB46F4B1E5F7E16587 /* Pods-SugarTraces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces.release.xcconfig"; sourceTree = "<group>"; };
+		DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SugarTraces.entitlements; sourceTree = "<group>"; };
+		F12B8FF5233B14AA009FEED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../temp Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
+		F12B9012233B5313009FEED1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F14B9BC1233C515700C877F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F14B9BC3233C517E00C877F1 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		F14B9BC7233C519600C877F1 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F163C7FA2320DFB0001A9CF2 /* SugarTraces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugarTraces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163C7FD2320DFB0001A9CF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F163C7FF2320DFB0001A9CF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F163C8022320DFB0001A9CF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F163C8042320DFB3001A9CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F163C8072320DFB3001A9CF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F163C8092320DFB3001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163C80E2320DFB4001A9CF2 /* SugarTracesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarTracesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163C8122320DFB4001A9CF2 /* SugarTracesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTracesTests.swift; sourceTree = "<group>"; };
+		F163C8142320DFB4001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163C8192320DFB4001A9CF2 /* SugarTracesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarTracesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163C81D2320DFB4001A9CF2 /* SugarTracesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTracesUITests.swift; sourceTree = "<group>"; };
+		F163C81F2320DFB4001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163C8222320DFB4001A9CF2 /* SugarTraces WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SugarTraces WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163C8282320DFB4001A9CF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F163C82A2320DFB4001A9CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F163C82C2320DFB5001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163C8312320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SugarTraces WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F163C8362320DFB5001A9CF2 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F163C83A2320DFB5001A9CF2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F163C83C2320DFB5001A9CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F163C83E2320DFB5001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGlucoseViewController.swift; sourceTree = "<group>"; };
+		F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarViewController.swift; sourceTree = "<group>"; };
+		FB247B5E31255A318F0BE59F /* Pods-SugarTracesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTracesTests.release.xcconfig"; path = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA7E4A0B19CB56320A3DFA27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C7F72320DFB0001A9CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */,
+				F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C80B2320DFB4001A9CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6562B1F6302284454D949676 /* Pods_SugarTracesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C8162320DFB4001A9CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D31957CA0529E99FC4FC03E /* Pods_SugarTracesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C82E2320DFB5001A9CF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D49B75D4F8C8760B0FD9756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F12B8FF5233B14AA009FEED1 /* HealthKit.framework */,
+				F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */,
+				DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */,
+				E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */,
+				455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */,
+				7CDD03F7B1CB4029631FD572 /* Pods_SugarTracesTests.framework */,
+				59CE33151BE6A50D57E1A270 /* Pods_SugarTracesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F86B3050692F3EDE95A35AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				454C15BBDCF39B8B7E476E94 /* Pods-SugarTraces.debug.xcconfig */,
+				B28979EB46F4B1E5F7E16587 /* Pods-SugarTraces.release.xcconfig */,
+				EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */,
+				F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */,
+				1412AC74179C79A9DFF57179 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */,
+				9B969CAF7CA2C6B72750BE5C /* Pods-SugarTraces WatchKit Extension.release.xcconfig */,
+				853DB11CCCE2FBD17D31BDF6 /* Pods-SugarTracesTests.debug.xcconfig */,
+				FB247B5E31255A318F0BE59F /* Pods-SugarTracesTests.release.xcconfig */,
+				9A2F75AFBE27D339238E9074 /* Pods-SugarTracesUITests.debug.xcconfig */,
+				810F5782B48F686FB5910323 /* Pods-SugarTracesUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F163C7F12320DFB0001A9CF2 = {
+			isa = PBXGroup;
+			children = (
+				F163C7FC2320DFB0001A9CF2 /* SugarTraces */,
+				F163C8112320DFB4001A9CF2 /* SugarTracesTests */,
+				F163C81C2320DFB4001A9CF2 /* SugarTracesUITests */,
+				F163C8262320DFB4001A9CF2 /* SugarTraces WatchKit App */,
+				F163C8352320DFB5001A9CF2 /* SugarTraces WatchKit Extension */,
+				F163C7FB2320DFB0001A9CF2 /* Products */,
+				8F86B3050692F3EDE95A35AC /* Pods */,
+				3D49B75D4F8C8760B0FD9756 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F163C7FB2320DFB0001A9CF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F163C7FA2320DFB0001A9CF2 /* SugarTraces.app */,
+				F163C80E2320DFB4001A9CF2 /* SugarTracesTests.xctest */,
+				F163C8192320DFB4001A9CF2 /* SugarTracesUITests.xctest */,
+				F163C8222320DFB4001A9CF2 /* SugarTraces WatchKit App.app */,
+				F163C8312320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F163C7FC2320DFB0001A9CF2 /* SugarTraces */ = {
+			isa = PBXGroup;
+			children = (
+				F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */,
+				F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */,
+				F163C7FD2320DFB0001A9CF2 /* AppDelegate.swift */,
+				F163C7FF2320DFB0001A9CF2 /* ViewController.swift */,
+				F163C8012320DFB0001A9CF2 /* Main.storyboard */,
+				F14B9BC3233C517E00C877F1 /* StatsViewController.swift */,
+				F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */,
+				F14B9BC7233C519600C877F1 /* InfoViewController.swift */,
+				F14B9BC1233C515700C877F1 /* HomeViewController.swift */,
+				F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */,
+				F163C8042320DFB3001A9CF2 /* Assets.xcassets */,
+				F163C8062320DFB3001A9CF2 /* LaunchScreen.storyboard */,
+				F163C8092320DFB3001A9CF2 /* Info.plist */,
+			);
+			path = SugarTraces;
+			sourceTree = "<group>";
+		};
+		F163C8112320DFB4001A9CF2 /* SugarTracesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F163C8122320DFB4001A9CF2 /* SugarTracesTests.swift */,
+				F163C8142320DFB4001A9CF2 /* Info.plist */,
+			);
+			path = SugarTracesTests;
+			sourceTree = "<group>";
+		};
+		F163C81C2320DFB4001A9CF2 /* SugarTracesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F163C81D2320DFB4001A9CF2 /* SugarTracesUITests.swift */,
+				F163C81F2320DFB4001A9CF2 /* Info.plist */,
+			);
+			path = SugarTracesUITests;
+			sourceTree = "<group>";
+		};
+		F163C8262320DFB4001A9CF2 /* SugarTraces WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F163C8272320DFB4001A9CF2 /* Interface.storyboard */,
+				F163C82A2320DFB4001A9CF2 /* Assets.xcassets */,
+				F163C82C2320DFB5001A9CF2 /* Info.plist */,
+			);
+			path = "SugarTraces WatchKit App";
+			sourceTree = "<group>";
+		};
+		F163C8352320DFB5001A9CF2 /* SugarTraces WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F163C8362320DFB5001A9CF2 /* InterfaceController.swift */,
+				F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */,
+				F163C83A2320DFB5001A9CF2 /* NotificationController.swift */,
+				F12B9012233B5313009FEED1 /* ComplicationController.swift */,
+				F163C83C2320DFB5001A9CF2 /* Assets.xcassets */,
+				F163C83E2320DFB5001A9CF2 /* Info.plist */,
+				F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */,
+			);
+			path = "SugarTraces WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F163C7F92320DFB0001A9CF2 /* SugarTraces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163C84A2320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces" */;
+			buildPhases = (
+				15BB99BA134945CA4AA17545 /* [CP] Check Pods Manifest.lock */,
+				F163C7F62320DFB0001A9CF2 /* Sources */,
+				F163C7F72320DFB0001A9CF2 /* Frameworks */,
+				F163C7F82320DFB0001A9CF2 /* Resources */,
+				F163C8492320DFB5001A9CF2 /* Embed Watch Content */,
+				1719B90DF41B642E0BF7BB36 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F163C8252320DFB4001A9CF2 /* PBXTargetDependency */,
+			);
+			name = SugarTraces;
+			productName = SugarTraces;
+			productReference = F163C7FA2320DFB0001A9CF2 /* SugarTraces.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F163C80D2320DFB4001A9CF2 /* SugarTracesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163C84D2320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTracesTests" */;
+			buildPhases = (
+				EC1235AC05E6C4BD714D113E /* [CP] Check Pods Manifest.lock */,
+				F163C80A2320DFB4001A9CF2 /* Sources */,
+				F163C80B2320DFB4001A9CF2 /* Frameworks */,
+				F163C80C2320DFB4001A9CF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F163C8102320DFB4001A9CF2 /* PBXTargetDependency */,
+			);
+			name = SugarTracesTests;
+			productName = SugarTracesTests;
+			productReference = F163C80E2320DFB4001A9CF2 /* SugarTracesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F163C8182320DFB4001A9CF2 /* SugarTracesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163C8502320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTracesUITests" */;
+			buildPhases = (
+				5B1002D799FFF8375E4E6035 /* [CP] Check Pods Manifest.lock */,
+				F163C8152320DFB4001A9CF2 /* Sources */,
+				F163C8162320DFB4001A9CF2 /* Frameworks */,
+				F163C8172320DFB4001A9CF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F163C81B2320DFB4001A9CF2 /* PBXTargetDependency */,
+			);
+			name = SugarTracesUITests;
+			productName = SugarTracesUITests;
+			productReference = F163C8192320DFB4001A9CF2 /* SugarTracesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F163C8212320DFB4001A9CF2 /* SugarTraces WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163C8462320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces WatchKit App" */;
+			buildPhases = (
+				5945F0871FC0A0E3D81B49AA /* [CP] Check Pods Manifest.lock */,
+				F163C8202320DFB4001A9CF2 /* Resources */,
+				F163C8452320DFB5001A9CF2 /* Embed App Extensions */,
+				DA7E4A0B19CB56320A3DFA27 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F163C8342320DFB5001A9CF2 /* PBXTargetDependency */,
+			);
+			name = "SugarTraces WatchKit App";
+			productName = "SugarTraces WatchKit App";
+			productReference = F163C8222320DFB4001A9CF2 /* SugarTraces WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F163C8302320DFB5001A9CF2 /* SugarTraces WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F163C8422320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces WatchKit Extension" */;
+			buildPhases = (
+				4F9D18DA0E41A8CF2F561193 /* [CP] Check Pods Manifest.lock */,
+				F163C82D2320DFB5001A9CF2 /* Sources */,
+				F163C82E2320DFB5001A9CF2 /* Frameworks */,
+				F163C82F2320DFB5001A9CF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SugarTraces WatchKit Extension";
+			productName = "SugarTraces WatchKit Extension";
+			productReference = F163C8312320DFB5001A9CF2 /* SugarTraces WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F163C7F22320DFB0001A9CF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Brian Sy";
+				TargetAttributes = {
+					F163C7F92320DFB0001A9CF2 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					F163C80D2320DFB4001A9CF2 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F163C7F92320DFB0001A9CF2;
+					};
+					F163C8182320DFB4001A9CF2 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F163C7F92320DFB0001A9CF2;
+					};
+					F163C8212320DFB4001A9CF2 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					F163C8302320DFB5001A9CF2 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = F163C7F52320DFB0001A9CF2 /* Build configuration list for PBXProject "SugarTraces" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F163C7F12320DFB0001A9CF2;
+			productRefGroup = F163C7FB2320DFB0001A9CF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F163C7F92320DFB0001A9CF2 /* SugarTraces */,
+				F163C80D2320DFB4001A9CF2 /* SugarTracesTests */,
+				F163C8182320DFB4001A9CF2 /* SugarTracesUITests */,
+				F163C8212320DFB4001A9CF2 /* SugarTraces WatchKit App */,
+				F163C8302320DFB5001A9CF2 /* SugarTraces WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F163C7F82320DFB0001A9CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */,
+				F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */,
+				F163C8032320DFB0001A9CF2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C80C2320DFB4001A9CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C8172320DFB4001A9CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C8202320DFB4001A9CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C82B2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
+				F163C8292320DFB4001A9CF2 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C82F2320DFB5001A9CF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15BB99BA134945CA4AA17545 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugarTraces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1719B90DF41B642E0BF7BB36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugarTraces/Pods-SugarTraces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugarTraces/Pods-SugarTraces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugarTraces/Pods-SugarTraces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F9D18DA0E41A8CF2F561193 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugarTraces WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5945F0871FC0A0E3D81B49AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugarTraces WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B1002D799FFF8375E4E6035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugarTracesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC1235AC05E6C4BD714D113E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugarTracesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F163C7F62320DFB0001A9CF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */,
+				F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */,
+				F163C8002320DFB0001A9CF2 /* ViewController.swift in Sources */,
+				F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */,
+				F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */,
+				F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */,
+				F14B9BC8233C519700C877F1 /* InfoViewController.swift in Sources */,
+				F163C7FE2320DFB0001A9CF2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C80A2320DFB4001A9CF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C8132320DFB4001A9CF2 /* SugarTracesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C8152320DFB4001A9CF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C81E2320DFB4001A9CF2 /* SugarTracesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F163C82D2320DFB5001A9CF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */,
+				F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */,
+				F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */,
+				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F163C8102320DFB4001A9CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F163C7F92320DFB0001A9CF2 /* SugarTraces */;
+			targetProxy = F163C80F2320DFB4001A9CF2 /* PBXContainerItemProxy */;
+		};
+		F163C81B2320DFB4001A9CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F163C7F92320DFB0001A9CF2 /* SugarTraces */;
+			targetProxy = F163C81A2320DFB4001A9CF2 /* PBXContainerItemProxy */;
+		};
+		F163C8252320DFB4001A9CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F163C8212320DFB4001A9CF2 /* SugarTraces WatchKit App */;
+			targetProxy = F163C8242320DFB4001A9CF2 /* PBXContainerItemProxy */;
+		};
+		F163C8342320DFB5001A9CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F163C8302320DFB5001A9CF2 /* SugarTraces WatchKit Extension */;
+			targetProxy = F163C8332320DFB5001A9CF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F163C8012320DFB0001A9CF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F163C8022320DFB0001A9CF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F163C8062320DFB3001A9CF2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F163C8072320DFB3001A9CF2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F163C8272320DFB4001A9CF2 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F163C8282320DFB4001A9CF2 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F163C8402320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F163C8412320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F163C8432320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1412AC74179C79A9DFF57179 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		F163C8442320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B969CAF7CA2C6B72750BE5C /* Pods-SugarTraces WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		F163C8472320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				IBSC_MODULE = SugarTraces_WatchKit_Extension;
+				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Debug;
+		};
+		F163C8482320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				IBSC_MODULE = SugarTraces_WatchKit_Extension;
+				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+			};
+			name = Release;
+		};
+		F163C84B2320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454C15BBDCF39B8B7E476E94 /* Pods-SugarTraces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTraces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F163C84C2320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B28979EB46F4B1E5F7E16587 /* Pods-SugarTraces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTraces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTraces;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F163C84E2320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853DB11CCCE2FBD17D31BDF6 /* Pods-SugarTracesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTracesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTracesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SugarTraces.app/SugarTraces";
+			};
+			name = Debug;
+		};
+		F163C84F2320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB247B5E31255A318F0BE59F /* Pods-SugarTracesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTracesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTracesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SugarTraces.app/SugarTraces";
+			};
+			name = Release;
+		};
+		F163C8512320DFB5001A9CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A2F75AFBE27D339238E9074 /* Pods-SugarTracesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTracesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTracesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SugarTraces;
+			};
+			name = Debug;
+		};
+		F163C8522320DFB5001A9CF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810F5782B48F686FB5910323 /* Pods-SugarTracesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WBN5N4H9;
+				INFOPLIST_FILE = SugarTracesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wsg.SugarTracesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SugarTraces;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F163C7F52320DFB0001A9CF2 /* Build configuration list for PBXProject "SugarTraces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C8402320DFB5001A9CF2 /* Debug */,
+				F163C8412320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163C8422320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C8432320DFB5001A9CF2 /* Debug */,
+				F163C8442320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163C8462320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C8472320DFB5001A9CF2 /* Debug */,
+				F163C8482320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163C84A2320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTraces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C84B2320DFB5001A9CF2 /* Debug */,
+				F163C84C2320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163C84D2320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTracesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C84E2320DFB5001A9CF2 /* Debug */,
+				F163C84F2320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F163C8502320DFB5001A9CF2 /* Build configuration list for PBXNativeTarget "SugarTracesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F163C8512320DFB5001A9CF2 /* Debug */,
+				F163C8522320DFB5001A9CF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F163C7F22320DFB0001A9CF2 /* Project object */;
+}

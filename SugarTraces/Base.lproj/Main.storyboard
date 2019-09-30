@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQ8-Md-ccu">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stats-->
+        <scene sceneID="p5F-Cb-20l">
+            <objects>
+                <navigationController id="TZE-Wz-Gms" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stats" image="stats" id="nEC-kP-xG7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hew-NU-evD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4tF-lM-344" kind="relationship" relationship="rootViewController" id="gTz-JL-bmN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Obb-e9-6Hw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1577" y="-18"/>
+        </scene>
+        <!--Stats-->
+        <scene sceneID="whg-kC-PiU">
+            <objects>
+                <viewController id="4tF-lM-344" customClass="StatsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bCd-0d-Q44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="X0S-fv-HrD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats" id="uCj-Td-1K1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guG-3o-GE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584" y="-18"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="1Ly-c2-UW2">
+            <objects>
+                <navigationController id="q8F-Ge-hLm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="7fs-Mi-SFx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SiW-Yl-Qat">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PeB-xL-IjN" kind="relationship" relationship="rootViewController" id="c7x-vJ-sFU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ze-K0-bjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1572" y="-747"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="oYg-xu-qqL">
+            <objects>
+                <viewController id="PeB-xL-IjN" customClass="HomeViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78n-Ly-Jjt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9BF-Qa-acz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="HmS-Mx-hzS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbX-ws-iBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2583" y="-747"/>
+        </scene>
+        <!--Master Tab Bar View Controller-->
+        <scene sceneID="ia3-PX-eWT">
+            <objects>
+                <tabBarController id="g4c-pl-X5t" customClass="MasterTabBarViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WRN-cg-KQA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpk-Oj-Kyo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="-747"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="WEw-mk-OUi">
+            <objects>
+                <navigationController id="Fqe-bw-EwK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info" id="ssg-mG-mm1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7LA-gw-O1i">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sc5-es-Ghr" kind="relationship" relationship="rootViewController" id="n1e-ZR-0Tf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pW-C9-rkg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="-747"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="0zI-kb-wt2">
+            <objects>
+                <viewController id="sc5-es-Ghr" customClass="InfoViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ttj-Ew-ozf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Nie-3z-AhY" kind="show" id="b9l-DU-hl4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="sPl-0d-Blt"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="3z7-W9-htS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gP4-cx-Ws3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="-747"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lIJ-49-3Bw">
+            <objects>
+                <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Vw-SN-uWO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0ls-Di-czQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vuF-wW-Dri"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ld-jO-JFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2264" y="-747"/>
+        </scene>
+        <!--Master Tab Bar View Controller-->
+        <scene sceneID="X0U-p1-Xbt">
+            <objects>
+                <tabBarController id="zQ8-Md-ccu" customClass="MasterTabBarViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0au-kP-wiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.13333333333333333" green="0.71372549019607845" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="q8F-Ge-hLm" kind="relationship" relationship="viewControllers" id="5Nq-po-Emy"/>
+                        <segue destination="TZE-Wz-Gms" kind="relationship" relationship="viewControllers" id="MpQ-IH-3c5"/>
+                        <segue destination="tky-22-VOQ" kind="relationship" relationship="viewControllers" id="6fH-H4-8Lh"/>
+                        <segue destination="utu-Ov-e2w" kind="relationship" relationship="viewControllers" id="uvw-sF-kq5"/>
+                        <segue destination="Fqe-bw-EwK" kind="relationship" relationship="viewControllers" id="iBv-ER-8KO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjd-Mc-fTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575" y="-747"/>
+        </scene>
+        <!--Add Glucose-->
+        <scene sceneID="T4w-6j-mkC">
+            <objects>
+                <navigationController id="tky-22-VOQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Glucose" image="add-glucose" id="i3O-r2-Cfy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewi-XV-UBZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iuP-vL-y8a" kind="relationship" relationship="rootViewController" id="EPp-iQ-DSy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDX-2R-0OG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1572" y="714"/>
+        </scene>
+        <!--Achievements-->
+        <scene sceneID="XGj-zL-cgo">
+            <objects>
+                <navigationController id="utu-Ov-e2w" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Achievements" image="achievements" id="diC-xi-LKI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mv6-C6-tuh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NwO-f4-5aJ" kind="relationship" relationship="rootViewController" id="7vm-EE-QvD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyu-5r-OT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="-18"/>
+        </scene>
+        <!--Achievements-->
+        <scene sceneID="XAm-ve-we0">
+            <objects>
+                <viewController id="NwO-f4-5aJ" customClass="AchievementsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZO9-sv-j9y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Achievements" id="jov-mC-SOs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4si-Ci-ua7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="-18"/>
+        </scene>
+        <!--Add Glucose-->
+        <scene sceneID="QrF-Jn-xNP">
+            <objects>
+                <viewController id="iuP-vL-y8a" customClass="AddGlucoseViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XRh-F1-y9K">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0w-kl-0Sv">
+                                <rect key="frame" x="20" y="263" width="374" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="jdm-4a-oGn"/>
+                                    <constraint firstAttribute="height" constant="520" id="rDW-Zt-0GW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3r-kq-6nb">
+                                <rect key="frame" x="190" y="579" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send"/>
+                                <connections>
+                                    <action selector="send:" destination="iuP-vL-y8a" eventType="touchUpInside" id="93I-OG-NAp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your blood glucose today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="kFg-2o-tYH">
+                                <rect key="frame" x="123" y="128" width="271" height="121"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="Tyn-Gh-bGn"/>
+                                    <constraint firstAttribute="width" constant="271" id="nQ5-ST-TSg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="26"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-mark-bg" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-kk-x6P">
+                                <rect key="frame" x="20" y="128" width="95" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="ClX-NO-FJ1"/>
+                                    <constraint firstAttribute="width" constant="95" id="SWY-PT-pVj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insulin-pen" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-nt-Vaq">
+                                <rect key="frame" x="164.66666666666666" y="323" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="UWW-er-ibk"/>
+                                    <constraint firstAttribute="width" constant="85" id="nuF-VD-wIW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My blood glucose is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-g8-XbS">
+                                <rect key="frame" x="52" y="438" width="310" height="26.666666666666686"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Gk-4Z6">
+                                <rect key="frame" x="119" y="488" width="177" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C0b-g8-XbS" firstAttribute="top" secondItem="EdP-nt-Vaq" secondAttribute="bottom" constant="30" id="06b-cW-Hsl"/>
+                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="45m-nP-EFj"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="bottom" secondItem="g0w-kl-0Sv" secondAttribute="bottom" constant="30" id="B99-c2-eOh"/>
+                            <constraint firstItem="EdP-nt-Vaq" firstAttribute="top" secondItem="g0w-kl-0Sv" secondAttribute="top" constant="60" id="BA0-T8-sqZ"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="40" id="CcM-PF-Zee"/>
+                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="top" secondItem="kFg-2o-tYH" secondAttribute="bottom" constant="14" id="Dax-dT-I0l"/>
+                            <constraint firstItem="C0b-g8-XbS" firstAttribute="centerX" secondItem="XRh-F1-y9K" secondAttribute="centerX" id="EmM-Mn-NWh"/>
+                            <constraint firstItem="C0b-g8-XbS" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="52" id="FJr-Ps-I5d"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="g0w-kl-0Sv" secondAttribute="trailing" constant="20" id="OSC-rq-k39"/>
+                            <constraint firstItem="wO7-kk-x6P" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="UOs-1p-NYX"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="UgH-FG-fFU"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="C0b-g8-XbS" secondAttribute="trailing" constant="52" id="bJ5-iD-sUQ"/>
+                            <constraint firstItem="wO7-kk-x6P" firstAttribute="top" secondItem="guH-kU-Hda" secondAttribute="top" constant="40" id="h39-4P-JQN"/>
+                            <constraint firstItem="guH-kU-Hda" firstAttribute="trailing" secondItem="kFg-2o-tYH" secondAttribute="trailing" constant="20" id="k2n-kn-PPq"/>
+                            <constraint firstItem="g0w-kl-0Sv" firstAttribute="leading" secondItem="guH-kU-Hda" secondAttribute="leading" constant="20" id="lc2-Vv-5WX"/>
+                            <constraint firstItem="kFg-2o-tYH" firstAttribute="leading" secondItem="wO7-kk-x6P" secondAttribute="trailing" constant="8" id="yLw-64-bNg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="guH-kU-Hda"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Glucose" id="je8-xe-pXG"/>
+                    <connections>
+                        <outlet property="feedback" destination="kFg-2o-tYH" id="UEa-fn-VNF"/>
+                        <outlet property="glucoseInput" destination="GKN-Gk-4Z6" id="z56-28-teg"/>
+                        <outlet property="imageFeedback" destination="wO7-kk-x6P" id="LM7-W2-u9A"/>
+                        <outlet property="secondBox" destination="g0w-kl-0Sv" id="fJb-om-p3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2XJ-09-KME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2584.057971014493" y="713.83928571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="achievements" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="add-glucose" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="home" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="info" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="insulin-pen" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

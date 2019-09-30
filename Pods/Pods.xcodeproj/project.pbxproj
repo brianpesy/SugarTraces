@@ -1,0 +1,1626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BBBA6D553E67C1026B165B4BFF72AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02C966830AB748EDD782B8C39839545 /* QuartzCore.framework */; };
+		0BA05826C78A36A3D348440FF97BD3A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		0F15C583AC48EA543C92AC2F369FAFC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B3558B9D2C818072191DF6517B8DD /* UIKit.framework */; };
+		120D789BD7FFF37CC4EF6D95B16F5420 /* Pods-SugarTraces WatchKit App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61D4544B46351AC4A90CAAE5E9D4ABDF /* Pods-SugarTraces WatchKit App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		252294FAB3A1ECA025AEB675F3F46ED1 /* MMTabBarAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B206C336510D1BCB5ACF7BE6A6429B /* MMTabBarAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B09B44A046D5700C1BCBF4E4F237DFD /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8705D5889ABB85BDEB2D50AE707A7C1 /* SAConfettiView-dummy.m */; };
+		31AB02A6C1A0E16647C78CAB9E840E14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		3B75C06E17D496FA2ABF31EE91E57C5E /* Pods-SugarTraces-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BF541790386489DE9361B4C50D596F /* Pods-SugarTraces-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		520244FBE61B294FE789281A41FA4332 /* Pods-SugarTraces WatchKit Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AECCE2BE08422F4952AADBE1095F2D5D /* Pods-SugarTraces WatchKit Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		583E6E8D393D8812D708DF59E4BBA21F /* MMTabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE676689D21E5AB0F8F87114924A22 /* MMTabBarAnimateController.swift */; };
+		65FE344CF109E88FA712681AAEEB7C75 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B92412337CFF0F81E881A9286244850 /* diamond.png */; };
+		6D46D00612344BAA080C4837AD8F9D31 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E7C33A4C1629991BF5005AF8CF1340 /* UIViewExtension.swift */; };
+		7775F77D2067CDC650EA611175D7A896 /* Pods-SugarTracesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF549BD4E0B9D9BDAFB6CA35B546E932 /* Pods-SugarTracesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8136A18B1D809ABE95B80DBE34A58F6C /* Pods-SugarTraces WatchKit App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7425D0766AF05C0556D862CAD5D8821A /* Pods-SugarTraces WatchKit App-dummy.m */; };
+		8BFB79A61072A8FCCA1207D3282F2606 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FA12B7B4320224329817D4B77D92B8D /* star.png */; };
+		8C7508F33C6397F6FBAECAF1CDB2F6EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C88210CE8E7FCAB8640FC827745208 /* Foundation.framework */; };
+		92E6EB555FD8B3B6C870BED33D353E45 /* Pods-SugarTracesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BDD5598B817447FC92506FC4563334 /* Pods-SugarTracesTests-dummy.m */; };
+		A3C4399C3360DDC2494F97D19CF8BEB6 /* Pods-SugarTracesUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A8721CAEF4E59910717D7C9FFBE7DC /* Pods-SugarTracesUITests-dummy.m */; };
+		AB58563C03A2FB392E4394F00CF39CEC /* ImageAnimateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD573C61B9697D4B9CD82366F98FF56 /* ImageAnimateLayer.swift */; };
+		B478E9F4E3F42B7FC631F039B36870B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		B6B6C3DF02E7CC4F430D56444BC216D9 /* Pods-SugarTracesUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D80618FF650BC5F3E924682F59E297A2 /* Pods-SugarTracesUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBDBD29F9CA38DF64AE08816CAC64C6F /* Pods-SugarTraces WatchKit Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E30AAE46887A142AD48BF2FA321B648 /* Pods-SugarTraces WatchKit Extension-dummy.m */; };
+		BC82831E158BED1EAD6B2A5A322754C3 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3BF6B3AE91B82CD55D469BB6803C76 /* SAConfettiView.swift */; };
+		C2D9ED33E9A11FCFB46FF6DFD9CC5136 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		D9FB6CA9AB2262729884623B57EFE506 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		DED6697789139911083133512CC5C267 /* Pods-SugarTraces-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC53812F6B4FA6F05C9CB887443BDD3 /* Pods-SugarTraces-dummy.m */; };
+		DF3348D74A7EC3F9236DFE576AE8CF92 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 755C7BE8C7B86B12D1C40CE9E6153203 /* confetti.png */; };
+		E1AF4311BAE94BF1E509BF75658E7542 /* MMTabBarAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF83F9251C477FF5409DDDEF3D784EA /* MMTabBarAnimation-dummy.m */; };
+		E55265C877D73F6B1D022794340DC9D6 /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E94B64C2BD13E14D90FC9CA3977F42AF /* SAConfettiView.bundle */; };
+		E97FB26744FC00505D9438DFB1BB35B1 /* AnimateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119B20FD71FDA41AD190FE2133FB1C3D /* AnimateItem.swift */; };
+		EA89E738D33D5F7EA1013C288A0D677F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6945D2762D5BCA695980038891D977CA /* Foundation.framework */; };
+		EAEDC21885FBB482FC6217CF5DFB25B3 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1F3BCCC38DAD6BC25EA6818C2EF6376 /* triangle.png */; };
+		F8617B911AE350986CD115D328EBD69C /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83199F5A7645310C9FEF01D5A0E66CF8 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		467A248DD7448532DC59DA92AC9C1209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00DB898E933D57C35EE001BE6AF78E9;
+			remoteInfo = "Pods-SugarTraces";
+		};
+		5F2CED348BA35DC948DEE02BB4D599E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F9207AB2E4F1E89B34CCEF995E4A140;
+			remoteInfo = MMTabBarAnimation;
+		};
+		67626E5B21E6BC8C6AB2771751752952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEF5EC9A82178D0D695682390F2DE2F1;
+			remoteInfo = SAConfettiView;
+		};
+		A27AD697FC1C902B9C90216BDB407C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E488B4A8341D4A1374B44B7D0191BC4;
+			remoteInfo = "SAConfettiView-SAConfettiView";
+		};
+		E8772EAD8E01E9C7F9B7ACEF60634682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00DB898E933D57C35EE001BE6AF78E9;
+			remoteInfo = "Pods-SugarTraces";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0873C657918A86C62789A18CFBDB5E6B /* Pods-SugarTraces.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarTraces.modulemap"; sourceTree = "<group>"; };
+		0BFE676689D21E5AB0F8F87114924A22 /* MMTabBarAnimateController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MMTabBarAnimateController.swift; path = MMTabBarAnimation/Classes/MMTabBarAnimateController.swift; sourceTree = "<group>"; };
+		0D42255A3E3581089E14B655834AB2FF /* Pods-SugarTracesUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTracesUITests-Info.plist"; sourceTree = "<group>"; };
+		0DB734E252D3AEE0933CA05A8993656C /* Pods-SugarTraces WatchKit Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarTraces WatchKit Extension.modulemap"; sourceTree = "<group>"; };
+		119B20FD71FDA41AD190FE2133FB1C3D /* AnimateItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimateItem.swift; path = MMTabBarAnimation/Classes/AnimateItem.swift; sourceTree = "<group>"; };
+		124A6EB6BB74FAC03AB3A1E060EAAA29 /* Pods_SugarTracesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SugarTracesUITests.framework; path = "Pods-SugarTracesUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B19F58981AD6BE05F7D1CEDDFE1510 /* Pods-SugarTracesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTracesTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		29C5C718F216714C890DF2E145C88367 /* Pods-SugarTraces WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		2AF19AE10E4026A67E3016E53B725531 /* Pods-SugarTraces WatchKit Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SugarTraces WatchKit Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		324D60616F296487EFF96D84E5274DB6 /* MMTabBarAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMTabBarAnimation-prefix.pch"; sourceTree = "<group>"; };
+		32E688D909F3E312AC02F817429C993F /* MMTabBarAnimation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MMTabBarAnimation-Info.plist"; sourceTree = "<group>"; };
+		34391A6C3D6C9932470EA52A36E8305A /* Pods-SugarTracesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTracesTests.release.xcconfig"; sourceTree = "<group>"; };
+		36310F54447E3C0BAF59F1246389171B /* Pods-SugarTracesUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTracesUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		37BF541790386489DE9361B4C50D596F /* Pods-SugarTraces-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SugarTraces-umbrella.h"; sourceTree = "<group>"; };
+		38D77F42FF5F10E8F9179446F1105FB1 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		3CF83F9251C477FF5409DDDEF3D784EA /* MMTabBarAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMTabBarAnimation-dummy.m"; sourceTree = "<group>"; };
+		3FB31DED3DD36A3C897782A222066A5E /* Pods-SugarTracesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTracesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		428B3558B9D2C818072191DF6517B8DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		447D262ADD81E5AC83D83D62B50CD5CC /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SugarTraces_WatchKit_App.framework; path = "Pods-SugarTraces WatchKit App.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E7C33A4C1629991BF5005AF8CF1340 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = MMTabBarAnimation/Classes/UIViewExtension.swift; sourceTree = "<group>"; };
+		46A8721CAEF4E59910717D7C9FFBE7DC /* Pods-SugarTracesUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SugarTracesUITests-dummy.m"; sourceTree = "<group>"; };
+		4CFF2E4058F858816365EC642C6DD990 /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E30AAE46887A142AD48BF2FA321B648 /* Pods-SugarTraces WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SugarTraces WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
+		51FD4B6116DBAA3DD75993586638141A /* Pods-SugarTraces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces.release.xcconfig"; sourceTree = "<group>"; };
+		53C88210CE8E7FCAB8640FC827745208 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		58259D06D400E9BB5D8CA173A57DA7E6 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		61D4544B46351AC4A90CAAE5E9D4ABDF /* Pods-SugarTraces WatchKit App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SugarTraces WatchKit App-umbrella.h"; sourceTree = "<group>"; };
+		655C782C1C87CB2F2D2E53CD4E87EB82 /* Pods-SugarTracesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTracesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66846F3E156F7BAF09C963F5142F2786 /* Pods-SugarTracesUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarTracesUITests.modulemap"; sourceTree = "<group>"; };
+		6945D2762D5BCA695980038891D977CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6E3B71F7196A8BF0ADD59D42009ABB78 /* Pods_SugarTraces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SugarTraces.framework; path = "Pods-SugarTraces.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72129F32D49DE2B1D1DC2ADDF5D35A06 /* Pods-SugarTraces WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SugarTraces WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7425D0766AF05C0556D862CAD5D8821A /* Pods-SugarTraces WatchKit App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SugarTraces WatchKit App-dummy.m"; sourceTree = "<group>"; };
+		755C7BE8C7B86B12D1C40CE9E6153203 /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
+		7B92412337CFF0F81E881A9286244850 /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
+		83199F5A7645310C9FEF01D5A0E66CF8 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
+		869344A609D85ADE60D0B060897DF0D4 /* Pods-SugarTraces-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SugarTraces-acknowledgements.markdown"; sourceTree = "<group>"; };
+		899C1326D0273B74E46664C01F9FAB9A /* Pods-SugarTraces-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SugarTraces-frameworks.sh"; sourceTree = "<group>"; };
+		8B887C5E2AC67FF7A21AA7432819E38F /* ResourceBundle-SAConfettiView-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
+		8FA12B7B4320224329817D4B77D92B8D /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
+		93BDD5598B817447FC92506FC4563334 /* Pods-SugarTracesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SugarTracesTests-dummy.m"; sourceTree = "<group>"; };
+		95901570847E5B8EC27C69FC2391B7F3 /* MMTabBarAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMTabBarAnimation.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A02C966830AB748EDD782B8C39839545 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A11746EEA7022AD40F27014A77834208 /* Pods-SugarTraces-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces-acknowledgements.plist"; sourceTree = "<group>"; };
+		A1F3BCCC38DAD6BC25EA6818C2EF6376 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
+		A3140996527581E81E236C73861F5A6F /* MMTabBarAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MMTabBarAnimation.modulemap; sourceTree = "<group>"; };
+		A7CBF618A482C17ADB2556A65C0D32A4 /* Pods_SugarTraces_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SugarTraces_WatchKit_Extension.framework; path = "Pods-SugarTraces WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F242BF4E97651F7135CEA6ADF53BB9 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MMTabBarAnimation.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A833F9438E02FE60033A531DF284FACA /* Pods-SugarTraces WatchKit App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces WatchKit App-Info.plist"; sourceTree = "<group>"; };
+		ADC53812F6B4FA6F05C9CB887443BDD3 /* Pods-SugarTraces-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SugarTraces-dummy.m"; sourceTree = "<group>"; };
+		AECCE2BE08422F4952AADBE1095F2D5D /* Pods-SugarTraces WatchKit Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SugarTraces WatchKit Extension-umbrella.h"; sourceTree = "<group>"; };
+		B112E8A4E3DA02F02F51F96372445DB8 /* Pods-SugarTracesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SugarTracesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B113DC0E876A192F2603CB5D48C5DFA0 /* Pods-SugarTracesTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTracesTests-Info.plist"; sourceTree = "<group>"; };
+		B34472AB63A6CD89CB9042A5B5852E70 /* Pods-SugarTraces-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces-Info.plist"; sourceTree = "<group>"; };
+		B7C44AC863E95987B6D1E1347231E045 /* Pods-SugarTraces WatchKit Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces WatchKit Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		BBDB5E6893242A4428B019DF768ACA0C /* Pods-SugarTraces WatchKit Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces WatchKit Extension-Info.plist"; sourceTree = "<group>"; };
+		BDC6594D7D392D176AE65289DECE215A /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		BE3BF6B3AE91B82CD55D469BB6803C76 /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
+		BF48FC828880DCDD89498D4BA3CD01D4 /* Pods-SugarTraces WatchKit App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SugarTraces WatchKit App-acknowledgements.plist"; sourceTree = "<group>"; };
+		C2CD92E6EB7F0166294EAAB97C311906 /* Pods-SugarTraces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces.debug.xcconfig"; sourceTree = "<group>"; };
+		C6B206C336510D1BCB5ACF7BE6A6429B /* MMTabBarAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMTabBarAnimation-umbrella.h"; sourceTree = "<group>"; };
+		C76BF79562330E890E57919E4B23BB57 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTraces WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		CCD2788D7C996FA0F4CCEAD2B045D2D2 /* SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SAConfettiView-Info.plist"; sourceTree = "<group>"; };
+		CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
+		D5FA836AB8942DC83794F328C6BB61D6 /* Pods-SugarTraces WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarTraces WatchKit App.modulemap"; sourceTree = "<group>"; };
+		D80618FF650BC5F3E924682F59E297A2 /* Pods-SugarTracesUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SugarTracesUITests-umbrella.h"; sourceTree = "<group>"; };
+		D8705D5889ABB85BDEB2D50AE707A7C1 /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		DADCE6126248F6F433B3B1DA0219118E /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		DFD573C61B9697D4B9CD82366F98FF56 /* ImageAnimateLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAnimateLayer.swift; path = MMTabBarAnimation/Classes/ImageAnimateLayer.swift; sourceTree = "<group>"; };
+		E94B64C2BD13E14D90FC9CA3977F42AF /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = "SAConfettiView-SAConfettiView.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF549BD4E0B9D9BDAFB6CA35B546E932 /* Pods-SugarTracesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SugarTracesTests-umbrella.h"; sourceTree = "<group>"; };
+		F048A7E0FC9C9A22239C9A056E0645B0 /* Pods-SugarTracesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SugarTracesTests.modulemap"; sourceTree = "<group>"; };
+		F2208661D5E662D766D61C737ABDEAD3 /* Pods_SugarTracesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SugarTracesTests.framework; path = "Pods-SugarTracesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53A2CDE5A3170AC5797D8E45DC5CC58 /* Pods-SugarTracesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SugarTracesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5B97DD3F1137829E339417903B248AC /* Pods-SugarTracesUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SugarTracesUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28B7D50B0CAC5EED8A5CF76F0A322C95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B478E9F4E3F42B7FC631F039B36870B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44C960AE1FF7DAAA0835732B58EE448D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BA05826C78A36A3D348440FF97BD3A6 /* Foundation.framework in Frameworks */,
+				02BBBA6D553E67C1026B165B4BFF72AA /* QuartzCore.framework in Frameworks */,
+				0F15C583AC48EA543C92AC2F369FAFC0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491D2688CDC552548D066EFC918D377A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA89E738D33D5F7EA1013C288A0D677F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49DD411DC1625B344663D43A81C15D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57EFA0A72349D74EB8C0EC3BC6FA6317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9FB6CA9AB2262729884623B57EFE506 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		964285184ABAB5BA603A305B9684490B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7508F33C6397F6FBAECAF1CDB2F6EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE7597D390EF218BD70F4973A98E753A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31AB02A6C1A0E16647C78CAB9E840E14 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC502723BC21371E8FB4CF85D23BD1A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D9ED33E9A11FCFB46FF6DFD9CC5136 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25B553403BBD4EEF4B3150C900C0B8AB /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				53C88210CE8E7FCAB8640FC827745208 /* Foundation.framework */,
+			);
+			name = watchOS;
+			sourceTree = "<group>";
+		};
+		453F3536220FBF454E5B4E7F74F85A95 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3140996527581E81E236C73861F5A6F /* MMTabBarAnimation.modulemap */,
+				95901570847E5B8EC27C69FC2391B7F3 /* MMTabBarAnimation.xcconfig */,
+				3CF83F9251C477FF5409DDDEF3D784EA /* MMTabBarAnimation-dummy.m */,
+				32E688D909F3E312AC02F817429C993F /* MMTabBarAnimation-Info.plist */,
+				324D60616F296487EFF96D84E5274DB6 /* MMTabBarAnimation-prefix.pch */,
+				C6B206C336510D1BCB5ACF7BE6A6429B /* MMTabBarAnimation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMTabBarAnimation";
+			sourceTree = "<group>";
+		};
+		4C7C93C3200304A27DE7C4337C313013 /* MMTabBarAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				119B20FD71FDA41AD190FE2133FB1C3D /* AnimateItem.swift */,
+				DFD573C61B9697D4B9CD82366F98FF56 /* ImageAnimateLayer.swift */,
+				0BFE676689D21E5AB0F8F87114924A22 /* MMTabBarAnimateController.swift */,
+				45E7C33A4C1629991BF5005AF8CF1340 /* UIViewExtension.swift */,
+				453F3536220FBF454E5B4E7F74F85A95 /* Support Files */,
+			);
+			name = MMTabBarAnimation;
+			path = MMTabBarAnimation;
+			sourceTree = "<group>";
+		};
+		534A10154B5EEF558D15BCB511BDB536 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6945D2762D5BCA695980038891D977CA /* Foundation.framework */,
+				A02C966830AB748EDD782B8C39839545 /* QuartzCore.framework */,
+				428B3558B9D2C818072191DF6517B8DD /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		56DAB9350D2C13DF03AF08B949D3BD8A /* Pods-SugarTraces WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D5FA836AB8942DC83794F328C6BB61D6 /* Pods-SugarTraces WatchKit App.modulemap */,
+				72129F32D49DE2B1D1DC2ADDF5D35A06 /* Pods-SugarTraces WatchKit App-acknowledgements.markdown */,
+				BF48FC828880DCDD89498D4BA3CD01D4 /* Pods-SugarTraces WatchKit App-acknowledgements.plist */,
+				7425D0766AF05C0556D862CAD5D8821A /* Pods-SugarTraces WatchKit App-dummy.m */,
+				A833F9438E02FE60033A531DF284FACA /* Pods-SugarTraces WatchKit App-Info.plist */,
+				61D4544B46351AC4A90CAAE5E9D4ABDF /* Pods-SugarTraces WatchKit App-umbrella.h */,
+				BDC6594D7D392D176AE65289DECE215A /* Pods-SugarTraces WatchKit App.debug.xcconfig */,
+				58259D06D400E9BB5D8CA173A57DA7E6 /* Pods-SugarTraces WatchKit App.release.xcconfig */,
+			);
+			name = "Pods-SugarTraces WatchKit App";
+			path = "Target Support Files/Pods-SugarTraces WatchKit App";
+			sourceTree = "<group>";
+		};
+		5C2B49F3D142346615A1C21F383832B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				755C7BE8C7B86B12D1C40CE9E6153203 /* confetti.png */,
+				7B92412337CFF0F81E881A9286244850 /* diamond.png */,
+				8FA12B7B4320224329817D4B77D92B8D /* star.png */,
+				A1F3BCCC38DAD6BC25EA6818C2EF6376 /* triangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5E84ECFC367C35F9E397E9609AAAC1C5 /* Pods-SugarTraces WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0DB734E252D3AEE0933CA05A8993656C /* Pods-SugarTraces WatchKit Extension.modulemap */,
+				2AF19AE10E4026A67E3016E53B725531 /* Pods-SugarTraces WatchKit Extension-acknowledgements.markdown */,
+				B7C44AC863E95987B6D1E1347231E045 /* Pods-SugarTraces WatchKit Extension-acknowledgements.plist */,
+				4E30AAE46887A142AD48BF2FA321B648 /* Pods-SugarTraces WatchKit Extension-dummy.m */,
+				BBDB5E6893242A4428B019DF768ACA0C /* Pods-SugarTraces WatchKit Extension-Info.plist */,
+				AECCE2BE08422F4952AADBE1095F2D5D /* Pods-SugarTraces WatchKit Extension-umbrella.h */,
+				C76BF79562330E890E57919E4B23BB57 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */,
+				29C5C718F216714C890DF2E145C88367 /* Pods-SugarTraces WatchKit Extension.release.xcconfig */,
+			);
+			name = "Pods-SugarTraces WatchKit Extension";
+			path = "Target Support Files/Pods-SugarTraces WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		6161E20B59FA32DA62830E685F0E73CF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B887C5E2AC67FF7A21AA7432819E38F /* ResourceBundle-SAConfettiView-SAConfettiView-Info.plist */,
+				DADCE6126248F6F433B3B1DA0219118E /* SAConfettiView.modulemap */,
+				CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */,
+				D8705D5889ABB85BDEB2D50AE707A7C1 /* SAConfettiView-dummy.m */,
+				CCD2788D7C996FA0F4CCEAD2B045D2D2 /* SAConfettiView-Info.plist */,
+				38D77F42FF5F10E8F9179446F1105FB1 /* SAConfettiView-prefix.pch */,
+				83199F5A7645310C9FEF01D5A0E66CF8 /* SAConfettiView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SAConfettiView";
+			sourceTree = "<group>";
+		};
+		8A02E5E0FFF00F1486B88BB5F2EFB56A /* Pods-SugarTraces */ = {
+			isa = PBXGroup;
+			children = (
+				0873C657918A86C62789A18CFBDB5E6B /* Pods-SugarTraces.modulemap */,
+				869344A609D85ADE60D0B060897DF0D4 /* Pods-SugarTraces-acknowledgements.markdown */,
+				A11746EEA7022AD40F27014A77834208 /* Pods-SugarTraces-acknowledgements.plist */,
+				ADC53812F6B4FA6F05C9CB887443BDD3 /* Pods-SugarTraces-dummy.m */,
+				899C1326D0273B74E46664C01F9FAB9A /* Pods-SugarTraces-frameworks.sh */,
+				B34472AB63A6CD89CB9042A5B5852E70 /* Pods-SugarTraces-Info.plist */,
+				37BF541790386489DE9361B4C50D596F /* Pods-SugarTraces-umbrella.h */,
+				C2CD92E6EB7F0166294EAAB97C311906 /* Pods-SugarTraces.debug.xcconfig */,
+				51FD4B6116DBAA3DD75993586638141A /* Pods-SugarTraces.release.xcconfig */,
+			);
+			name = "Pods-SugarTraces";
+			path = "Target Support Files/Pods-SugarTraces";
+			sourceTree = "<group>";
+		};
+		8B0863ED773891A6D1EE6E0B4079526B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7F242BF4E97651F7135CEA6ADF53BB9 /* MMTabBarAnimation.framework */,
+				6E3B71F7196A8BF0ADD59D42009ABB78 /* Pods_SugarTraces.framework */,
+				447D262ADD81E5AC83D83D62B50CD5CC /* Pods_SugarTraces_WatchKit_App.framework */,
+				A7CBF618A482C17ADB2556A65C0D32A4 /* Pods_SugarTraces_WatchKit_Extension.framework */,
+				F2208661D5E662D766D61C737ABDEAD3 /* Pods_SugarTracesTests.framework */,
+				124A6EB6BB74FAC03AB3A1E060EAAA29 /* Pods_SugarTracesUITests.framework */,
+				E94B64C2BD13E14D90FC9CA3977F42AF /* SAConfettiView.bundle */,
+				4CFF2E4058F858816365EC642C6DD990 /* SAConfettiView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABF724E71B44EEB22509A1E9A7A9C25C /* Pods-SugarTracesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66846F3E156F7BAF09C963F5142F2786 /* Pods-SugarTracesUITests.modulemap */,
+				F5B97DD3F1137829E339417903B248AC /* Pods-SugarTracesUITests-acknowledgements.markdown */,
+				36310F54447E3C0BAF59F1246389171B /* Pods-SugarTracesUITests-acknowledgements.plist */,
+				46A8721CAEF4E59910717D7C9FFBE7DC /* Pods-SugarTracesUITests-dummy.m */,
+				0D42255A3E3581089E14B655834AB2FF /* Pods-SugarTracesUITests-Info.plist */,
+				D80618FF650BC5F3E924682F59E297A2 /* Pods-SugarTracesUITests-umbrella.h */,
+				F53A2CDE5A3170AC5797D8E45DC5CC58 /* Pods-SugarTracesUITests.debug.xcconfig */,
+				3FB31DED3DD36A3C897782A222066A5E /* Pods-SugarTracesUITests.release.xcconfig */,
+			);
+			name = "Pods-SugarTracesUITests";
+			path = "Target Support Files/Pods-SugarTracesUITests";
+			sourceTree = "<group>";
+		};
+		B26249BFA6EE55C16C11AE1C09625552 /* SAConfettiView */ = {
+			isa = PBXGroup;
+			children = (
+				BE3BF6B3AE91B82CD55D469BB6803C76 /* SAConfettiView.swift */,
+				5C2B49F3D142346615A1C21F383832B5 /* Resources */,
+				6161E20B59FA32DA62830E685F0E73CF /* Support Files */,
+			);
+			name = SAConfettiView;
+			path = SAConfettiView;
+			sourceTree = "<group>";
+		};
+		BFC9A8986ED351F9B00BE7521FE1A3E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534A10154B5EEF558D15BCB511BDB536 /* iOS */,
+				25B553403BBD4EEF4B3150C900C0B8AB /* watchOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BFC9A8986ED351F9B00BE7521FE1A3E8 /* Frameworks */,
+				F51062264A56C61D4A250996D0DAEE8C /* Pods */,
+				8B0863ED773891A6D1EE6E0B4079526B /* Products */,
+				F705002CDCE89351ABCDAA5F8D7447B5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		EA54B952ECFFA1D3AEC505FF63437514 /* Pods-SugarTracesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F048A7E0FC9C9A22239C9A056E0645B0 /* Pods-SugarTracesTests.modulemap */,
+				B112E8A4E3DA02F02F51F96372445DB8 /* Pods-SugarTracesTests-acknowledgements.markdown */,
+				14B19F58981AD6BE05F7D1CEDDFE1510 /* Pods-SugarTracesTests-acknowledgements.plist */,
+				93BDD5598B817447FC92506FC4563334 /* Pods-SugarTracesTests-dummy.m */,
+				B113DC0E876A192F2603CB5D48C5DFA0 /* Pods-SugarTracesTests-Info.plist */,
+				EF549BD4E0B9D9BDAFB6CA35B546E932 /* Pods-SugarTracesTests-umbrella.h */,
+				655C782C1C87CB2F2D2E53CD4E87EB82 /* Pods-SugarTracesTests.debug.xcconfig */,
+				34391A6C3D6C9932470EA52A36E8305A /* Pods-SugarTracesTests.release.xcconfig */,
+			);
+			name = "Pods-SugarTracesTests";
+			path = "Target Support Files/Pods-SugarTracesTests";
+			sourceTree = "<group>";
+		};
+		F51062264A56C61D4A250996D0DAEE8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C7C93C3200304A27DE7C4337C313013 /* MMTabBarAnimation */,
+				B26249BFA6EE55C16C11AE1C09625552 /* SAConfettiView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F705002CDCE89351ABCDAA5F8D7447B5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A02E5E0FFF00F1486B88BB5F2EFB56A /* Pods-SugarTraces */,
+				56DAB9350D2C13DF03AF08B949D3BD8A /* Pods-SugarTraces WatchKit App */,
+				5E84ECFC367C35F9E397E9609AAAC1C5 /* Pods-SugarTraces WatchKit Extension */,
+				EA54B952ECFFA1D3AEC505FF63437514 /* Pods-SugarTracesTests */,
+				ABF724E71B44EEB22509A1E9A7A9C25C /* Pods-SugarTracesUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10949A331BBDDF035D85ED55DE79C5D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7775F77D2067CDC650EA611175D7A896 /* Pods-SugarTracesTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D820A059C49AAE4F279C4EE8AD89F2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				120D789BD7FFF37CC4EF6D95B16F5420 /* Pods-SugarTraces WatchKit App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F1D5C6C1CFBDFC46FE00A9BF8827AFB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				520244FBE61B294FE789281A41FA4332 /* Pods-SugarTraces WatchKit Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B405195849A35F7263CC453E49954C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				252294FAB3A1ECA025AEB675F3F46ED1 /* MMTabBarAnimation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84328E4206F90166765340C02ED6C0FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8617B911AE350986CD115D328EBD69C /* SAConfettiView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0A53DEE0F36629A0D655AC88C0E9FDD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B75C06E17D496FA2ABF31EE91E57C5E /* Pods-SugarTraces-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A610246F0BB7F812144619AB88B94958 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6B6C3DF02E7CC4F430D56444BC216D9 /* Pods-SugarTracesUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1E488B4A8341D4A1374B44B7D0191BC4 /* SAConfettiView-SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08FC3EABC923CF523A32E299C1BB8DD /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
+			buildPhases = (
+				18DC88AB1CF41A97684AE8302F5A2A4D /* Sources */,
+				49DD411DC1625B344663D43A81C15D17 /* Frameworks */,
+				70E3261F6EE119A0497B87A04AE65779 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAConfettiView-SAConfettiView";
+			productName = "SAConfettiView-SAConfettiView";
+			productReference = E94B64C2BD13E14D90FC9CA3977F42AF /* SAConfettiView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		4F9207AB2E4F1E89B34CCEF995E4A140 /* MMTabBarAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C6E6AE0F72F793FDC0D8ED7A63DD62 /* Build configuration list for PBXNativeTarget "MMTabBarAnimation" */;
+			buildPhases = (
+				5B405195849A35F7263CC453E49954C0 /* Headers */,
+				7CE3BC5FCC5B4A056591B1777DBC4520 /* Sources */,
+				EE7597D390EF218BD70F4973A98E753A /* Frameworks */,
+				9FC77F269BCF813EA254D79F80F5DEF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMTabBarAnimation;
+			productName = MMTabBarAnimation;
+			productReference = A7F242BF4E97651F7135CEA6ADF53BB9 /* MMTabBarAnimation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E943F4A9A9219C0E49B217E911B0664 /* Pods-SugarTraces WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5727264EF7BB5D11FA6890A6CFB3B6DF /* Build configuration list for PBXNativeTarget "Pods-SugarTraces WatchKit Extension" */;
+			buildPhases = (
+				1F1D5C6C1CFBDFC46FE00A9BF8827AFB /* Headers */,
+				9CE186F68EF0771198A5FA2F8955BCB1 /* Sources */,
+				964285184ABAB5BA603A305B9684490B /* Frameworks */,
+				795E3514AF279F64CF6A0BF2F9E22D18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SugarTraces WatchKit Extension";
+			productName = "Pods-SugarTraces WatchKit Extension";
+			productReference = A7CBF618A482C17ADB2556A65C0D32A4 /* Pods_SugarTraces_WatchKit_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C06B86EA617129EC0685068ECF60BA96 /* Pods-SugarTracesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD87EA04969F3D4932EC9DA24B8097D9 /* Build configuration list for PBXNativeTarget "Pods-SugarTracesTests" */;
+			buildPhases = (
+				10949A331BBDDF035D85ED55DE79C5D6 /* Headers */,
+				9BDE9343CC40436D5227B33614AF1575 /* Sources */,
+				491D2688CDC552548D066EFC918D377A /* Frameworks */,
+				0085FD8790D4DC1257833D081E6EFBE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9990B3E4A7EF960D47ACD0AF157E4FC1 /* PBXTargetDependency */,
+			);
+			name = "Pods-SugarTracesTests";
+			productName = "Pods-SugarTracesTests";
+			productReference = F2208661D5E662D766D61C737ABDEAD3 /* Pods_SugarTracesTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9D3A40235132E6C59CE31CBA7EEA37B /* Pods-SugarTraces WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68E3F048ACC9F4CD101C33E73948AF6E /* Build configuration list for PBXNativeTarget "Pods-SugarTraces WatchKit App" */;
+			buildPhases = (
+				1D820A059C49AAE4F279C4EE8AD89F2A /* Headers */,
+				8CBAD1F465E40B4659FDE0DE499EA3C7 /* Sources */,
+				FC502723BC21371E8FB4CF85D23BD1A4 /* Frameworks */,
+				DF36A3B185DAF0E5C58E555BB1C2C75B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SugarTraces WatchKit App";
+			productName = "Pods-SugarTraces WatchKit App";
+			productReference = 447D262ADD81E5AC83D83D62B50CD5CC /* Pods_SugarTraces_WatchKit_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DEF5EC9A82178D0D695682390F2DE2F1 /* SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A7FD801DDF40A55A66A41D9997C32CE /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
+			buildPhases = (
+				84328E4206F90166765340C02ED6C0FD /* Headers */,
+				EC8D63BDE57DCA5749BBD6E504B86E87 /* Sources */,
+				44C960AE1FF7DAAA0835732B58EE448D /* Frameworks */,
+				B6B51ED5B8E11F603E2E5554677E4BF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B1272A325D7E31B9254744A630CAB7 /* PBXTargetDependency */,
+			);
+			name = SAConfettiView;
+			productName = SAConfettiView;
+			productReference = 4CFF2E4058F858816365EC642C6DD990 /* SAConfettiView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F00DB898E933D57C35EE001BE6AF78E9 /* Pods-SugarTraces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E40C1D78EC74BB0AD2E3BE4203440058 /* Build configuration list for PBXNativeTarget "Pods-SugarTraces" */;
+			buildPhases = (
+				A0A53DEE0F36629A0D655AC88C0E9FDD /* Headers */,
+				08E4A3CB86D7949C1DF6A1145ECC73B0 /* Sources */,
+				28B7D50B0CAC5EED8A5CF76F0A322C95 /* Frameworks */,
+				EBFE624E75C0FB8B3188B708BA29FCEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88A15DF53306CD1E151DB46420DE9CDE /* PBXTargetDependency */,
+				199B260CF596F3B86D68072B7414FEF2 /* PBXTargetDependency */,
+			);
+			name = "Pods-SugarTraces";
+			productName = "Pods-SugarTraces";
+			productReference = 6E3B71F7196A8BF0ADD59D42009ABB78 /* Pods_SugarTraces.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD59E648981E2E66CBF4CC345EAA14A3 /* Pods-SugarTracesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54C3E89273D5D1B582556D0753E87B80 /* Build configuration list for PBXNativeTarget "Pods-SugarTracesUITests" */;
+			buildPhases = (
+				A610246F0BB7F812144619AB88B94958 /* Headers */,
+				814601BB2D960BCAF6926B861B0C3613 /* Sources */,
+				57EFA0A72349D74EB8C0EC3BC6FA6317 /* Frameworks */,
+				993D393453F26DE96FEED21A53142611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D96852BFFABA78A50FFFB5E766B6911D /* PBXTargetDependency */,
+			);
+			name = "Pods-SugarTracesUITests";
+			productName = "Pods-SugarTracesUITests";
+			productReference = 124A6EB6BB74FAC03AB3A1E060EAAA29 /* Pods_SugarTracesUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 8B0863ED773891A6D1EE6E0B4079526B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F9207AB2E4F1E89B34CCEF995E4A140 /* MMTabBarAnimation */,
+				F00DB898E933D57C35EE001BE6AF78E9 /* Pods-SugarTraces */,
+				C9D3A40235132E6C59CE31CBA7EEA37B /* Pods-SugarTraces WatchKit App */,
+				7E943F4A9A9219C0E49B217E911B0664 /* Pods-SugarTraces WatchKit Extension */,
+				C06B86EA617129EC0685068ECF60BA96 /* Pods-SugarTracesTests */,
+				FD59E648981E2E66CBF4CC345EAA14A3 /* Pods-SugarTracesUITests */,
+				DEF5EC9A82178D0D695682390F2DE2F1 /* SAConfettiView */,
+				1E488B4A8341D4A1374B44B7D0191BC4 /* SAConfettiView-SAConfettiView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0085FD8790D4DC1257833D081E6EFBE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70E3261F6EE119A0497B87A04AE65779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3348D74A7EC3F9236DFE576AE8CF92 /* confetti.png in Resources */,
+				65FE344CF109E88FA712681AAEEB7C75 /* diamond.png in Resources */,
+				8BFB79A61072A8FCCA1207D3282F2606 /* star.png in Resources */,
+				EAEDC21885FBB482FC6217CF5DFB25B3 /* triangle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		795E3514AF279F64CF6A0BF2F9E22D18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		993D393453F26DE96FEED21A53142611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC77F269BCF813EA254D79F80F5DEF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6B51ED5B8E11F603E2E5554677E4BF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E55265C877D73F6B1D022794340DC9D6 /* SAConfettiView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF36A3B185DAF0E5C58E555BB1C2C75B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBFE624E75C0FB8B3188B708BA29FCEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08E4A3CB86D7949C1DF6A1145ECC73B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6697789139911083133512CC5C267 /* Pods-SugarTraces-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DC88AB1CF41A97684AE8302F5A2A4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CE3BC5FCC5B4A056591B1777DBC4520 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97FB26744FC00505D9438DFB1BB35B1 /* AnimateItem.swift in Sources */,
+				AB58563C03A2FB392E4394F00CF39CEC /* ImageAnimateLayer.swift in Sources */,
+				583E6E8D393D8812D708DF59E4BBA21F /* MMTabBarAnimateController.swift in Sources */,
+				E1AF4311BAE94BF1E509BF75658E7542 /* MMTabBarAnimation-dummy.m in Sources */,
+				6D46D00612344BAA080C4837AD8F9D31 /* UIViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		814601BB2D960BCAF6926B861B0C3613 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C4399C3360DDC2494F97D19CF8BEB6 /* Pods-SugarTracesUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CBAD1F465E40B4659FDE0DE499EA3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8136A18B1D809ABE95B80DBE34A58F6C /* Pods-SugarTraces WatchKit App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BDE9343CC40436D5227B33614AF1575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E6EB555FD8B3B6C870BED33D353E45 /* Pods-SugarTracesTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CE186F68EF0771198A5FA2F8955BCB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBDBD29F9CA38DF64AE08816CAC64C6F /* Pods-SugarTraces WatchKit Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8D63BDE57DCA5749BBD6E504B86E87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B09B44A046D5700C1BCBF4E4F237DFD /* SAConfettiView-dummy.m in Sources */,
+				BC82831E158BED1EAD6B2A5A322754C3 /* SAConfettiView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		199B260CF596F3B86D68072B7414FEF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SAConfettiView;
+			target = DEF5EC9A82178D0D695682390F2DE2F1 /* SAConfettiView */;
+			targetProxy = 67626E5B21E6BC8C6AB2771751752952 /* PBXContainerItemProxy */;
+		};
+		55B1272A325D7E31B9254744A630CAB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SAConfettiView-SAConfettiView";
+			target = 1E488B4A8341D4A1374B44B7D0191BC4 /* SAConfettiView-SAConfettiView */;
+			targetProxy = A27AD697FC1C902B9C90216BDB407C9F /* PBXContainerItemProxy */;
+		};
+		88A15DF53306CD1E151DB46420DE9CDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMTabBarAnimation;
+			target = 4F9207AB2E4F1E89B34CCEF995E4A140 /* MMTabBarAnimation */;
+			targetProxy = 5F2CED348BA35DC948DEE02BB4D599E8 /* PBXContainerItemProxy */;
+		};
+		9990B3E4A7EF960D47ACD0AF157E4FC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SugarTraces";
+			target = F00DB898E933D57C35EE001BE6AF78E9 /* Pods-SugarTraces */;
+			targetProxy = E8772EAD8E01E9C7F9B7ACEF60634682 /* PBXContainerItemProxy */;
+		};
+		D96852BFFABA78A50FFFB5E766B6911D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SugarTraces";
+			target = F00DB898E933D57C35EE001BE6AF78E9 /* Pods-SugarTraces */;
+			targetProxy = 467A248DD7448532DC59DA92AC9C1209 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09D8191BED4CA26DE803320171EDEF15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC6594D7D392D176AE65289DECE215A /* Pods-SugarTraces WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		108829235E29F2B0308B11CF73C78543 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76BF79562330E890E57919E4B23BB57 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		307045D867D6418E373904B50E083031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CD92E6EB7F0166294EAAB97C311906 /* Pods-SugarTraces.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3284047C7260E2CC576A7CC733ADDC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/SAConfettiView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				PRODUCT_MODULE_NAME = SAConfettiView;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		42DD988BA5ACB6396C350A45F6EDDF3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34391A6C3D6C9932470EA52A36E8305A /* Pods-SugarTracesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4748C573EBB4687B08CD49362524BAB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/SAConfettiView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				PRODUCT_MODULE_NAME = SAConfettiView;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		532ADB53438EBDC4EEF79ACE4A14C1A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53A2CDE5A3170AC5797D8E45DC5CC58 /* Pods-SugarTracesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7F06CA9ACA06C5FCB16AF557CD0EFBE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		971970FDFBE993853751047762554021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58259D06D400E9BB5D8CA173A57DA7E6 /* Pods-SugarTraces WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		979E7C68B863F9924810A9FF3710DCE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB0E41623C0958B504DB7F13C6E6D7C /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		ADEB74E8E2F6434DF902458AFF891686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95901570847E5B8EC27C69FC2391B7F3 /* MMTabBarAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation.modulemap";
+				PRODUCT_MODULE_NAME = MMTabBarAnimation;
+				PRODUCT_NAME = MMTabBarAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B3DDD7CC7B94B419B2BA8D96818EB32E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655C782C1C87CB2F2D2E53CD4E87EB82 /* Pods-SugarTracesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTracesTests/Pods-SugarTracesTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C4A2545B6592F2C40A4F7A8B8EC96108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C5C718F216714C890DF2E145C88367 /* Pods-SugarTraces WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces WatchKit Extension/Pods-SugarTraces WatchKit Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		C525502D76A53DE4F838CA69E25F73FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FB31DED3DD36A3C897782A222066A5E /* Pods-SugarTracesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTracesUITests/Pods-SugarTracesUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6AA4FC3B1D738F1AF9F566CAFE6E038 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		CFE70B3C23372E19C5A73AB1B2901EAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51FD4B6116DBAA3DD75993586638141A /* Pods-SugarTraces.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SugarTraces/Pods-SugarTraces.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E5655574E4ED4760D6A71B8042150240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		F536D55A7511AEC4EC7ECF8698CD4917 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95901570847E5B8EC27C69FC2391B7F3 /* MMTabBarAnimation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MMTabBarAnimation/MMTabBarAnimation.modulemap";
+				PRODUCT_MODULE_NAME = MMTabBarAnimation;
+				PRODUCT_NAME = MMTabBarAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A7FD801DDF40A55A66A41D9997C32CE /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3284047C7260E2CC576A7CC733ADDC78 /* Debug */,
+				4748C573EBB4687B08CD49362524BAB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5655574E4ED4760D6A71B8042150240 /* Debug */,
+				C6AA4FC3B1D738F1AF9F566CAFE6E038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54C3E89273D5D1B582556D0753E87B80 /* Build configuration list for PBXNativeTarget "Pods-SugarTracesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				532ADB53438EBDC4EEF79ACE4A14C1A5 /* Debug */,
+				C525502D76A53DE4F838CA69E25F73FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5727264EF7BB5D11FA6890A6CFB3B6DF /* Build configuration list for PBXNativeTarget "Pods-SugarTraces WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				108829235E29F2B0308B11CF73C78543 /* Debug */,
+				C4A2545B6592F2C40A4F7A8B8EC96108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68E3F048ACC9F4CD101C33E73948AF6E /* Build configuration list for PBXNativeTarget "Pods-SugarTraces WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09D8191BED4CA26DE803320171EDEF15 /* Debug */,
+				971970FDFBE993853751047762554021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3C6E6AE0F72F793FDC0D8ED7A63DD62 /* Build configuration list for PBXNativeTarget "MMTabBarAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F536D55A7511AEC4EC7ECF8698CD4917 /* Debug */,
+				ADEB74E8E2F6434DF902458AFF891686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08FC3EABC923CF523A32E299C1BB8DD /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F06CA9ACA06C5FCB16AF557CD0EFBE5 /* Debug */,
+				979E7C68B863F9924810A9FF3710DCE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD87EA04969F3D4932EC9DA24B8097D9 /* Build configuration list for PBXNativeTarget "Pods-SugarTracesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DDD7CC7B94B419B2BA8D96818EB32E /* Debug */,
+				42DD988BA5ACB6396C350A45F6EDDF3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E40C1D78EC74BB0AD2E3BE4203440058 /* Build configuration list for PBXNativeTarget "Pods-SugarTraces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				307045D867D6418E373904B50E083031 /* Debug */,
+				CFE70B3C23372E19C5A73AB1B2901EAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
