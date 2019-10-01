@@ -86,8 +86,8 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         //Readings are the y axis, dates are labeled at the x axis
         barChartView.noDataText = "You need to provide data for the chart."
         var dataEntries:[BarChartDataEntry] = []
-        if entryX.count > 5 {
-            for i in 0..<5{ //entryX.count for everything
+        if entryX.count > 6 {
+            for i in 0..<6{ //entryX.count for everything
                 let dataEntry = BarChartDataEntry(x: Double(i), y: Double(entryY[i]), data: loggedReadings as AnyObject?)
                 dataEntries.append(dataEntry)
             }
@@ -103,8 +103,8 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         
         //Color condition
         var tempColors = [UIColor]()
-        if entryX.count > 5 {
-            for i in 0..<5 {
+        if entryX.count > 6 {
+            for i in 0..<6 {
                 tempColors.append(setColor(value: Double(entryY[i])))
             }
         } else {
