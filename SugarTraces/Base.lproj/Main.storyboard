@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQ8-Md-ccu">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
                 <navigationController id="TZE-Wz-Gms" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stats" image="stats" id="nEC-kP-xG7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hew-NU-evD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,16 +29,31 @@
             <objects>
                 <viewController id="4tF-lM-344" customClass="StatsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCd-0d-Q44">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-sx-eDf" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mzG-sx-eDf" firstAttribute="top" secondItem="X0S-fv-HrD" secondAttribute="top" id="K8a-d3-wf2"/>
+                            <constraint firstItem="mzG-sx-eDf" firstAttribute="leading" secondItem="X0S-fv-HrD" secondAttribute="leading" constant="20" id="Tbl-Uz-Rpg"/>
+                            <constraint firstItem="mzG-sx-eDf" firstAttribute="bottom" secondItem="X0S-fv-HrD" secondAttribute="bottom" id="eum-6j-i5i"/>
+                            <constraint firstItem="X0S-fv-HrD" firstAttribute="trailing" secondItem="mzG-sx-eDf" secondAttribute="trailing" constant="20" id="xWy-NR-P8V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X0S-fv-HrD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Stats" id="uCj-Td-1K1"/>
+                    <connections>
+                        <outlet property="barChartView" destination="mzG-sx-eDf" id="dY3-Se-Q6x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guG-3o-GE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2584" y="-18"/>
+            <point key="canvasLocation" x="-2586.9565217391305" y="-18.75"/>
         </scene>
         <!--Home-->
         <scene sceneID="1Ly-c2-UW2">
@@ -46,7 +61,7 @@
                 <navigationController id="q8F-Ge-hLm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="7fs-Mi-SFx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SiW-Yl-Qat">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -62,7 +77,7 @@
             <objects>
                 <viewController id="PeB-xL-IjN" customClass="HomeViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78n-Ly-Jjt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9BF-Qa-acz"/>
@@ -100,7 +115,7 @@
                 <navigationController id="Fqe-bw-EwK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="ssg-mG-mm1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7LA-gw-O1i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -116,7 +131,7 @@
             <objects>
                 <viewController id="sc5-es-Ghr" customClass="InfoViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ttj-Ew-ozf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
@@ -142,7 +157,7 @@
             <objects>
                 <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Vw-SN-uWO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0ls-Di-czQ"/>
@@ -187,7 +202,7 @@
                 <navigationController id="tky-22-VOQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Glucose" image="add-glucose" id="i3O-r2-Cfy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewi-XV-UBZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -204,7 +219,7 @@
                 <navigationController id="utu-Ov-e2w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Achievements" image="achievements" id="diC-xi-LKI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mv6-C6-tuh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -220,7 +235,7 @@
             <objects>
                 <viewController id="NwO-f4-5aJ" customClass="AchievementsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZO9-sv-j9y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
@@ -236,11 +251,11 @@
             <objects>
                 <viewController id="iuP-vL-y8a" customClass="AddGlucoseViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRh-F1-y9K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0w-kl-0Sv">
-                                <rect key="frame" x="20" y="199" width="335" height="385"/>
+                                <rect key="frame" x="20" y="243" width="374" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Jsw-jR-agQ"/>
@@ -251,7 +266,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-mark-bg" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-kk-x6P">
-                                <rect key="frame" x="20" y="60" width="95" height="121"/>
+                                <rect key="frame" x="20" y="104" width="95" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="GTB-Po-96k" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -270,7 +285,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3r-kq-6nb">
-                                <rect key="frame" x="137.5" y="464.5" width="100" height="100"/>
+                                <rect key="frame" x="157" y="508.33333333333326" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Axl-vV-GYT" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target"/>
@@ -285,7 +300,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your blood glucose today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="kFg-2o-tYH">
-                                <rect key="frame" x="123" y="60" width="232" height="121"/>
+                                <rect key="frame" x="123" y="104" width="271" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="Obp-nq-8Qt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
@@ -302,7 +317,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My blood glucose is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-g8-XbS">
-                                <rect key="frame" x="95.5" y="369" width="184" height="26.5"/>
+                                <rect key="frame" x="115" y="413" width="184" height="26.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.670000000000002" id="otA-vN-2X4"/>
                                     <constraint firstAttribute="width" constant="184" id="vzc-bp-pPd"/>
@@ -312,7 +327,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insulin-pen" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-nt-Vaq">
-                                <rect key="frame" x="145" y="260" width="85" height="85"/>
+                                <rect key="frame" x="164.66666666666666" y="304" width="85" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="aW4-Qe-6c8" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -331,7 +346,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Gk-4Z6">
-                                <rect key="frame" x="94" y="415.5" width="187" height="34"/>
+                                <rect key="frame" x="113.66666666666669" y="459.66666666666669" width="187" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EH7-MB-Gco"/>
                                     <constraint firstAttribute="width" constant="187" id="Fra-Da-5gJ"/>
@@ -391,12 +406,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="achievements" width="37.5" height="37.5"/>
-        <image name="add-glucose" width="37.5" height="37.5"/>
-        <image name="home" width="37.5" height="37.5"/>
-        <image name="info" width="37.5" height="37.5"/>
-        <image name="insulin-pen" width="50" height="50"/>
-        <image name="question-mark-bg" width="50" height="50"/>
-        <image name="stats" width="37.5" height="37.5"/>
+        <image name="achievements" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="add-glucose" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="home" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="info" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="insulin-pen" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>

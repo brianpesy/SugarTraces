@@ -64,8 +64,6 @@ var aboveFeedback = ["Too much carbs actually turn into glucose. Sounda familiar
 "Do you have a death wish? No? Then stop and lower your blood sugar level!"]
 
 let defaults = UserDefaults.standard
-var loggedReadings = [Int]()
-var loggedDates = [String]()
 
 struct Keys {
     static let savedReadings = "savedReadings"
@@ -73,6 +71,9 @@ struct Keys {
 }
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
+    
+    var loggedReadings = [Int]()
+    var loggedDates = [String]()
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -204,48 +205,55 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                     
                 }
             }
-            
-            //Put data in array
-            let date = Date()
-            let formatter = DateFormatter()
-            //Date formatting
-            formatter.timeZone = .current
-            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
-            
-            loggedReadings.insert(num!, at: 0)
-            loggedDates.insert(formatter.string(from:date), at:0)
-            
-            //Save Data
-            saveLoggedData()
-            
-            glucoseInput.text = ""
-            
-            print(loggedReadings)
-            print(loggedDates)
         }
         //Below reading (below 70)
         else if (num! < 70){
             imageFeedback.image = UIImage(named: "sad-g")
             
+            //feedback
             belowFeedback.shuffle()
             feedback.text = belowFeedback[0]
             
+            //sound
+                        
         }
         //Above reading (above 150)
         else if (num! > 150){
             imageFeedback.image = UIImage(named: "angry-g")
             
+            //feedback
             aboveFeedback.shuffle()
             feedback.text = aboveFeedback[0]
             
+            //sound
+            
+            
         }
+        
+        //Put data in array
+        let date = Date()
+        let formatter = DateFormatter()
+        //Date formatting
+        formatter.timeZone = .current
+        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        
+        loggedReadings.insert(num!, at: 0)
+        loggedDates.insert(formatter.string(from:date), at:0)
+        
+        //Save Data
+        saveLoggedData()
+        
+        glucoseInput.text = ""
+        
+        print(loggedReadings)
+        print(loggedDates)
         
         //Watch Connectivity part
         
         //This can check if the watch is reachable. It'll have an error if it isn't!
         print(wcSession.isReachable)
 
-        //NOT WORKING YET
+        //SAVING IS NOT WORKING YET
         
         //I need my values to have a key! This is a dictionary
         let strReadings = "\(loggedReadings)"
