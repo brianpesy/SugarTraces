@@ -134,39 +134,210 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Jy-gdr">
+                                <rect key="frame" x="20" y="104" width="374" height="676"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
+                                <rect key="frame" x="142.66666666666666" y="532" width="128.99999999999997" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Acknowledgement">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Nie-3z-AhY" kind="show" id="b9l-DU-hl4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-pd-JL5">
+                                <rect key="frame" x="185" y="474" width="44" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jcB-1m-ZI8" kind="show" id="4wz-RX-Ogv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMU-1l-qTm">
+                                <rect key="frame" x="144.66666666666666" y="590" width="124.99999999999997" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Terms and Privacy">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1sQ-fP-c3I" kind="show" id="jvc-IY-23M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-PC-PKU">
+                                <rect key="frame" x="171" y="401" width="72" height="30"/>
+                                <state key="normal" title="Send Data"/>
+                                <connections>
+                                    <action selector="sendData:" destination="sc5-es-Ghr" eventType="touchUpInside" id="rBD-cQ-pLn"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-5a-qGc">
+                                <rect key="frame" x="132" y="151" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0sz-Jc-yDB" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="GlG-tf-U78" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IbP-PC-PKU" firstAttribute="top" secondItem="eGG-5a-qGc" secondAttribute="bottom" constant="100" id="0j6-tX-jpS" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="AMU-1l-qTm" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="5GP-Qe-4r6"/>
+                            <constraint firstItem="S8Z-Jy-gdr" firstAttribute="top" secondItem="sPl-0d-Blt" secondAttribute="top" constant="16" id="D91-VV-kpu"/>
+                            <constraint firstItem="sPl-0d-Blt" firstAttribute="bottom" secondItem="S8Z-Jy-gdr" secondAttribute="bottom" constant="33" id="axC-ds-j0h"/>
+                            <constraint firstItem="FO3-sw-Ooc" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="bWp-lB-7fz"/>
+                            <constraint firstItem="IbP-PC-PKU" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="eVb-9c-Anp"/>
+                            <constraint firstItem="sPl-0d-Blt" firstAttribute="trailing" secondItem="S8Z-Jy-gdr" secondAttribute="trailing" constant="20" id="efB-7I-O1D"/>
+                            <constraint firstItem="AMU-1l-qTm" firstAttribute="top" secondItem="FO3-sw-Ooc" secondAttribute="bottom" constant="26" id="gZG-cS-cr4"/>
+                            <constraint firstItem="b6P-pd-JL5" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="lXp-Xa-iPI"/>
+                            <constraint firstItem="S8Z-Jy-gdr" firstAttribute="leading" secondItem="sPl-0d-Blt" secondAttribute="leading" constant="20" id="nT4-xn-scZ"/>
+                            <constraint firstItem="b6P-pd-JL5" firstAttribute="top" secondItem="IbP-PC-PKU" secondAttribute="bottom" constant="43" id="nnA-If-zhC"/>
+                            <constraint firstItem="FO3-sw-Ooc" firstAttribute="top" secondItem="b6P-pd-JL5" secondAttribute="bottom" constant="26" id="rQk-uB-f4T"/>
+                            <constraint firstItem="eGG-5a-qGc" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="sWx-Cq-Nkb"/>
+                            <constraint firstItem="eGG-5a-qGc" firstAttribute="top" secondItem="sPl-0d-Blt" secondAttribute="top" constant="63" id="yJP-3Y-nmk" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sPl-0d-Blt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="3z7-W9-htS"/>
+                    <connections>
+                        <outlet property="aboutBtn" destination="b6P-pd-JL5" id="JuI-Fo-811"/>
+                        <outlet property="ackBtn" destination="FO3-sw-Ooc" id="PCG-mU-ZJ0"/>
+                        <outlet property="bgBox" destination="S8Z-Jy-gdr" id="pw5-c8-wxq"/>
+                        <outlet property="tpBtn" destination="AMU-1l-qTm" id="GkG-Jf-cAZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gP4-cx-Ws3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="-747"/>
+            <point key="canvasLocation" x="1389.8550724637682" y="-747.32142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms and Privacy-->
+        <scene sceneID="IcJ-kE-98R">
+            <objects>
+                <viewController id="1sQ-fP-c3I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bw5-go-3tz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="i4w-in-oFJ">
+                                <rect key="frame" x="20" y="103" width="374" height="695"/>
+                                <mutableString key="text">SugarTraces is a mobile health application developed by the Web Science Lab of the Department of Science, College of Engineering, University of the Philippines - Diliman. By using SugarTraces, you consent to the terms and conditions described in this Privacy Policy.  SugarTraces Does Not Collect Any Information  SugarTraces will request permissions to read information such as date of birth and sex. Additionally, it will also request permissions to read and write blood glucose readings. Collection of name, date of birth and sex is only used for customization and they are only stored on the device and will not be stored in a cloud.  The user has the ability to export their data to us through e-mail. The exportable data will only contain the user's sex, blood glucose readings as well as the dates the readings were recorded.  The exportable data will not include any personally identifiable information.  Changes to this Privacy Policy  We reserve the right to update our Privacy Policy. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.  Date: September 2, 2019</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i4w-in-oFJ" firstAttribute="leading" secondItem="oHe-ro-aoB" secondAttribute="leading" constant="20" id="cH1-vN-fyA"/>
+                            <constraint firstItem="i4w-in-oFJ" firstAttribute="top" secondItem="oHe-ro-aoB" secondAttribute="top" constant="15" id="moP-gc-4Xe"/>
+                            <constraint firstItem="oHe-ro-aoB" firstAttribute="bottom" secondItem="i4w-in-oFJ" secondAttribute="bottom" constant="15" id="p9b-58-W2r"/>
+                            <constraint firstItem="oHe-ro-aoB" firstAttribute="trailing" secondItem="i4w-in-oFJ" secondAttribute="trailing" constant="20" id="tBX-ie-O0D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oHe-ro-aoB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Terms and Privacy" id="i54-z1-6vC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHj-CC-nUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378.2608695652175" y="-1467.1875"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="sLT-T8-Nt5">
+            <objects>
+                <viewController id="jcB-1m-ZI8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wpy-Zj-BVh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-Cz-S9h">
+                                <rect key="frame" x="20" y="110" width="374" height="677"/>
+                                <string key="text">SugarTraces is a mobile health application which aims to help users live a healthier lifestyle by maintaining healthy blood glucose levels. It has gamified elements such as achievements, streaks, and feedback messages for entered blood glucose readings. This application was made by Karl Bayron and Brian Sy as a requirement for their Special Problems class in the University of the Philippines Diliman.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aTQ-Cz-S9h" firstAttribute="top" secondItem="vR7-Pj-Ool" secondAttribute="top" constant="22" id="2TB-we-917"/>
+                            <constraint firstItem="vR7-Pj-Ool" firstAttribute="bottom" secondItem="aTQ-Cz-S9h" secondAttribute="bottom" constant="26" id="5s7-U3-7Zm"/>
+                            <constraint firstItem="aTQ-Cz-S9h" firstAttribute="leading" secondItem="vR7-Pj-Ool" secondAttribute="leading" constant="20" id="SwB-My-abT"/>
+                            <constraint firstItem="vR7-Pj-Ool" firstAttribute="trailing" secondItem="aTQ-Cz-S9h" secondAttribute="trailing" constant="20" id="mwk-HZ-7Nz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vR7-Pj-Ool"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="oAx-hq-cUa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yk1-jD-i9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="-1402"/>
+        </scene>
+        <!--Acknowledgement-->
         <scene sceneID="lIJ-49-3Bw">
             <objects>
                 <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Vw-SN-uWO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We would like to thank our adviser, Professor Rommel Feria, for guiding us in developing this application." lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-WM-aye">
+                                <rect key="frame" x="20" y="111" width="374" height="677"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7cU-WM-aye" firstAttribute="top" secondItem="0ls-Di-czQ" secondAttribute="top" constant="23" id="0vH-6o-xxT"/>
+                            <constraint firstItem="0ls-Di-czQ" firstAttribute="trailing" secondItem="7cU-WM-aye" secondAttribute="trailing" constant="20" id="HRy-bg-a7k"/>
+                            <constraint firstItem="7cU-WM-aye" firstAttribute="leading" secondItem="0ls-Di-czQ" secondAttribute="leading" constant="20" id="Px2-JH-1fn"/>
+                            <constraint firstItem="0ls-Di-czQ" firstAttribute="bottom" secondItem="7cU-WM-aye" secondAttribute="bottom" constant="25" id="r5D-TT-8Af"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0ls-Di-czQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vuF-wW-Dri"/>
+                    <navigationItem key="navigationItem" title="Acknowledgement" id="r9e-ag-7gh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ld-jO-JFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="-747"/>
+            <point key="canvasLocation" x="2457.971014492754" y="-747.32142857142856"/>
         </scene>
         <!--Master Tab Bar View Controller-->
         <scene sceneID="X0U-p1-Xbt">
@@ -411,6 +582,7 @@
         <image name="home" width="33.333332061767578" height="33.333332061767578"/>
         <image name="info" width="33.333332061767578" height="33.333332061767578"/>
         <image name="insulin-pen" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
         <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
         <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
     </resources>

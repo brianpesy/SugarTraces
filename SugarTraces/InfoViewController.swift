@@ -10,10 +10,22 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var bgBox: UILabel!
+    @IBOutlet weak var aboutBtn: UIButton!
+    @IBOutlet weak var ackBtn: UIButton!
+    @IBOutlet weak var tpBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bgBox.textDropShadow()
         // Do any additional setup after loading the view.
+        aboutBtn.pulsate()
+        ackBtn.pulsate()
+        tpBtn.pulsate()
+    }
+    
+    @IBAction func sendData(_ sender: Any) {
+    
     }
     
 
