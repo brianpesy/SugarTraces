@@ -86,10 +86,16 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         //Readings are the y axis, dates are labeled at the x axis
         barChartView.noDataText = "You need to provide data for the chart."
         var dataEntries:[BarChartDataEntry] = []
-
-        for i in 0..<5{ //entryX.count for everything
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(entryY[i]), data: loggedReadings as AnyObject?)
-            dataEntries.append(dataEntry)
+        if entryX.count > 5 {
+            for i in 0..<5{ //entryX.count for everything
+                let dataEntry = BarChartDataEntry(x: Double(i), y: Double(entryY[i]), data: loggedReadings as AnyObject?)
+                dataEntries.append(dataEntry)
+            }
+        } else {
+            for i in 0..<entryX.count{ //entryX.count for everything
+                let dataEntry = BarChartDataEntry(x: Double(i), y: Double(entryY[i]), data: loggedReadings as AnyObject?)
+                dataEntries.append(dataEntry)
+            }
         }
 
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Blood Glucose")
@@ -97,9 +103,16 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         
         //Color condition
         var tempColors = [UIColor]()
-        for i in 0..<5 {
-            tempColors.append(setColor(value: Double(entryY[i])))
+        if entryX.count > 5 {
+            for i in 0..<5 {
+                tempColors.append(setColor(value: Double(entryY[i])))
+            }
+        } else {
+            for i in 0..<entryX.count {
+                tempColors.append(setColor(value: Double(entryY[i])))
+            }
         }
+
         chartDataSet.colors = tempColors
 
         //Legend preparation
@@ -129,7 +142,9 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         loadLoggedData()
         
         //Make the line graph
-        setChartValues(entryX: loggedDates, entryY: loggedReadings)
+        if (!loggedDates.isEmpty){
+            setChartValues(entryX: loggedDates, entryY: loggedReadings)
+        }
     }
     
 
