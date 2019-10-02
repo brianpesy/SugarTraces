@@ -17,10 +17,10 @@
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
 		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
 		F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B9012233B5313009FEED1 /* ComplicationController.swift */; };
-		F12D332723446D1000FE3C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12D332623446D1000FE3C3F /* AVFoundation.framework */; };
-		F12D332A23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
+		F12D332D234494C100FE3C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12D332623446D1000FE3C3F /* AVFoundation.framework */; };
+		F12D3330234495B600FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC1233C515700C877F1 /* HomeViewController.swift */; };
 		F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC3233C517E00C877F1 /* StatsViewController.swift */; };
 		F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */; };
@@ -174,7 +174,7 @@
 			files = (
 				E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */,
 				F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */,
-				F12D332723446D1000FE3C3F /* AVFoundation.framework in Frameworks */,
+				F12D332D234494C100FE3C3F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12D332A23446D6D00FE3C3F /* DING.mp3 in Resources */,
+				F12D3330234495B600FE3C3F /* DING.mp3 in Resources */,
 				F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */,
 				F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8032320DFB0001A9CF2 /* Main.storyboard in Resources */,

@@ -10,6 +10,7 @@ import UIKit
 import WatchConnectivity
 import SAConfettiView
 import AVFoundation
+import HealthKit
 
 //Below 70
 var belowFeedback = ["I think you should sit down, reflect on your blood sugar and munch on a banana.",
@@ -73,7 +74,7 @@ struct Keys {
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer: AVAudioPlayer!
     
     var loggedReadings = [Int]()
     var loggedDates = [String]()
@@ -152,13 +153,17 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
 //        self.tabBarItem.title = "Add Glucose"
         
         
-        let sound = Bundle.main.path(forResource: "DING", ofType: "mp3")
-        
+        let sound = Bundle.main.path(forResource: "DING.mp3", ofType: nil)
+        print(sound)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         } catch {
             print(error)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sendAnim.pulsate()
     }
     
     func saveLoggedData(){
@@ -172,6 +177,26 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         var savedDates = defaults.array(forKey: Keys.savedDates) as? [String] ?? [String]()
         loggedDates = savedDates
+    }
+    
+    func writeBloodGlucose(bloodGlucose: Double){
+        
+        let quantityType = HKQuantityType.quantityType(forIdentifier: .bloodGlucose)
+        
+        let quantityUnit = HKUnit(from: "mg/dL")
+        
+        let quantityAmount = HKQuantity(unit: quantityUnit, doubleValue: bloodGlucose)
+        
+        let now = Date()
+        
+        let sample = HKQuantitySample(type: quantityType!, quantity: quantityAmount, start: Date(), end: Date())
+        
+        healthKitStore.save(sample) { (success,error) in
+            if success {
+                print("successful")
+            }
+            
+        }
     }
     
     @IBAction func send(_ sender: Any) {
@@ -252,13 +277,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         //Save Data
         saveLoggedData()
         
+        //Saving to HealthKit
+        writeBloodGlucose(bloodGlucose: Double(num!))
+        
         glucoseInput.text = ""
         
         print(loggedReadings)
         print(loggedDates)
-        
-        //Write blood glucose to HealthKit
-        
         
         
         //Watch Connectivity part
