@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class HomeViewController: UIViewController {
 
@@ -16,7 +17,10 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
 
+    }
+    
     /*
     // MARK: - Navigation
 

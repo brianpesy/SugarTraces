@@ -9,6 +9,7 @@
 import UIKit
 import WatchConnectivity
 import SAConfettiView
+import AVFoundation
 
 //Below 70
 var belowFeedback = ["I think you should sit down, reflect on your blood sugar and munch on a banana.",
@@ -71,6 +72,8 @@ struct Keys {
 }
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
+    
+    var audioPlayer = AVAudioPlayer()
     
     var loggedReadings = [Int]()
     var loggedDates = [String]()
@@ -138,7 +141,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         glucoseInput.layer.borderWidth = 2.0
         glucoseInput.layer.borderColor = UIColor.gray.cgColor
         glucoseInput.clipsToBounds = true
-        glucoseInput.placeholder = "Tap here to type"
+        glucoseInput.placeholder = "In mg/dL"
         
         //Dismiss keyboard when tapped anywhere
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
@@ -147,6 +150,15 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         loadLoggedData()
                 
 //        self.tabBarItem.title = "Add Glucose"
+        
+        
+        let sound = Bundle.main.path(forResource: "DING", ofType: "mp3")
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        } catch {
+            print(error)
+        }
     }
     
     func saveLoggedData(){
@@ -168,11 +180,14 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //Flash animation when pressed
         sendAnim.flash()
-        
+                
         //Empty case with nothing inputted or anything that is not a number
         if (glucoseInput.text == "" || Int(glucoseInput.text!) == nil){
             return
         }
+        
+        //sound clip
+        audioPlayer.play()
         
         let num = Int(glucoseInput.text!)
         
@@ -193,9 +208,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //Confetti settings
             confettiView.intensity = 0.2
             confettiView.startConfetti()
-            
-            //Sound clip
-            
+                        
             
             //Delay
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -213,9 +226,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //feedback
             belowFeedback.shuffle()
             feedback.text = belowFeedback[0]
-            
-            //sound
-                        
+                                    
         }
         //Above reading (above 150)
         else if (num! > 150){
@@ -224,8 +235,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //feedback
             aboveFeedback.shuffle()
             feedback.text = aboveFeedback[0]
-            
-            //sound
             
             
         }
@@ -247,6 +256,10 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         print(loggedReadings)
         print(loggedDates)
+        
+        //Write blood glucose to HealthKit
+        
+        
         
         //Watch Connectivity part
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class InfoViewController: UIViewController {
 
@@ -32,9 +33,63 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func sendData(_ sender: Any) {
-    
+        //sending export data through email: wsl-research@dcs.upd.edu.ph
+        
+        // Data consists of: date of birth, blood glucose levels and dates, and sex. HealthKit functionality required.
+        // Subject: SugarTraces Health Data
+        let (dob, sex, bloodGlucose) = readProfile()
+        print(dob, sex)
     }
     
+    
+    func readProfile() -> (dob:Any?, sex:Any?, bloodGlucose:Any?){
+        
+        var dateOfBirth:Any?
+        var sexInp:Any?
+        var bloodglucose:Any?
+        
+        var biologicalSexObject: HKBiologicalSexObject?
+        var biologicalSex: HKBiologicalSex?
+        
+        do {
+            dateOfBirth = try healthKitStore.dateOfBirthComponents()
+            dateOfBirth = try healthKitStore.dateOfBirth()
+            print(dateOfBirth)
+        } catch {
+            print("nuh")
+        }
+        
+        do { //Get the sex of the person
+            biologicalSexObject = try healthKitStore.biologicalSex()
+            biologicalSex = biologicalSexObject!.biologicalSex
+            
+            switch biologicalSex!.rawValue{
+                case 0:
+                    sexInp = nil
+                case 1:
+                    sexInp = "Female"
+                case 2:
+                    sexInp = "Male"
+                case 3:
+                    sexInp = "Other"
+                default:
+                    sexInp = nil
+            }
+            
+            print(sexInp)
+        } catch {
+            print("nuh2")
+        }
+        
+        do {
+            //blood glucose reading here
+            
+//            bloodglucose = try healthKitStore.
+        }
+        
+//        return ("d","e")
+        return (dateOfBirth, sexInp, bloodglucose)
+    }
 
     /*
     // MARK: - Navigation

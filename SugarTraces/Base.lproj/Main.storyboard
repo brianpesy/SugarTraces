@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zQ8-Md-ccu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zhi-vM-rNq">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -92,6 +92,7 @@
         <scene sceneID="ia3-PX-eWT">
             <objects>
                 <tabBarController id="g4c-pl-X5t" customClass="MasterTabBarViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="guo-00-Sn0"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WRN-cg-KQA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -264,7 +265,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="i4w-in-oFJ">
                                 <rect key="frame" x="20" y="103" width="374" height="695"/>
-                                <mutableString key="text">SugarTraces is a mobile health application developed by the Web Science Lab of the Department of Science, College of Engineering, University of the Philippines - Diliman. By using SugarTraces, you consent to the terms and conditions described in this Privacy Policy.  SugarTraces Does Not Collect Any Information  SugarTraces will request permissions to read information such as date of birth and sex. Additionally, it will also request permissions to read and write blood glucose readings. Collection of name, date of birth and sex is only used for customization and they are only stored on the device and will not be stored in a cloud.  The user has the ability to export their data to us through e-mail. The exportable data will only contain the user's sex, blood glucose readings as well as the dates the readings were recorded.  The exportable data will not include any personally identifiable information.  Changes to this Privacy Policy  We reserve the right to update our Privacy Policy. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.  Date: September 2, 2019</mutableString>
+                                <string key="text">SugarTraces is a mobile health application developed by the Web Science Lab of the Department of Science, College of Engineering, University of the Philippines - Diliman. By using SugarTraces, you consent to the terms and conditions described in this Privacy Policy.  SugarTraces Does Not Collect Any Information  SugarTraces will request permissions to read information such as date of birth and sex. Additionally, it will also request permissions to read and write blood glucose readings. Collection of name, date of birth and sex is only used for customization and they are only stored on the device and will not be stored in a cloud.  The user has the ability to export their data to us through e-mail. The exportable data will only contain the user's sex, blood glucose readings as well as the dates the readings were recorded.  The exportable data will not include any personally identifiable information.  Changes to this Privacy Policy  We reserve the right to update our Privacy Policy. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.  Date: September 2, 2019</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -346,6 +347,31 @@
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="-747.32142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zJd-EL-VlM">
+            <objects>
+                <viewController id="Zhi-vM-rNq" customClass="ViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OxG-fx-E55">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fot-pI-f4H">
+                                <rect key="frame" x="184" y="485" width="46" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="zQ8-Md-ccu" kind="presentation" modalPresentationStyle="fullScreen" id="qKz-zS-IZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="j4a-bK-arW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Exr-0V-sVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-575.36231884057975" y="-1515.4017857142856"/>
+        </scene>
         <!--Master Tab Bar View Controller-->
         <scene sceneID="X0U-p1-Xbt">
             <objects>
@@ -379,6 +405,7 @@
             <objects>
                 <navigationController id="tky-22-VOQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Add Glucose" image="add-glucose" id="i3O-r2-Cfy"/>
+                    <navigationItem key="navigationItem" id="5Rq-Ns-9w6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewi-XV-UBZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

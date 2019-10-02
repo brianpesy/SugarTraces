@@ -17,6 +17,8 @@ class MasterTabBarViewController: MMTabBarAnimateController {
             // Always adopt a light interface style.
             overrideUserInterfaceStyle = .light
         }
+        
+        navigationItem.hidesBackButton = true
                 
         //initial tab bar button is Add Glucose
         self.selectedIndex = 2

@@ -17,6 +17,10 @@
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
 		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
 		F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B9012233B5313009FEED1 /* ComplicationController.swift */; };
+		F12D332723446D1000FE3C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12D332623446D1000FE3C3F /* AVFoundation.framework */; };
+		F12D332A23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
+		F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
+		F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC1233C515700C877F1 /* HomeViewController.swift */; };
 		F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC3233C517E00C877F1 /* StatsViewController.swift */; };
 		F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */; };
@@ -118,6 +122,8 @@
 		F12B8FF5233B14AA009FEED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../temp Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
 		F12B9012233B5313009FEED1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F12D332623446D1000FE3C3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F12D332923446D6D00FE3C3F /* DING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DING.mp3; sourceTree = "<group>"; };
 		F14B9BC1233C515700C877F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F14B9BC3233C517E00C877F1 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +174,7 @@
 			files = (
 				E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */,
 				F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */,
+				F12D332723446D1000FE3C3F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +208,7 @@
 		3D49B75D4F8C8760B0FD9756 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F12D332623446D1000FE3C3F /* AVFoundation.framework */,
 				F12B8FF5233B14AA009FEED1 /* HealthKit.framework */,
 				F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */,
 				DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */,
@@ -227,6 +235,14 @@
 				810F5782B48F686FB5910323 /* Pods-SugarTracesUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F12D332823446D3500FE3C3F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F12D332923446D6D00FE3C3F /* DING.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		F163C7F12320DFB0001A9CF2 = {
@@ -275,6 +291,7 @@
 				F163C8042320DFB3001A9CF2 /* Assets.xcassets */,
 				F163C8062320DFB3001A9CF2 /* LaunchScreen.storyboard */,
 				F163C8092320DFB3001A9CF2 /* Info.plist */,
+				F12D332823446D3500FE3C3F /* Sounds */,
 			);
 			path = SugarTraces;
 			sourceTree = "<group>";
@@ -476,6 +493,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D332A23446D6D00FE3C3F /* DING.mp3 in Resources */,
 				F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */,
 				F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8032320DFB0001A9CF2 /* Main.storyboard in Resources */,
@@ -500,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */,
 				F163C82B2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8292320DFB4001A9CF2 /* Interface.storyboard in Resources */,
 			);
@@ -509,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */,
 				F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
