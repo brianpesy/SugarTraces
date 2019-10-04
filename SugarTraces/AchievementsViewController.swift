@@ -10,10 +10,36 @@ import UIKit
 
 class AchievementsViewController: UIViewController {
 
+    var loggedAchievements = [Bool](repeating: false, count: 11)
+    var loggedAchDates = [String](repeating: "", count: 11)
+    
+    func loadAchievements(){
+        var savedAchievements = defaults.array(forKey: Keys.savedAchievements) as? [Bool] ?? [Bool]()
+        loggedAchievements = savedAchievements
+        
+        var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
+        loggedAchDates = savedAchDates
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadAchievements()
+        
+        if loggedAchievements.isEmpty {
+            loggedAchievements = [Bool](repeating: false, count: 11)
+        }
+        if loggedAchDates.isEmpty {
+            loggedAchDates = [String](repeating: "", count: 11)
+        }
+        
+        print(loggedAchievements)
+        print(loggedAchDates)
     }
     
 

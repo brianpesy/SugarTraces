@@ -70,14 +70,22 @@ let defaults = UserDefaults.standard
 struct Keys {
     static let savedReadings = "savedReadings"
     static let savedDates = "savedDates"
+    static let savedAchievements = "savedAchievements"
+    static let savedAchDates = "savedAchDates"
+
 }
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
     var audioPlayer: AVAudioPlayer!
+    var achAudioPlayer: AVAudioPlayer!
     
     var loggedReadings = [Int]()
     var loggedDates = [String]()
+
+    var loggedAchievements = [Bool](repeating: false, count: 11)
+    var loggedAchDates = [String](repeating: "", count: 11)
+
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -149,17 +157,28 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         view.addGestureRecognizer(tap)
         
         loadLoggedData()
-                
+        loadAchievements()
+        
+        if loggedAchievements.isEmpty {
+            loggedAchievements = [Bool](repeating: false, count: 11)
+        }
+        if loggedAchDates.isEmpty {
+            loggedAchDates = [String](repeating: "", count: 11)
+        }
 //        self.tabBarItem.title = "Add Glucose"
         
         
-        let sound = Bundle.main.path(forResource: "DING.mp3", ofType: nil)
-        print(sound)
+        let dingPath = Bundle.main.path(forResource: "DING.mp3", ofType: nil)
+        let swooshPath = Bundle.main.path(forResource: "SWOOSH3.mp3", ofType: nil)
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: dingPath!))
+            achAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: swooshPath!))
         } catch {
             print(error)
         }
+        
+        print(loggedAchievements)
+        print(loggedAchDates)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -170,6 +189,11 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         defaults.set(loggedReadings, forKey: Keys.savedReadings)
         defaults.set(loggedDates, forKey: Keys.savedDates)
     }
+    
+    func saveAchievements(){
+        defaults.set(loggedAchievements, forKey: Keys.savedAchievements)
+        defaults.set(loggedAchDates, forKey: Keys.savedAchDates)
+    }
 
     func loadLoggedData(){
         var savedReadings = defaults.array(forKey: Keys.savedReadings) as? [Int] ?? [Int]()
@@ -177,6 +201,14 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         var savedDates = defaults.array(forKey: Keys.savedDates) as? [String] ?? [String]()
         loggedDates = savedDates
+    }
+    
+    func loadAchievements(){
+        var savedAchievements = defaults.array(forKey: Keys.savedAchievements) as? [Bool] ?? [Bool]()
+        loggedAchievements = savedAchievements
+        
+        var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
+        loggedAchDates = savedAchDates
     }
     
     func writeBloodGlucose(bloodGlucose: Double){
@@ -199,6 +231,237 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         }
     }
     
+    func consecutiveDatesCheck(dateArray: [String]) -> Int {
+        //MM-DD-YYYY HH:MM:SS
+        var consecutiveDays = 1
+        var ctr = 0
+        var dateArrOnly = [Int]()
+        var monthArrOnly = [Int]()
+        var yearArrOnly = [Int]()
+        var dummy:String
+        while (ctr < dateArray.count){
+            //THE LATEST IS THE FIRST
+            
+            let fullDateSubStr = dateArray[ctr].prefix(10)
+            
+            //date parse
+            dummy = String(fullDateSubStr.prefix(2))
+            dateArrOnly.insert(Int(dummy)!, at: ctr)
+            
+            //month parse
+            
+            
+            //year parse
+
+            
+            print(fullDateSubStr)
+            print(dateArrOnly)
+            print(monthArrOnly)
+            print(yearArrOnly)
+
+            ctr = ctr + 1
+        }
+        
+        return consecutiveDays
+    }
+    
+    
+    func achievementCheck(){
+        //ADD GLUCOSE
+        //entered your first reading 0
+        if (!(loggedReadings.indices.contains(1)) && loggedAchievements[0] != true){
+            print("ACHIEVEMENT 1 GET")
+            
+            //Achievement get
+            loggedAchievements[0] = true
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[0] = formatter.string(from:date)
+            
+            //Alert that you got an achievement
+            
+            
+            //sound clip for achievement
+            achAudioPlayer.play()
+
+            saveAchievements()
+        }
+        
+        //entered 4 consecutive normal readings after an above normal reading 1
+        if (loggedReadings.indices.contains(4) && loggedAchievements[1] != true){
+            if (loggedReadings[4] > 150){
+                for i in 0..<4{
+
+                    if (loggedReadings[i] < 70 || loggedReadings[i] > 150){
+                        break
+                    }
+                    if (i == 3){
+                        achAudioPlayer.play()
+                        print("ACHIEVEMENT")
+                        //Achievement get
+                        loggedAchievements[1] = true
+                        
+                        let date = Date()
+                        let formatter = DateFormatter()
+                        //Date formatting
+                        formatter.timeZone = .current
+                        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                        
+                        //Date when achievement was gotten
+                        loggedAchDates[1] = formatter.string(from:date)
+                        
+                        saveAchievements()
+
+                    }
+                }
+            }
+        }
+        
+        //entered 5 consecutive normal readings 2
+        if (loggedReadings.indices.contains(4) && loggedAchievements[2] != true){
+            for i in 0..<5 {
+                if (loggedReadings[i] < 70 || loggedReadings[i] > 150){
+                    break
+                }
+                if (i == 4){
+                    achAudioPlayer.play()
+                    print("ACHIEVEMENT")
+                    
+                    //Achievement get
+                    loggedAchievements[2] = true
+                    
+                    let date = Date()
+                    let formatter = DateFormatter()
+                    //Date formatting
+                    formatter.timeZone = .current
+                    formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                    
+                    //Date when achievement was gotten
+                    loggedAchDates[2] = formatter.string(from:date)
+                    
+                    saveAchievements()
+                }
+            }
+        }
+        
+        
+        //entered 4 consecutive normal readings after a below normal reading 3
+        if (loggedReadings.indices.contains(4) && loggedAchievements[3] != true){
+            if (loggedReadings[4] < 70){
+                for i in 0..<4{
+
+                    if (loggedReadings[i] < 70 || loggedReadings[i] > 150){
+                        break
+                    }
+                    if (i == 3){
+                        achAudioPlayer.play()
+                        print("ACHIEVEMENT")
+                        //Achievement get
+                        loggedAchievements[3] = true
+                        
+                        let date = Date()
+                        let formatter = DateFormatter()
+                        //Date formatting
+                        formatter.timeZone = .current
+                        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                        
+                        //Date when achievement was gotten
+                        loggedAchDates[3] = formatter.string(from:date)
+                        
+                        saveAchievements()
+
+                    }
+                }
+            }
+        }
+        
+        //entered 10 consecutive normal readings 4
+        if (loggedReadings.indices.contains(9) && loggedAchievements[4] != true){
+            for i in 0..<10 {
+                if (loggedReadings[i] < 70 || loggedReadings[i] > 150){
+                    break
+                }
+                if (i == 9){
+                    achAudioPlayer.play()
+                    print("ACHIEVEMENT")
+                    
+                    //Achievement get
+                    loggedAchievements[4] = true
+                    
+                    let date = Date()
+                    let formatter = DateFormatter()
+                    //Date formatting
+                    formatter.timeZone = .current
+                    formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                    
+                    //Date when achievement was gotten
+                    loggedAchDates[4] = formatter.string(from:date)
+                    
+                    saveAchievements()
+                }
+            }
+        }
+        
+        //had a normal blood glucose streak for 3 days 5
+        //check everything in the array loggedDates, parse info
+            //if the same month-day-year
+        //DATE FORMAT: MM-DD-YYYY HH:MM:SS
+        
+        if (loggedDates.indices.contains(2) && loggedAchievements[5] != true){
+            //there needs to be at least 3 readings for this
+            print(loggedDates)
+            consecutiveDatesCheck(dateArray: loggedDates)
+//            if (consecutiveDatesCheck(dateArray: loggedDates) == 3) {
+//                achAudioPlayer.play()
+//            }
+        }
+        
+        //entered a normal reading after an above reading 6
+        
+        
+        //entered a normal reading after a below reading 7
+        
+        
+        //entered 15 consecutive normal readings 8
+        if (loggedReadings.indices.contains(14) && loggedAchievements[8] != true){
+            for i in 0..<15 {
+                if (loggedReadings[i] < 70 || loggedReadings[i] > 150){
+                    break
+                }
+                if (i == 14){
+                    achAudioPlayer.play()
+                    print("ACHIEVEMENT")
+                    
+                    //Achievement get
+                    loggedAchievements[8] = true
+                    
+                    let date = Date()
+                    let formatter = DateFormatter()
+                    //Date formatting
+                    formatter.timeZone = .current
+                    formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                    
+                    //Date when achievement was gotten
+                    loggedAchDates[8] = formatter.string(from:date)
+                    
+                    saveAchievements()
+                }
+            }
+        }
+
+        
+        //INFO
+        //shared your data (clicked on send data) 9
+        
+        //read the acknowledgement page (clicked on acknowledgement) 10
+    }
+    
     @IBAction func send(_ sender: Any) {
         
         //Processing of the data, changing feedback depending on ranges, saving input and corresponding date to a dictionary.
@@ -213,6 +476,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //sound clip
         audioPlayer.play()
+        
         
         let num = Int(glucoseInput.text!)
         
@@ -279,6 +543,9 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //Saving to HealthKit
         writeBloodGlucose(bloodGlucose: Double(num!))
+        
+        //Achievement check
+        achievementCheck()
         
         glucoseInput.text = ""
         

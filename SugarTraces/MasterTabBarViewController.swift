@@ -10,6 +10,9 @@ import UIKit
 import MMTabBarAnimation
 
 class MasterTabBarViewController: MMTabBarAnimateController {
+    
+    var name = "f"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,8 +20,17 @@ class MasterTabBarViewController: MMTabBarAnimateController {
             // Always adopt a light interface style.
             overrideUserInterfaceStyle = .light
         }
+        //if name name == "", we start the app with the segue to the intro. If not, we don't have to.
         
+        if (name == "") {
+//            performSegue(withIdentifier: "introSegue", sender: self)
+            performSegue(withIdentifier: "introSegue", sender: self)
+            name = "p"
+            print("in")
+        }
+        print("out")
         navigationItem.hidesBackButton = true
+
                 
         //initial tab bar button is Add Glucose
         self.selectedIndex = 2

@@ -12,6 +12,10 @@
 		C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */; };
 		D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */; };
 		E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */; };
+		F115C36A2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
+		F115C36B2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
+		F115C36C2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
+		F115C37423465492001CB683 /* Intro1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115C37323465492001CB683 /* Intro1ViewController.swift */; };
 		F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA72341D565003B4838 /* NSLayoutHelper.swift */; };
 		F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA92341D59D003B4838 /* DeviceHelper.swift */; };
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
@@ -21,6 +25,7 @@
 		F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F12D332D234494C100FE3C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12D332623446D1000FE3C3F /* AVFoundation.framework */; };
 		F12D3330234495B600FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
+		F12D333323457D0A00FE3C3F /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D333223457D0A00FE3C3F /* IntroViewController.swift */; };
 		F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC1233C515700C877F1 /* HomeViewController.swift */; };
 		F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC3233C517E00C877F1 /* StatsViewController.swift */; };
 		F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */; };
@@ -116,6 +121,8 @@
 		E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F115C3692345DC48001CB683 /* SWOOSH3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SWOOSH3.mp3; sourceTree = "<group>"; };
+		F115C37323465492001CB683 /* Intro1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro1ViewController.swift; sourceTree = "<group>"; };
 		F1169DA72341D565003B4838 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
 		F1169DA92341D59D003B4838 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SugarTraces.entitlements; sourceTree = "<group>"; };
@@ -124,6 +131,7 @@
 		F12B9012233B5313009FEED1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F12D332623446D1000FE3C3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F12D332923446D6D00FE3C3F /* DING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DING.mp3; sourceTree = "<group>"; };
+		F12D333223457D0A00FE3C3F /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		F14B9BC1233C515700C877F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F14B9BC3233C517E00C877F1 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		F14B9BC5233C518900C877F1 /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
@@ -240,9 +248,19 @@
 		F12D332823446D3500FE3C3F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F115C3692345DC48001CB683 /* SWOOSH3.mp3 */,
 				F12D332923446D6D00FE3C3F /* DING.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		F12D33312345789200FE3C3F /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				F115C37323465492001CB683 /* Intro1ViewController.swift */,
+				F12D333223457D0A00FE3C3F /* IntroViewController.swift */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		F163C7F12320DFB0001A9CF2 = {
@@ -291,6 +309,7 @@
 				F163C8042320DFB3001A9CF2 /* Assets.xcassets */,
 				F163C8062320DFB3001A9CF2 /* LaunchScreen.storyboard */,
 				F163C8092320DFB3001A9CF2 /* Info.plist */,
+				F12D33312345789200FE3C3F /* Intro */,
 				F12D332823446D3500FE3C3F /* Sounds */,
 			);
 			path = SugarTraces;
@@ -493,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F115C36A2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
 				F12D3330234495B600FE3C3F /* DING.mp3 in Resources */,
 				F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */,
 				F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */,
@@ -521,6 +541,7 @@
 				F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */,
 				F163C82B2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8292320DFB4001A9CF2 /* Interface.storyboard in Resources */,
+				F115C36B2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +551,7 @@
 			files = (
 				F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */,
 				F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
+				F115C36C2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,11 +693,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */,
+				F12D333323457D0A00FE3C3F /* IntroViewController.swift in Sources */,
 				F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */,
 				F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */,
 				F1EE6A942341D0AA0089EC66 /* UILabelExtension.swift in Sources */,
 				F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */,
 				F163C8002320DFB0001A9CF2 /* ViewController.swift in Sources */,
+				F115C37423465492001CB683 /* Intro1ViewController.swift in Sources */,
 				F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */,
 				F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */,
 				F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */,

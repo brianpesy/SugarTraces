@@ -98,7 +98,7 @@ class StatsViewController: UIViewController, ChartViewDelegate {
             }
         }
 
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Blood Glucose")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Blood Glucose (mg/dL)")
         let chartData = BarChartData(dataSet: chartDataSet)
         
         //Color condition
