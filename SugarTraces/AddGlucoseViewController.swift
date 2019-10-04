@@ -72,6 +72,7 @@ struct Keys {
     static let savedDates = "savedDates"
     static let savedAchievements = "savedAchievements"
     static let savedAchDates = "savedAchDates"
+    static let savedConsecutiveDays = "savedConsecutiveDays"
 
 }
 
@@ -86,6 +87,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     var loggedAchievements = [Bool](repeating: false, count: 11)
     var loggedAchDates = [String](repeating: "", count: 11)
 
+    var loggedConsecutiveDays = 0
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -179,6 +181,10 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         print(loggedAchievements)
         print(loggedAchDates)
+        
+        loadConsecutiveDays()
+        print(loggedConsecutiveDays)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -193,6 +199,10 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     func saveAchievements(){
         defaults.set(loggedAchievements, forKey: Keys.savedAchievements)
         defaults.set(loggedAchDates, forKey: Keys.savedAchDates)
+    }
+    
+    func saveConsecutiveDays(){
+        defaults.set(loggedConsecutiveDays, forKey: Keys.savedConsecutiveDays)
     }
 
     func loadLoggedData(){
@@ -209,6 +219,11 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
         loggedAchDates = savedAchDates
+    }
+    
+    func loadConsecutiveDays(){
+        var savedConsecutiveDays = defaults.integer(forKey: Keys.savedConsecutiveDays)
+        loggedConsecutiveDays = savedConsecutiveDays
     }
     
     func writeBloodGlucose(bloodGlucose: Double){
@@ -231,38 +246,83 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         }
     }
     
-    func consecutiveDatesCheck(dateArray: [String]) -> Int {
+    func consecutiveDaysCheck(prevDay: String, newDay: String, consecutiveDays: Int) -> Int {
         //MM-DD-YYYY HH:MM:SS
-        var consecutiveDays = 1
-        var ctr = 0
-        var dateArrOnly = [Int]()
-        var monthArrOnly = [Int]()
-        var yearArrOnly = [Int]()
         var dummy:String
-        while (ctr < dateArray.count){
-            //THE LATEST IS THE FIRST
-            
-            let fullDateSubStr = dateArray[ctr].prefix(10)
-            
-            //date parse
-            dummy = String(fullDateSubStr.prefix(2))
-            dateArrOnly.insert(Int(dummy)!, at: ctr)
-            
-            //month parse
-            
-            
-            //year parse
-
-            
-            print(fullDateSubStr)
-            print(dateArrOnly)
-            print(monthArrOnly)
-            print(yearArrOnly)
-
-            ctr = ctr + 1
+        let prevDaySub = prevDay.prefix(10)
+        let newDaySub = newDay.prefix(10)
+        
+        //0: month, 1: day, 2: year
+        let prevDayArr = prevDaySub.components(separatedBy: "-").flatMap { Int($0) }
+        let newDayArr = newDaySub.components(separatedBy: "-").flatMap { Int($0) }
+        
+        print(prevDayArr)
+        
+        //if it's the exact same day
+        if (prevDayArr[0] == newDayArr[0] && prevDayArr[1] == newDayArr[1] && prevDayArr[2] == newDayArr[2]) {
+            print("same day")
+            return consecutiveDays
+        }
+        //31 dates: January, March, May, July, August, October, December (1, 3, 5, 7, 8, 10, 12)
+        //30 dates: April, June, September, November (4, 6, 9, 11)
+        //28 dates: February | 29 dates (every 4 years): February (2)
+        
+        //Consecutive days, same year
+        if (newDayArr[1] == prevDayArr[1] + 1 && newDayArr[0] == prevDayArr[0] && newDayArr[2] == prevDayArr[2]) {
+            print("consecutive day")
+            return consecutiveDays + 1
         }
         
-        return consecutiveDays
+        //Changing months, consecutive days supposedly, same year (31 days)
+        if (newDayArr[1] == 1 && prevDayArr[1] == 31){
+            if ((prevDayArr[0] == 1 || prevDayArr[0] == 3 || prevDayArr[0] == 5 || prevDayArr[0] == 7 || prevDayArr[0] == 8 || prevDayArr[0] == 10 || prevDayArr[0] == 12) && (newDayArr[0] == 2 || newDayArr[0] == 4 || newDayArr[0] == 6 || newDayArr[0] == 8 || newDayArr[0] == 9 || newDayArr[0] == 11 || newDayArr[0] == 1) && (newDayArr[2] == prevDayArr[2])){
+                //it's a 31 month
+                print("31 month to another month")
+                return consecutiveDays + 1
+            }
+        }
+        
+        //30 days, same year
+        if (newDayArr[1] == 1 && prevDayArr[1] == 30){
+            if ((prevDayArr[0] == 4 || prevDayArr[0] == 6 || prevDayArr[0] == 9 || prevDayArr[0] == 11) && (newDayArr[0] == 5 || newDayArr[0] == 7 || newDayArr[0] == 10 || newDayArr[0] == 12) && (newDayArr[2] == prevDayArr[2])){
+                //it's a 30 month
+                print("30 month to another month")
+
+                return consecutiveDays + 1
+            }
+        }
+        
+        //Feb to March, same year
+        if (prevDayArr[0] == 2){
+            //leap year, 29 days
+            if (prevDayArr[2] % 4 == 0){
+                if (prevDayArr[1] == 29 && newDayArr[1] == 1 && newDayArr[0] == 3 && prevDayArr[2] == newDayArr[2]){
+                    print("Feb to march, leap year")
+                    return consecutiveDays + 1
+
+                }
+            } else {
+                //no leap year, 28 days
+                if (prevDayArr[1] == 28 && newDayArr[1] == 1 && newDayArr[0] == 3 && prevDayArr[2] == newDayArr[2]){
+                    print("Feb to march, not leap year")
+                    return consecutiveDays + 1
+                }
+            }
+                        
+            
+        }
+        
+        //changing years, consecutive days supposedly
+        if (newDayArr[2] == prevDayArr[2] + 1 && newDayArr[0] == 1 && prevDayArr[0] == 12 && newDayArr[1] == 1 && prevDayArr[1] == 31){
+            print("HAPPY NEW YEAR")
+            return consecutiveDays + 1
+        }
+        
+        print(newDayArr)
+
+        print("Not consecutive, reset")
+        return 1
+        
     }
     
     
@@ -413,13 +473,24 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //if the same month-day-year
         //DATE FORMAT: MM-DD-YYYY HH:MM:SS
         
-        if (loggedDates.indices.contains(2) && loggedAchievements[5] != true){
+        if (loggedConsecutiveDays == 3 && loggedAchievements[5] != true){
             //there needs to be at least 3 readings for this
-            print(loggedDates)
-            consecutiveDatesCheck(dateArray: loggedDates)
-//            if (consecutiveDatesCheck(dateArray: loggedDates) == 3) {
-//                achAudioPlayer.play()
-//            }
+            achAudioPlayer.play()
+            
+            //Achievement get
+            loggedAchievements[5] = true
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[5] = formatter.string(from:date)
+            
+            saveAchievements()
+            
         }
         
         //entered a normal reading after an above reading 6
@@ -507,6 +578,21 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                     
                 }
             }
+            
+            //Consecutive day check
+            if (loggedConsecutiveDays == 0){
+                loggedConsecutiveDays = 1
+                saveConsecutiveDays()
+                print(loggedConsecutiveDays)
+            } else {
+                //do the function
+//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: "02-29-2020 14:23:53", newDay: "03-01-2020 14:23:53", consecutiveDays: loggedConsecutiveDays)
+
+//                print(loggedConsecutiveDays)
+                saveConsecutiveDays()
+            }
+            
         }
         //Below reading (below 70)
         else if (num! < 70){
@@ -515,6 +601,14 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //feedback
             belowFeedback.shuffle()
             feedback.text = belowFeedback[0]
+            
+            //Consecutive day check
+            if (loggedConsecutiveDays != 0){
+                loggedConsecutiveDays = 0
+                saveConsecutiveDays()
+                print(loggedConsecutiveDays)
+
+            }
                                     
         }
         //Above reading (above 150)
@@ -525,7 +619,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             aboveFeedback.shuffle()
             feedback.text = aboveFeedback[0]
             
-            
+            //Consecutive day check
+            if (loggedConsecutiveDays != 0){
+                loggedConsecutiveDays = 0
+                saveConsecutiveDays()
+                print(loggedConsecutiveDays)
+
+            }
         }
         
         //Put data in array
