@@ -149,6 +149,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="acknowledgementBtn:" destination="sc5-es-Ghr" eventType="touchUpInside" id="Xta-ye-bZj"/>
                                     <segue destination="Nie-3z-AhY" kind="show" id="b9l-DU-hl4"/>
                                 </connections>
                             </button>

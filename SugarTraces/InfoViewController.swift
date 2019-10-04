@@ -9,6 +9,8 @@
 import UIKit
 import HealthKit
 import MessageUI
+import AVFoundation
+
 
 class InfoViewController: UIViewController {
 
@@ -21,8 +23,14 @@ class InfoViewController: UIViewController {
     var loggedReadings = [Int]()
     var loggedDates = [String]()
     
+    var loggedAchievements = [Bool](repeating: false, count: 11)
+    var loggedAchDates = [String](repeating: "", count: 11)
+    
     var dob:Any?
     var sex:Any?
+    
+    var achAudioPlayer: AVAudioPlayer!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +49,21 @@ class InfoViewController: UIViewController {
 //        sendDataOutlet.layer.borderWidth = 1
 //        sendDataOutlet.layer.borderColor = UIColor.gray.cgColor
         
+        let swooshPath = Bundle.main.path(forResource: "SWOOSH3.mp3", ofType: nil)
+        do {
+            achAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: swooshPath!))
+        } catch {
+            print(error)
+        }
+        
+        loadAchievements()
+        
+        if loggedAchievements.isEmpty {
+            loggedAchievements = [Bool](repeating: false, count: 11)
+        }
+        if loggedAchDates.isEmpty {
+            loggedAchDates = [String](repeating: "", count: 11)
+        }
         
     }
     
@@ -56,8 +79,40 @@ class InfoViewController: UIViewController {
         
         sendEmail()
         
+        if (loggedAchievements[9] != true){
+            achAudioPlayer.play()
+            print("ACHIEVEMENT")
+            //Achievement get
+            loggedAchievements[9] = true
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[9] = formatter.string(from:date)
+            
+            saveAchievements()
+        }
+        
+        
     }
     
+    func loadAchievements(){
+        var savedAchievements = defaults.array(forKey: Keys.savedAchievements) as? [Bool] ?? [Bool]()
+        loggedAchievements = savedAchievements
+        
+        var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
+        loggedAchDates = savedAchDates
+    }
+    
+    func saveAchievements(){
+        defaults.set(loggedAchievements, forKey: Keys.savedAchievements)
+        defaults.set(loggedAchDates, forKey: Keys.savedAchDates)
+    }
+
     func sendEmail() {
         
     //sending export data through email: wsl-research@dcs.upd.edu.ph || bpsy@up.edu.ph
@@ -146,6 +201,26 @@ class InfoViewController: UIViewController {
         return (dateOfBirth, sexInp)
     }
 
+    @IBAction func acknowledgementBtn(_ sender: Any) {
+        
+        if (loggedAchievements[10] != true){
+            achAudioPlayer.play()
+            print("ACHIEVEMENT")
+            //Achievement get
+            loggedAchievements[10] = true
+            
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[10] = formatter.string(from:date)
+            
+            saveAchievements()
+        }
+    }
     /*
     // MARK: - Navigation
 

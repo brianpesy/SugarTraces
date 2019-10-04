@@ -494,10 +494,46 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         }
         
         //entered a normal reading after an above reading 6
-        
+        if (loggedReadings.indices.contains(1) && loggedAchievements[6] != true){
+            if (loggedReadings[1] > 150 && loggedReadings[0] > 69 && loggedReadings[0] < 151){
+                achAudioPlayer.play()
+                print("ACHIEVEMENT")
+                //Achievement get
+                loggedAchievements[6] = true
+                
+                let date = Date()
+                let formatter = DateFormatter()
+                //Date formatting
+                formatter.timeZone = .current
+                formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                
+                //Date when achievement was gotten
+                loggedAchDates[6] = formatter.string(from:date)
+                
+                saveAchievements()
+            }
+        }
         
         //entered a normal reading after a below reading 7
-        
+        if (loggedReadings.indices.contains(1) && loggedAchievements[7] != true){
+            if (loggedReadings[1] < 70 && loggedReadings[0] > 69 && loggedReadings[0] < 151){
+                achAudioPlayer.play()
+                print("ACHIEVEMENT")
+                //Achievement get
+                loggedAchievements[7] = true
+                
+                let date = Date()
+                let formatter = DateFormatter()
+                //Date formatting
+                formatter.timeZone = .current
+                formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+                
+                //Date when achievement was gotten
+                loggedAchDates[7] = formatter.string(from:date)
+                
+                saveAchievements()
+            }
+        }
         
         //entered 15 consecutive normal readings 8
         if (loggedReadings.indices.contains(14) && loggedAchievements[8] != true){
@@ -525,12 +561,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 }
             }
         }
-
-        
-        //INFO
-        //shared your data (clicked on send data) 9
-        
-        //read the acknowledgement page (clicked on acknowledgement) 10
     }
     
     @IBAction func send(_ sender: Any) {

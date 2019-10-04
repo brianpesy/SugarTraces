@@ -40,6 +40,10 @@ class AchievementsViewController: UIViewController {
         
         print(loggedAchievements)
         print(loggedAchDates)
+        
+        //Change the icons of each achievement according to the loggedAchievements and loggedAchDates, both of which are of indices 0-10, corresponding to a specific achievement
+        
+        
     }
     
 
