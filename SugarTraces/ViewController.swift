@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         nameTextField.layer.borderWidth = 2.0
         nameTextField.layer.borderColor = UIColor.gray.cgColor
         nameTextField.clipsToBounds = true
-        nameTextField.placeholder = "Your name here"
+        nameTextField.placeholder = "Your name here (Optional)"
         
         startBtnOutlet.layer.cornerRadius = 13
         
