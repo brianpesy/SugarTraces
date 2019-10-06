@@ -12,7 +12,11 @@ import HealthKit
 let healthKitStore:HKHealthStore = HKHealthStore()
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var startBtnOutlet: UIButton!
+    
+    var loggedName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,7 +25,34 @@ class ViewController: UIViewController {
             // Always adopt a light interface style.
             overrideUserInterfaceStyle = .light
         }
+        
+        nameTextField.layer.cornerRadius = 15.0
+        nameTextField.layer.borderWidth = 2.0
+        nameTextField.layer.borderColor = UIColor.gray.cgColor
+        nameTextField.clipsToBounds = true
+        nameTextField.placeholder = "Your name here"
+        
+        startBtnOutlet.layer.cornerRadius = 13
+        
         authorize()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        startBtnOutlet.pulsate()
+    }
+    
+    @IBAction func nameEnterBtn(_ sender: Any) {
+        if (nameTextField.text == ""){
+            loggedName = "User"
+        } else {
+            loggedName = nameTextField.text!
+        }
+        saveName()
+    }
+    
+    func saveName(){
+        defaults.set(loggedName, forKey: Keys.savedName)
     }
     
     

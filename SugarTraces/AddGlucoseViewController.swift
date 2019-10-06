@@ -73,7 +73,7 @@ struct Keys {
     static let savedAchievements = "savedAchievements"
     static let savedAchDates = "savedAchDates"
     static let savedConsecutiveDays = "savedConsecutiveDays"
-
+    static let savedName = "savedName"
 }
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {

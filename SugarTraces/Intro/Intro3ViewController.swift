@@ -15,11 +15,15 @@ class Intro3ViewController: UIViewController {
 
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var understoodBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pageControl.currentPage = 2
 
         // Do any additional setup after loading the view.
+        
+        understoodBtn.layer.cornerRadius = 13
         
         pageControl.pageIndicatorTintColor = UIColor.darkGray
         
@@ -34,6 +38,7 @@ class Intro3ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         pageControl.currentPage = 2
+        understoodBtn.pulsate()
 //        if (name != "") {
 //            performSegue(withIdentifier: "toMainSegue", sender: self)
 //        }

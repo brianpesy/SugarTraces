@@ -10,7 +10,7 @@ import UIKit
 
 class Intro1ViewController: UIViewController {
     
-    var name = ""
+    var loggedName = ""
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
@@ -29,16 +29,22 @@ class Intro1ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-        
+//        loadName()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         pageControl.currentPage = 0
-        if (name != "") {
+        loadName()
+        print(loggedName)
+        if (loggedName != "") {
             performSegue(withIdentifier: "toMainSegue", sender: self)
         }
     }
     
+    func loadName(){
+        var savedName = defaults.string(forKey: Keys.savedName)
+        loggedName = savedName ?? ""
+    }
 
     /*
     // MARK: - Navigation
