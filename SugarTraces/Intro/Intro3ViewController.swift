@@ -1,5 +1,5 @@
 //
-//  Intro1ViewController.swift
+//  Intro3ViewController.swift
 //  SugarTraces
 //
 //  Created by Brian Sy on 05/10/2019.
@@ -8,15 +8,16 @@
 
 import UIKit
 
-class Intro1ViewController: UIViewController {
-    
-    var name = ""
+class Intro3ViewController: UIViewController {
+
+//    var pageNumber = 2
+//    var name = ""
+
     @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageControl.currentPage = 0
-
+        pageControl.currentPage = 2
 
         // Do any additional setup after loading the view.
         
@@ -29,14 +30,28 @@ class Intro1ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        pageControl.currentPage = 0
-        if (name != "") {
-            performSegue(withIdentifier: "toMainSegue", sender: self)
-        }
+        pageControl.currentPage = 2
+//        if (name != "") {
+//            performSegue(withIdentifier: "toMainSegue", sender: self)
+//        }
+    }
+    
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+       if gesture.direction == .right {
+            print("Swipe Right")
+        
+            //do segue
+            performSegue(withIdentifier: "backSegue", sender: self)
+        
+       }
+       else if gesture.direction == .left {
+            print("Swipe Left")
+            
+       }
     }
     
 
@@ -49,24 +64,5 @@ class Intro1ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
-       if gesture.direction == .right {
-            print("Swipe Right")
-        
-            //do segue
-        
-       }
-       else if gesture.direction == .left {
-            print("Swipe Left")
-        
-            //do segue
-            performSegue(withIdentifier: "nextSegue", sender: self)
-
-            
-       }
-    }
-
-    
 
 }
