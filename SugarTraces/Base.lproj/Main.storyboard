@@ -578,10 +578,13 @@ and view your current data.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fot-pI-f4H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fot-pI-f4H">
                                 <rect key="frame" x="87" y="548" width="240" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dY0-nU-0Li"/>
+                                    <constraint firstAttribute="height" constant="44" id="uTw-No-uTI"/>
+                                </constraints>
                                 <state key="normal" title="Let's start!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -600,6 +603,8 @@ and view your current data.</string>
                             <constraint firstItem="9DW-aU-FE4" firstAttribute="top" secondItem="sPF-39-EyX" secondAttribute="bottom" constant="29" id="Q8d-hZ-tV6"/>
                             <constraint firstItem="gNj-pV-N5p" firstAttribute="leading" secondItem="j4a-bK-arW" secondAttribute="leading" constant="20" id="R2e-6E-pDu"/>
                             <constraint firstItem="sPF-39-EyX" firstAttribute="centerX" secondItem="OxG-fx-E55" secondAttribute="centerX" id="XR3-IS-JDA"/>
+                            <constraint firstItem="fot-pI-f4H" firstAttribute="top" secondItem="gNj-pV-N5p" secondAttribute="bottom" constant="27" id="bQ4-Wr-zyR"/>
+                            <constraint firstItem="fot-pI-f4H" firstAttribute="centerX" secondItem="OxG-fx-E55" secondAttribute="centerX" id="kc3-ct-gme"/>
                             <constraint firstItem="j4a-bK-arW" firstAttribute="trailing" secondItem="gNj-pV-N5p" secondAttribute="trailing" constant="20" id="uIY-wU-Aw1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j4a-bK-arW"/>
@@ -683,14 +688,284 @@ and view your current data.</string>
                     <view key="view" contentMode="scaleToFill" id="ZO9-sv-j9y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achMain" translatesAutoresizingMaskIntoConstraints="NO" id="QPy-EN-BiH">
+                                <rect key="frame" x="123.66666666666667" y="114" width="166.66666666666663" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="23X-XX-7fR" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="166.66999999999999" id="E9j-SB-7Q0" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement Wall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-Kc-sWP">
+                                <rect key="frame" x="134" y="250" width="146" height="23"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-ta-Yez">
+                                <rect key="frame" x="278.66666666666669" y="346" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Gil-p8-JlV" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="Qu9-QF-0uJ" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Uwb-jA-Mh7">
+                                <rect key="frame" x="169.66666666666666" y="346" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Pkt-0Y-FSt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="tDn-lK-M8u" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="InL-GF-fnb">
+                                <rect key="frame" x="278.66666666666669" y="443" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="McT-p8-NZc" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="lyW-5M-Mkn" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="R8T-Kc-V5u">
+                                <rect key="frame" x="169.66666666666666" y="443" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="DpL-Ea-CeX" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="pIi-2J-u0G" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-NM-kEr">
+                                <rect key="frame" x="169.66666666666666" y="540" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Bed-Cl-Aei" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="ySG-5M-WvW" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-Yu-buP">
+                                <rect key="frame" x="60.666666666666657" y="443" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="P4y-EA-1cn" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="ezK-1z-CPF" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-4m-Gub">
+                                <rect key="frame" x="60.666666666666657" y="346" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="1Rd-AI-pJj" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="4gF-8V-7Ky" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-Ux-a8X">
+                                <rect key="frame" x="278.66666666666669" y="540" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3NP-q6-HTV" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="Qoq-Ff-nUu" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-Qt-j0N">
+                                <rect key="frame" x="60.666666666666657" y="540" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="bLO-JN-c1z" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="bf2-fh-ULC" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="T1f-LO-nkt">
+                                <rect key="frame" x="116" y="637" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="N0Z-Sa-Abp" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="mw6-op-0i8" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-AE-G2d">
+                                <rect key="frame" x="223" y="637" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="E1I-mi-KAu" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="G7N-eU-5qD" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tBN-NM-kEr" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="0Ul-vq-JG7"/>
+                            <constraint firstItem="jbM-Ux-a8X" firstAttribute="leading" secondItem="tBN-NM-kEr" secondAttribute="trailing" constant="34" id="5dE-1i-JKv"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="6SR-Ol-8F1"/>
+                            <constraint firstItem="tBN-NM-kEr" firstAttribute="top" secondItem="R8T-Kc-V5u" secondAttribute="bottom" constant="22" id="85x-y5-djF"/>
+                            <constraint firstItem="T1f-LO-nkt" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="8eb-cS-rFq"/>
+                            <constraint firstItem="vyj-Qt-j0N" firstAttribute="top" secondItem="Chd-Yu-buP" secondAttribute="bottom" constant="22" id="8hD-n0-X8a"/>
+                            <constraint firstItem="Uwb-jA-Mh7" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="9Bn-XC-8t7"/>
+                            <constraint firstItem="Chd-Yu-buP" firstAttribute="top" secondItem="8lx-4m-Gub" secondAttribute="bottom" constant="22" id="9k6-Ok-bXd"/>
+                            <constraint firstItem="Aem-Kc-sWP" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="A2J-dD-dgz"/>
+                            <constraint firstItem="QPy-EN-BiH" firstAttribute="top" secondItem="iqr-Q7-pg1" secondAttribute="top" constant="26" id="AOP-yH-Jis"/>
+                            <constraint firstItem="jbM-Ux-a8X" firstAttribute="top" secondItem="InL-GF-fnb" secondAttribute="bottom" constant="22" id="EaX-0K-npD"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="top" secondItem="Uwb-jA-Mh7" secondAttribute="bottom" constant="22" id="G7O-5N-YF2"/>
+                            <constraint firstItem="InL-GF-fnb" firstAttribute="top" secondItem="VcI-ta-Yez" secondAttribute="bottom" constant="22" id="KmV-2w-00B"/>
+                            <constraint firstItem="VcI-ta-Yez" firstAttribute="leading" secondItem="Uwb-jA-Mh7" secondAttribute="trailing" constant="34" id="Uge-oa-ZYz"/>
+                            <constraint firstItem="Uwb-jA-Mh7" firstAttribute="leading" secondItem="8lx-4m-Gub" secondAttribute="trailing" constant="34" id="Urg-wd-nAb"/>
+                            <constraint firstItem="Chd-Yu-buP" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="XID-XJ-fcZ"/>
+                            <constraint firstItem="tBN-NM-kEr" firstAttribute="leading" secondItem="vyj-Qt-j0N" secondAttribute="trailing" constant="34" id="ZLO-fL-2ry"/>
+                            <constraint firstItem="InL-GF-fnb" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="ZTn-wP-4dG"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="cnW-fZ-ISL"/>
+                            <constraint firstItem="InL-GF-fnb" firstAttribute="leading" secondItem="R8T-Kc-V5u" secondAttribute="trailing" constant="34" id="g84-Nm-bqb"/>
+                            <constraint firstItem="QPy-EN-BiH" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="l8h-E2-DWi"/>
+                            <constraint firstItem="DyG-AE-G2d" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="53.5" id="pJ7-bO-GMS"/>
+                            <constraint firstItem="Aem-Kc-sWP" firstAttribute="top" secondItem="QPy-EN-BiH" secondAttribute="bottom" constant="8" id="t7E-mv-krr"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="leading" secondItem="Chd-Yu-buP" secondAttribute="trailing" constant="34" id="vcL-jx-Djm"/>
+                            <constraint firstItem="DyG-AE-G2d" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="xYD-ff-oF3"/>
+                            <constraint firstItem="T1f-LO-nkt" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="-53.5" id="zQd-K0-rmj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Achievements" id="jov-mC-SOs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4si-Ci-ua7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="-18"/>
+            <point key="canvasLocation" x="1389.8550724637682" y="-18.080357142857142"/>
         </scene>
         <!--Add Glucose-->
         <scene sceneID="QrF-Jn-xNP">
@@ -852,6 +1127,7 @@ and view your current data.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="achMain" width="33.333332061767578" height="33.333332061767578"/>
         <image name="achievements" width="33.333332061767578" height="33.333332061767578"/>
         <image name="add-glucose" width="33.333332061767578" height="33.333332061767578"/>
         <image name="home" width="33.333332061767578" height="33.333332061767578"/>
@@ -860,6 +1136,7 @@ and view your current data.</string>
         <image name="intro1" width="166.66667175292969" height="166.66667175292969"/>
         <image name="intro2" width="166.66667175292969" height="166.66667175292969"/>
         <image name="intro3" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="lock" width="33.333332061767578" height="33.333332061767578"/>
         <image name="name" width="33.333332061767578" height="33.333332061767578"/>
         <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
         <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
