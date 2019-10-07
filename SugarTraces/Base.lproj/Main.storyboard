@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSg-O9-XgW">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
                 <navigationController id="TZE-Wz-Gms" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stats" image="stats" id="nEC-kP-xG7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hew-NU-evD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,11 +29,11 @@
             <objects>
                 <viewController id="4tF-lM-344" customClass="StatsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCd-0d-Q44">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-sx-eDf" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <rect key="frame" x="20" y="44" width="335" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -61,7 +61,7 @@
                 <navigationController id="q8F-Ge-hLm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="7fs-Mi-SFx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SiW-Yl-Qat">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -77,7 +77,7 @@
             <objects>
                 <viewController id="PeB-xL-IjN" customClass="HomeViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78n-Ly-Jjt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9BF-Qa-acz"/>
@@ -116,7 +116,7 @@
                 <navigationController id="Fqe-bw-EwK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Info" image="info" id="ssg-mG-mm1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7LA-gw-O1i">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -132,18 +132,18 @@
             <objects>
                 <viewController id="sc5-es-Ghr" customClass="InfoViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ttj-Ew-ozf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8Z-Jy-gdr">
-                                <rect key="frame" x="20" y="104" width="374" height="676"/>
+                                <rect key="frame" x="20" y="60" width="335" height="525"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
-                                <rect key="frame" x="146.66666666666666" y="571" width="120.99999999999997" height="32"/>
+                                <rect key="frame" x="127" y="527" width="121" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Acknowledgment">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-pd-JL5">
-                                <rect key="frame" x="185" y="513" width="44" height="32"/>
+                                <rect key="frame" x="165.5" y="469" width="44" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,7 +164,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMU-1l-qTm">
-                                <rect key="frame" x="144.66666666666666" y="629" width="124.99999999999997" height="32"/>
+                                <rect key="frame" x="125" y="585" width="125" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Terms and Privacy">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-5a-qGc">
-                                <rect key="frame" x="132" y="188" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="144" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="0sz-Jc-yDB" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -193,7 +193,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-PC-PKU">
-                                <rect key="frame" x="132" y="438" width="150" height="32"/>
+                                <rect key="frame" x="112.5" y="394" width="150" height="32"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="36C-Og-qWf"/>
@@ -269,11 +269,11 @@
             <objects>
                 <viewController id="1sQ-fP-c3I" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bw5-go-3tz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="i4w-in-oFJ">
-                                <rect key="frame" x="20" y="103" width="374" height="695"/>
+                                <rect key="frame" x="20" y="59" width="335" height="544"/>
                                 <string key="text">SugarTraces is a mobile health application developed by the Web Science Lab of the Department of Science, College of Engineering, University of the Philippines - Diliman. By using SugarTraces, you consent to the terms and conditions described in this Privacy Policy.  SugarTraces Does Not Collect Any Information  SugarTraces will request permissions to read information such as date of birth and sex. Additionally, it will also request permissions to read and write blood glucose readings. Collection of name, date of birth and sex is only used for customization and they are only stored on the device and will not be stored in a cloud.  The user has the ability to export their data to us through e-mail. The exportable data will only contain the user's sex, blood glucose readings as well as the dates the readings were recorded.  The exportable data will not include any personally identifiable information.  Changes to this Privacy Policy  We reserve the right to update our Privacy Policy. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.  Date: September 2, 2019</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -300,11 +300,11 @@
             <objects>
                 <viewController id="jcB-1m-ZI8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wpy-Zj-BVh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="aTQ-Cz-S9h">
-                                <rect key="frame" x="20" y="110" width="374" height="677"/>
+                                <rect key="frame" x="20" y="66" width="335" height="526"/>
                                 <string key="text">SugarTraces is a mobile health application which aims to help users live a healthier lifestyle by maintaining healthy blood glucose levels. It has gamified elements such as achievements, streaks, and feedback messages for entered blood glucose readings. This application was made by Karl Bayron and Brian Sy as a requirement for their Special Problems class in the University of the Philippines Diliman.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -331,11 +331,11 @@
             <objects>
                 <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Vw-SN-uWO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We would like to thank our adviser, Professor Rommel Feria, for guiding us in developing this application." lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-WM-aye">
-                                <rect key="frame" x="20" y="111" width="374" height="677"/>
+                                <rect key="frame" x="20" y="67" width="335" height="526"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -361,7 +361,7 @@
             <objects>
                 <viewController id="bnt-oN-meg" customClass="Intro3ViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GVV-xr-mtn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-f1-zHe">
@@ -373,29 +373,29 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro3" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-S9-MCh">
-                                <rect key="frame" x="123.66666666666667" y="273" width="166.66666666666663" height="128"/>
+                                <rect key="frame" x="104" y="158.5" width="167" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166.66999999999999" id="HP5-wb-CPQ"/>
                                     <constraint firstAttribute="height" constant="128" id="VWx-Ih-jct"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your streaks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ads-BF-bnL">
-                                <rect key="frame" x="72.666666666666686" y="430" width="269" height="36"/>
+                                <rect key="frame" x="53" y="315.5" width="269" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vBd-8L-2CE">
-                                <rect key="frame" x="187.66666666666666" y="825" width="39" height="37"/>
+                                <rect key="frame" x="168" y="630" width="39" height="37"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get streaks for consecutive normal blood sugar readings." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN7-1t-t8t">
-                                <rect key="frame" x="63.666666666666657" y="474" width="286.66666666666674" height="46"/>
+                                <rect key="frame" x="44.5" y="359.5" width="286.5" height="46"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-Z1-KZE">
-                                <rect key="frame" x="87" y="773" width="240" height="44"/>
+                                <rect key="frame" x="67.5" y="578" width="240" height="44"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="HiA-YH-7Kz"/>
@@ -441,11 +441,11 @@
             <objects>
                 <viewController storyboardIdentifier="Intro2ID" id="VSg-O9-XgW" customClass="Intro1ViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jm5-00-i0r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHY-cz-DXA">
-                                <rect key="frame" x="68.666666666666686" y="474" width="277" height="46"/>
+                                <rect key="frame" x="49" y="359.5" width="277" height="46"/>
                                 <string key="text">Start living healthy by being
 conscious about your blood sugar.</string>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
@@ -453,14 +453,14 @@ conscious about your blood sugar.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro1" translatesAutoresizingMaskIntoConstraints="NO" id="rWR-PO-JC5">
-                                <rect key="frame" x="123.66666666666667" y="273" width="166.66666666666663" height="128"/>
+                                <rect key="frame" x="104" y="158.5" width="167" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166.66999999999999" id="8Y7-x3-6qJ"/>
                                     <constraint firstAttribute="height" constant="128" id="KAC-ss-OJO"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SugarTraces" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6H-98-jPj">
-                                <rect key="frame" x="119" y="430" width="176" height="36"/>
+                                <rect key="frame" x="99.5" y="315.5" width="176" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="FJd-CC-dPS"/>
                                     <constraint firstAttribute="height" constant="36" id="FSc-Qj-zhE"/>
@@ -470,7 +470,7 @@ conscious about your blood sugar.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-d6-uIL">
-                                <rect key="frame" x="187.66666666666666" y="825" width="39" height="37"/>
+                                <rect key="frame" x="168" y="630" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -501,11 +501,11 @@ conscious about your blood sugar.</string>
             <objects>
                 <viewController storyboardIdentifier="Intro1ID" id="W0t-z1-dV4" customClass="Intro2ViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gco-nX-g6O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-8S-lui">
-                                <rect key="frame" x="70" y="474" width="274.33333333333331" height="46"/>
+                                <rect key="frame" x="50.5" y="359.5" width="274.5" height="46"/>
                                 <string key="text">Get feedback about your readings
 and view your current data.</string>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
@@ -513,16 +513,16 @@ and view your current data.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record your readings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIU-M6-cRh">
-                                <rect key="frame" x="58" y="430" width="298" height="36"/>
+                                <rect key="frame" x="38.5" y="315.5" width="298" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V9t-Mq-UqF">
-                                <rect key="frame" x="187.66666666666666" y="825" width="39" height="37"/>
+                                <rect key="frame" x="168" y="630" width="39" height="37"/>
                             </pageControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro2" translatesAutoresizingMaskIntoConstraints="NO" id="hty-QF-1KP">
-                                <rect key="frame" x="123.66666666666667" y="273" width="166.66666666666663" height="128"/>
+                                <rect key="frame" x="104" y="158.5" width="167" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="V4A-vV-kdw"/>
                                     <constraint firstAttribute="width" constant="166.66999999999999" id="mzq-Mp-cby"/>
@@ -557,29 +557,29 @@ and view your current data.</string>
             <objects>
                 <viewController id="Zhi-vM-rNq" customClass="ViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OxG-fx-E55">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="sPF-39-EyX">
-                                <rect key="frame" x="123.66666666666667" y="273" width="166.66666666666663" height="128"/>
+                                <rect key="frame" x="104" y="158.5" width="167" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166.66999999999999" id="YPX-Ke-fcT"/>
                                     <constraint firstAttribute="height" constant="128" id="ljQ-6S-Fkh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DW-aU-FE4">
-                                <rect key="frame" x="135.33333333333331" y="430" width="143.33333333333331" height="36"/>
+                                <rect key="frame" x="116" y="315.5" width="143.5" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-pV-N5p">
-                                <rect key="frame" x="20" y="487" width="374" height="34"/>
+                                <rect key="frame" x="20" y="372.5" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fot-pI-f4H">
-                                <rect key="frame" x="87" y="548" width="240" height="44"/>
+                                <rect key="frame" x="67.5" y="433.5" width="240" height="44"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="dY0-nU-0Li"/>
@@ -653,7 +653,7 @@ and view your current data.</string>
                     <tabBarItem key="tabBarItem" title="Add Glucose" image="add-glucose" id="i3O-r2-Cfy"/>
                     <navigationItem key="navigationItem" id="5Rq-Ns-9w6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ewi-XV-UBZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -670,7 +670,7 @@ and view your current data.</string>
                 <navigationController id="utu-Ov-e2w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Achievements" image="achievements" id="diC-xi-LKI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mv6-C6-tuh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -686,11 +686,11 @@ and view your current data.</string>
             <objects>
                 <viewController id="NwO-f4-5aJ" customClass="AchievementsViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZO9-sv-j9y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="achMain" translatesAutoresizingMaskIntoConstraints="NO" id="QPy-EN-BiH">
-                                <rect key="frame" x="123.66666666666667" y="114" width="166.66666666666663" height="128"/>
+                                <rect key="frame" x="104" y="70" width="167" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="23X-XX-7fR" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -715,13 +715,13 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievement Wall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aem-Kc-sWP">
-                                <rect key="frame" x="134" y="250" width="146" height="23"/>
+                                <rect key="frame" x="114.5" y="206" width="146" height="23"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-ta-Yez">
-                                <rect key="frame" x="278.66666666666669" y="346" width="75" height="75"/>
+                                <rect key="frame" x="259" y="231.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Gil-p8-JlV" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -740,7 +740,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Uwb-jA-Mh7">
-                                <rect key="frame" x="169.66666666666666" y="346" width="75" height="75"/>
+                                <rect key="frame" x="150" y="231.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="Pkt-0Y-FSt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -759,7 +759,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="InL-GF-fnb">
-                                <rect key="frame" x="278.66666666666669" y="443" width="75" height="75"/>
+                                <rect key="frame" x="259" y="328.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="McT-p8-NZc" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -778,7 +778,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="R8T-Kc-V5u">
-                                <rect key="frame" x="169.66666666666666" y="443" width="75" height="75"/>
+                                <rect key="frame" x="150" y="328.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="DpL-Ea-CeX" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -797,7 +797,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-NM-kEr">
-                                <rect key="frame" x="169.66666666666666" y="540" width="75" height="75"/>
+                                <rect key="frame" x="150" y="425.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Bed-Cl-Aei" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -816,7 +816,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-Yu-buP">
-                                <rect key="frame" x="60.666666666666657" y="443" width="75" height="75"/>
+                                <rect key="frame" x="41" y="328.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="P4y-EA-1cn" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -835,7 +835,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="8lx-4m-Gub">
-                                <rect key="frame" x="60.666666666666657" y="346" width="75" height="75"/>
+                                <rect key="frame" x="41" y="231.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="1Rd-AI-pJj" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -854,7 +854,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="jbM-Ux-a8X">
-                                <rect key="frame" x="278.66666666666669" y="540" width="75" height="75"/>
+                                <rect key="frame" x="259" y="425.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="3NP-q6-HTV" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -873,7 +873,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="vyj-Qt-j0N">
-                                <rect key="frame" x="60.666666666666657" y="540" width="75" height="75"/>
+                                <rect key="frame" x="41" y="425.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="bLO-JN-c1z" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -892,7 +892,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="T1f-LO-nkt">
-                                <rect key="frame" x="116" y="637" width="75" height="75"/>
+                                <rect key="frame" x="96.5" y="522.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="N0Z-Sa-Abp" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -911,7 +911,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-AE-G2d">
-                                <rect key="frame" x="223" y="637" width="75" height="75"/>
+                                <rect key="frame" x="203.5" y="522.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="E1I-mi-KAu" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -929,34 +929,315 @@ and view your current data.</string>
                                     </constraint>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-rh-3SD">
+                                <rect key="frame" x="150" y="231.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="9tr-87-api" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="acE-Lf-6aX" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn1:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="cCZ-hA-OrE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAK-Y2-ZOM">
+                                <rect key="frame" x="180" y="356" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gs-87-O0a">
+                                <rect key="frame" x="71" y="356" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqV-qd-ipz">
+                                <rect key="frame" x="40.5" y="231.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="EjI-L5-XLK" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="wRM-zA-Xaf" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn0:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="eYx-Un-gMR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbU-Z2-EiD">
+                                <rect key="frame" x="258.5" y="231.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="HEP-qb-Ujv" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="Zrv-Cc-egx" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn2:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="uYO-bT-a7Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKl-Ee-60y">
+                                <rect key="frame" x="40.5" y="328.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="vUk-n3-fjg" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="x31-rY-8Co" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn3:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="hDh-BQ-7ST"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5o-Mu-I3M">
+                                <rect key="frame" x="150" y="328.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Z7D-CD-JLe" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="ZAs-j6-FP4" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn4:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="rqW-DU-ATO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNp-Q3-zDH">
+                                <rect key="frame" x="258.5" y="328.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Esc-OA-TGE" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="wj3-oj-8iy" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn5:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="ccp-AY-lIF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-rZ-3Vm">
+                                <rect key="frame" x="41" y="425.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Hxb-hY-HN8" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="lE5-Vc-PI9" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn6:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="nHJ-nR-quZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bM5-y0-u2A">
+                                <rect key="frame" x="150" y="425.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Lnh-j4-FKI" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="a3C-bC-RhO" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn7:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="rGI-M9-9bH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6e-Gt-mRu">
+                                <rect key="frame" x="258.5" y="425.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="7aZ-AV-Ekx" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="Xia-ue-JWX" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn8:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="86E-jL-UBC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giT-yz-IuN">
+                                <rect key="frame" x="96.5" y="522.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="CGT-w2-8aG" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="75" id="fNK-S0-8eE" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn9:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="JPa-mr-Uq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pr-6O-Dhy">
+                                <rect key="frame" x="203.5" y="522.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="dNa-eJ-LUA" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="75" id="ecM-mj-c8s" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="55"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <action selector="achBtn10:" destination="NwO-f4-5aJ" eventType="touchUpInside" id="cha-cE-dvO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tBN-NM-kEr" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="0Ul-vq-JG7"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="leading" secondItem="kKl-Ee-60y" secondAttribute="trailing" constant="34.670000000000002" id="1a4-zv-V6n"/>
                             <constraint firstItem="jbM-Ux-a8X" firstAttribute="leading" secondItem="tBN-NM-kEr" secondAttribute="trailing" constant="34" id="5dE-1i-JKv"/>
                             <constraint firstItem="R8T-Kc-V5u" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="6SR-Ol-8F1"/>
+                            <constraint firstItem="nNp-Q3-zDH" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="6pW-BW-sy3"/>
+                            <constraint firstItem="IbU-Z2-EiD" firstAttribute="leading" secondItem="1Pt-rh-3SD" secondAttribute="trailing" constant="33.329999999999998" id="6v8-h3-ZxU"/>
                             <constraint firstItem="tBN-NM-kEr" firstAttribute="top" secondItem="R8T-Kc-V5u" secondAttribute="bottom" constant="22" id="85x-y5-djF"/>
                             <constraint firstItem="T1f-LO-nkt" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="8eb-cS-rFq"/>
                             <constraint firstItem="vyj-Qt-j0N" firstAttribute="top" secondItem="Chd-Yu-buP" secondAttribute="bottom" constant="22" id="8hD-n0-X8a"/>
                             <constraint firstItem="Uwb-jA-Mh7" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="9Bn-XC-8t7"/>
+                            <constraint firstItem="Btx-rZ-3Vm" firstAttribute="top" secondItem="Chd-Yu-buP" secondAttribute="bottom" constant="22" id="9Pf-43-2oF"/>
                             <constraint firstItem="Chd-Yu-buP" firstAttribute="top" secondItem="8lx-4m-Gub" secondAttribute="bottom" constant="22" id="9k6-Ok-bXd"/>
                             <constraint firstItem="Aem-Kc-sWP" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="A2J-dD-dgz"/>
                             <constraint firstItem="QPy-EN-BiH" firstAttribute="top" secondItem="iqr-Q7-pg1" secondAttribute="top" constant="26" id="AOP-yH-Jis"/>
+                            <constraint firstItem="bM5-y0-u2A" firstAttribute="top" secondItem="R8T-Kc-V5u" secondAttribute="bottom" constant="22" id="BYJ-Lq-mkD"/>
+                            <constraint firstItem="A6e-Gt-mRu" firstAttribute="leading" secondItem="bM5-y0-u2A" secondAttribute="trailing" constant="33.329999999999998" id="EQI-JJ-BcQ"/>
                             <constraint firstItem="jbM-Ux-a8X" firstAttribute="top" secondItem="InL-GF-fnb" secondAttribute="bottom" constant="22" id="EaX-0K-npD"/>
+                            <constraint firstItem="InL-GF-fnb" firstAttribute="top" secondItem="IbU-Z2-EiD" secondAttribute="bottom" constant="22" id="EoD-TO-1XG"/>
+                            <constraint firstItem="u5o-Mu-I3M" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="Fgq-UM-ODR"/>
+                            <constraint firstItem="nNp-Q3-zDH" firstAttribute="top" secondItem="VcI-ta-Yez" secondAttribute="bottom" constant="22" id="G43-lv-vjy"/>
                             <constraint firstItem="R8T-Kc-V5u" firstAttribute="top" secondItem="Uwb-jA-Mh7" secondAttribute="bottom" constant="22" id="G7O-5N-YF2"/>
                             <constraint firstItem="InL-GF-fnb" firstAttribute="top" secondItem="VcI-ta-Yez" secondAttribute="bottom" constant="22" id="KmV-2w-00B"/>
+                            <constraint firstItem="DyG-AE-G2d" firstAttribute="leading" secondItem="giT-yz-IuN" secondAttribute="trailing" constant="32" id="P2t-Tw-ru6"/>
+                            <constraint firstItem="4pr-6O-Dhy" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="53.5" id="SE0-H0-5en"/>
                             <constraint firstItem="VcI-ta-Yez" firstAttribute="leading" secondItem="Uwb-jA-Mh7" secondAttribute="trailing" constant="34" id="Uge-oa-ZYz"/>
                             <constraint firstItem="Uwb-jA-Mh7" firstAttribute="leading" secondItem="8lx-4m-Gub" secondAttribute="trailing" constant="34" id="Urg-wd-nAb"/>
+                            <constraint firstItem="u5o-Mu-I3M" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="WCr-Wc-N0Q"/>
                             <constraint firstItem="Chd-Yu-buP" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="XID-XJ-fcZ"/>
+                            <constraint firstItem="4pr-6O-Dhy" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="YJ8-jD-fkl"/>
                             <constraint firstItem="tBN-NM-kEr" firstAttribute="leading" secondItem="vyj-Qt-j0N" secondAttribute="trailing" constant="34" id="ZLO-fL-2ry"/>
+                            <constraint firstItem="nNp-Q3-zDH" firstAttribute="leading" secondItem="R8T-Kc-V5u" secondAttribute="trailing" constant="33.329999999999998" id="ZQN-KL-l9B"/>
                             <constraint firstItem="InL-GF-fnb" firstAttribute="centerY" secondItem="ZO9-sv-j9y" secondAttribute="centerY" constant="32.5" id="ZTn-wP-4dG"/>
+                            <constraint firstItem="bM5-y0-u2A" firstAttribute="leading" secondItem="Btx-rZ-3Vm" secondAttribute="trailing" constant="34" id="bWe-te-1cG"/>
+                            <constraint firstItem="1Pt-rh-3SD" firstAttribute="leading" secondItem="8lx-4m-Gub" secondAttribute="trailing" constant="34" id="cR4-Kr-png"/>
                             <constraint firstItem="R8T-Kc-V5u" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="cnW-fZ-ISL"/>
+                            <constraint firstItem="jbM-Ux-a8X" firstAttribute="top" secondItem="nNp-Q3-zDH" secondAttribute="bottom" constant="22" id="cur-FI-5yQ"/>
+                            <constraint firstItem="bM5-y0-u2A" firstAttribute="leading" secondItem="vyj-Qt-j0N" secondAttribute="trailing" constant="34" id="ddf-Zu-8v1"/>
+                            <constraint firstItem="A6e-Gt-mRu" firstAttribute="top" secondItem="InL-GF-fnb" secondAttribute="bottom" constant="22" id="dwn-Aq-lFP"/>
                             <constraint firstItem="InL-GF-fnb" firstAttribute="leading" secondItem="R8T-Kc-V5u" secondAttribute="trailing" constant="34" id="g84-Nm-bqb"/>
+                            <constraint firstItem="Chd-Yu-buP" firstAttribute="top" secondItem="TqV-qd-ipz" secondAttribute="bottom" constant="22" id="gTD-84-OQT"/>
+                            <constraint firstItem="bM5-y0-u2A" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="hmB-zW-PRM"/>
+                            <constraint firstItem="4pr-6O-Dhy" firstAttribute="leading" secondItem="T1f-LO-nkt" secondAttribute="trailing" constant="32" id="htE-rh-FeC"/>
+                            <constraint firstItem="giT-yz-IuN" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="-53.5" id="iVm-31-nVm"/>
                             <constraint firstItem="QPy-EN-BiH" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="l8h-E2-DWi"/>
+                            <constraint firstItem="vyj-Qt-j0N" firstAttribute="top" secondItem="kKl-Ee-60y" secondAttribute="bottom" constant="22" id="mn7-Bg-LIm"/>
+                            <constraint firstItem="kKl-Ee-60y" firstAttribute="top" secondItem="8lx-4m-Gub" secondAttribute="bottom" constant="22" id="mta-nE-9V7"/>
+                            <constraint firstItem="R8T-Kc-V5u" firstAttribute="top" secondItem="1Pt-rh-3SD" secondAttribute="bottom" constant="22" id="nha-cJ-Mep"/>
                             <constraint firstItem="DyG-AE-G2d" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="53.5" id="pJ7-bO-GMS"/>
+                            <constraint firstItem="giT-yz-IuN" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="pwM-Wd-Zh7"/>
+                            <constraint firstItem="Uwb-jA-Mh7" firstAttribute="leading" secondItem="TqV-qd-ipz" secondAttribute="trailing" constant="34.670000000000002" id="sko-Im-QDM"/>
                             <constraint firstItem="Aem-Kc-sWP" firstAttribute="top" secondItem="QPy-EN-BiH" secondAttribute="bottom" constant="8" id="t7E-mv-krr"/>
                             <constraint firstItem="R8T-Kc-V5u" firstAttribute="leading" secondItem="Chd-Yu-buP" secondAttribute="trailing" constant="34" id="vcL-jx-Djm"/>
                             <constraint firstItem="DyG-AE-G2d" firstAttribute="top" secondItem="tBN-NM-kEr" secondAttribute="bottom" constant="22" id="xYD-ff-oF3"/>
+                            <constraint firstItem="1Pt-rh-3SD" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" id="xo5-jl-YsW"/>
                             <constraint firstItem="T1f-LO-nkt" firstAttribute="centerX" secondItem="ZO9-sv-j9y" secondAttribute="centerX" constant="-53.5" id="zQd-K0-rmj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
@@ -985,11 +1266,11 @@ and view your current data.</string>
             <objects>
                 <viewController id="iuP-vL-y8a" customClass="AddGlucoseViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRh-F1-y9K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0w-kl-0Sv">
-                                <rect key="frame" x="20" y="243" width="374" height="536"/>
+                                <rect key="frame" x="20" y="199" width="335" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="Jsw-jR-agQ"/>
@@ -1000,7 +1281,7 @@ and view your current data.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="question-mark-bg" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-kk-x6P">
-                                <rect key="frame" x="20" y="104" width="95" height="121"/>
+                                <rect key="frame" x="20" y="60" width="95" height="121"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="GTB-Po-96k" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -1019,7 +1300,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3r-kq-6nb">
-                                <rect key="frame" x="157" y="508.33333333333326" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="464.5" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Axl-vV-GYT" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target"/>
@@ -1034,7 +1315,7 @@ and view your current data.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your blood glucose today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="kFg-2o-tYH">
-                                <rect key="frame" x="123" y="104" width="271" height="121"/>
+                                <rect key="frame" x="123" y="60" width="232" height="121"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="Obp-nq-8Qt" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
@@ -1051,7 +1332,7 @@ and view your current data.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My blood glucose is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0b-g8-XbS">
-                                <rect key="frame" x="115" y="413" width="184" height="26.666666666666686"/>
+                                <rect key="frame" x="95.5" y="369" width="184" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.670000000000002" id="otA-vN-2X4"/>
                                     <constraint firstAttribute="width" constant="184" id="vzc-bp-pPd"/>
@@ -1061,7 +1342,7 @@ and view your current data.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="insulin-pen" translatesAutoresizingMaskIntoConstraints="NO" id="EdP-nt-Vaq">
-                                <rect key="frame" x="164.66666666666666" y="304" width="85" height="85"/>
+                                <rect key="frame" x="145" y="260" width="85" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="aW4-Qe-6c8" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                         <userDefinedRuntimeAttributes>
@@ -1080,7 +1361,7 @@ and view your current data.</string>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-Gk-4Z6">
-                                <rect key="frame" x="113.66666666666669" y="459.66666666666669" width="187" height="34"/>
+                                <rect key="frame" x="94" y="415.5" width="187" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="EH7-MB-Gco"/>
                                     <constraint firstAttribute="width" constant="187" id="Fra-Da-5gJ"/>
@@ -1140,20 +1421,20 @@ and view your current data.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="achMain" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="achievements" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="add-glucose" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="home" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="info" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="insulin-pen" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="intro1" width="166.66667175292969" height="166.66667175292969"/>
-        <image name="intro2" width="166.66667175292969" height="166.66667175292969"/>
-        <image name="intro3" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="lock" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="name" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
-        <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="achMain" width="50" height="50"/>
+        <image name="achievements" width="37.5" height="37.5"/>
+        <image name="add-glucose" width="37.5" height="37.5"/>
+        <image name="home" width="50" height="50"/>
+        <image name="info" width="37.5" height="37.5"/>
+        <image name="insulin-pen" width="50" height="50"/>
+        <image name="intro1" width="250" height="250"/>
+        <image name="intro2" width="250" height="250"/>
+        <image name="intro3" width="50" height="50"/>
+        <image name="lock" width="50" height="50"/>
+        <image name="name" width="50" height="50"/>
+        <image name="paper" width="256" height="256"/>
+        <image name="question-mark-bg" width="50" height="50"/>
+        <image name="stats" width="37.5" height="37.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qKz-zS-IZP"/>

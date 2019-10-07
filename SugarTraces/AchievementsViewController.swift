@@ -92,7 +92,61 @@ class AchievementsViewController: UIViewController {
         
     }
     
+    @IBAction func achBtn0(_ sender: Any) {
+        print("btn0")
+    }
+    
+    @IBAction func achBtn1(_ sender: Any) {
+        print("btn1")
 
+    }
+    
+    @IBAction func achBtn2(_ sender: Any) {
+        print("btn2")
+
+    }
+    
+    @IBAction func achBtn3(_ sender: Any) {
+        print("btn3")
+
+    }
+    
+    @IBAction func achBtn4(_ sender: Any) {
+        print("btn4")
+
+    }
+    
+    @IBAction func achBtn5(_ sender: Any) {
+        print("btn5")
+
+    }
+    
+    @IBAction func achBtn6(_ sender: Any) {
+        print("btn6")
+
+    }
+    
+    @IBAction func achBtn7(_ sender: Any) {
+        print("btn7")
+
+    }
+    
+    @IBAction func achBtn8(_ sender: Any) {
+        print("btn8")
+
+    }
+    
+    @IBAction func achBtn9(_ sender: Any) {
+        print("btn9")
+
+    }
+    
+    @IBAction func achBtn10(_ sender: Any) {
+        print("btn10")
+
+    }
+    
+    
     /*
     // MARK: - Navigation
 
