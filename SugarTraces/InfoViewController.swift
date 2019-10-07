@@ -94,7 +94,15 @@ class InfoViewController: UIViewController {
             //Date when achievement was gotten
             loggedAchDates[9] = formatter.string(from:date)
             
+//            // create the alert
+//            let alert = UIAlertController(title: "Woah! An achievement!", message: "You checked out the Send Data option. Thanks! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+//            // add an action (button)
+//            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+//            // show the alert
+//            self.present(alert, animated: true, completion: nil)
+            
             saveAchievements()
+
         }
         
         
@@ -218,7 +226,17 @@ class InfoViewController: UIViewController {
             //Date when achievement was gotten
             loggedAchDates[10] = formatter.string(from:date)
             
+            // create the alert
+            let alert = UIAlertController(title: "Woah! An achievement!", message: "You checked out the Acknowledgment option. Thanks! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: { action in
+                    self.performSegue(withIdentifier: "ackSegue", sender: self)
+            }))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
             saveAchievements()
+
         }
     }
     /*

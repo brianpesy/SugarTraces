@@ -345,7 +345,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             loggedAchDates[0] = formatter.string(from:date)
             
             //Alert that you got an achievement
-            
+            // create the alert
+            let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered your first reading! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+
             
             //sound clip for achievement
             achAudioPlayer.play()
@@ -376,6 +382,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                         //Date when achievement was gotten
                         loggedAchDates[1] = formatter.string(from:date)
                         
+                        // create the alert
+                        let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered 4 consecutive readings after an above normal reading! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                        // add an action (button)
+                        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                        // show the alert
+                        self.present(alert, animated: true, completion: nil)
+                        
                         saveAchievements()
 
                     }
@@ -404,6 +417,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                     
                     //Date when achievement was gotten
                     loggedAchDates[2] = formatter.string(from:date)
+                    
+                    // create the alert
+                    let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered 5 consecutive normal readings! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                     
                     saveAchievements()
                 }
@@ -434,6 +454,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                         //Date when achievement was gotten
                         loggedAchDates[3] = formatter.string(from:date)
                         
+                        // create the alert
+                        let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered 4 consecutive normal readings after a below normal reading! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                        // add an action (button)
+                        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                        // show the alert
+                        self.present(alert, animated: true, completion: nil)
+                        
                         saveAchievements()
 
                     }
@@ -463,6 +490,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                     //Date when achievement was gotten
                     loggedAchDates[4] = formatter.string(from:date)
                     
+                    // create the alert
+                    let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered 10 consecutive readings! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+                    
                     saveAchievements()
                 }
             }
@@ -489,6 +523,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //Date when achievement was gotten
             loggedAchDates[5] = formatter.string(from:date)
             
+            // create the alert
+            let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered normal readings for 3 days in a row! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
             saveAchievements()
             
         }
@@ -510,6 +551,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 //Date when achievement was gotten
                 loggedAchDates[6] = formatter.string(from:date)
                 
+                // create the alert
+                let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered a normal reading after an above reading! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+                
                 saveAchievements()
             }
         }
@@ -530,6 +578,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 
                 //Date when achievement was gotten
                 loggedAchDates[7] = formatter.string(from:date)
+                
+                // create the alert
+                let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered a normal reading after a below reading! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
                 
                 saveAchievements()
             }
@@ -556,6 +611,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                     
                     //Date when achievement was gotten
                     loggedAchDates[8] = formatter.string(from:date)
+                    
+                    // create the alert
+                    let alert = UIAlertController(title: "Woah! An achievement!", message: "You entered 15 consecutive normal readings! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
                     
                     saveAchievements()
                 }

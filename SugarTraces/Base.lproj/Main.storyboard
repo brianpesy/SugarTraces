@@ -143,14 +143,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-sw-Ooc">
-                                <rect key="frame" x="142.66666666666666" y="571" width="128.99999999999997" height="32"/>
+                                <rect key="frame" x="146.66666666666666" y="571" width="120.99999999999997" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Acknowledgement">
+                                <state key="normal" title="Acknowledgment">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="acknowledgementBtn:" destination="sc5-es-Ghr" eventType="touchUpInside" id="Xta-ye-bZj"/>
-                                    <segue destination="Nie-3z-AhY" kind="show" id="b9l-DU-hl4"/>
+                                    <segue destination="Nie-3z-AhY" kind="show" identifier="ackSegue" id="b9l-DU-hl4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6P-pd-JL5">
@@ -170,7 +170,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1sQ-fP-c3I" kind="show" id="jvc-IY-23M"/>
+                                    <segue destination="1sQ-fP-c3I" kind="show" identifier="" id="jvc-IY-23M"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-5a-qGc">
@@ -326,7 +326,7 @@
             </objects>
             <point key="canvasLocation" x="2458" y="-1402"/>
         </scene>
-        <!--Acknowledgement-->
+        <!--Acknowledgment-->
         <scene sceneID="lIJ-49-3Bw">
             <objects>
                 <viewController id="Nie-3z-AhY" sceneMemberID="viewController">
@@ -350,7 +350,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ls-Di-czQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Acknowledgement" id="r9e-ag-7gh"/>
+                    <navigationItem key="navigationItem" title="Acknowledgment" id="r9e-ag-7gh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ld-jO-JFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
