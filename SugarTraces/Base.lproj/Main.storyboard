@@ -962,6 +962,19 @@ and view your current data.</string>
                         <viewLayoutGuide key="safeArea" id="iqr-Q7-pg1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Achievements" id="jov-mC-SOs"/>
+                    <connections>
+                        <outlet property="ach0" destination="8lx-4m-Gub" id="xiO-Bi-EX3"/>
+                        <outlet property="ach1" destination="Uwb-jA-Mh7" id="HaW-m2-XPS"/>
+                        <outlet property="ach10" destination="DyG-AE-G2d" id="bPc-R8-rrq"/>
+                        <outlet property="ach2" destination="VcI-ta-Yez" id="Fiy-fT-g4m"/>
+                        <outlet property="ach3" destination="Chd-Yu-buP" id="T64-lz-7jm"/>
+                        <outlet property="ach4" destination="R8T-Kc-V5u" id="azL-E8-Ysl"/>
+                        <outlet property="ach5" destination="InL-GF-fnb" id="2WL-S8-HZv"/>
+                        <outlet property="ach6" destination="vyj-Qt-j0N" id="LH6-14-gTD"/>
+                        <outlet property="ach7" destination="tBN-NM-kEr" id="dF1-hA-DLf"/>
+                        <outlet property="ach8" destination="jbM-Ux-a8X" id="8iA-D2-3qs"/>
+                        <outlet property="ach9" destination="T1f-LO-nkt" id="mZy-Ho-Eg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4si-Ci-ua7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
