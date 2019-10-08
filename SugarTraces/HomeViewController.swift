@@ -11,15 +11,69 @@ import HealthKit
 
 class HomeViewController: UIViewController {
     
+    var loggedName = ""
+
+    var loggedReadings = [Int]()
+    var loggedDates = [String]()
+
+    var loggedAchievements = [Bool](repeating: false, count: 11)
+    var loggedAchDates = [String](repeating: "", count: 11)
+
+    var loggedConsecutiveDays = 0
+    
+//    @IBOutlet weak var firstBox: UILabel!
+    @IBOutlet weak var secondBox: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    func loadLoggedData(){
+        var savedReadings = defaults.array(forKey: Keys.savedReadings) as? [Int] ?? [Int]()
+        loggedReadings = savedReadings
+        
+        var savedDates = defaults.array(forKey: Keys.savedDates) as? [String] ?? [String]()
+        loggedDates = savedDates
+    }
+    
+    func loadAchievements(){
+        var savedAchievements = defaults.array(forKey: Keys.savedAchievements) as? [Bool] ?? [Bool]()
+        loggedAchievements = savedAchievements
+        
+        var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
+        loggedAchDates = savedAchDates
+    }
+    
+    func loadConsecutiveDays(){
+        var savedConsecutiveDays = defaults.integer(forKey: Keys.savedConsecutiveDays)
+        loggedConsecutiveDays = savedConsecutiveDays
+    }
+    
+    func loadName(){
+        var savedName = defaults.string(forKey: Keys.savedName)
+        loggedName = savedName ?? "User"
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameLabel.textDropShadow()
+        secondBox.textDropShadow()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        loadLoggedData()
+        loadAchievements()
+        loadConsecutiveDays()
+        loadName()
+        
+//        print(loggedName)
+        nameLabel.text = loggedName
+        print(loggedReadings)
+        print(loggedDates)
+        print(loggedAchievements)
+        print(loggedAchDates)
+        print(loggedConsecutiveDays)
     }
     
     /*

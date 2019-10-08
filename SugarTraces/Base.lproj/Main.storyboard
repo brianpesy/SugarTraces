@@ -79,14 +79,55 @@
                     <view key="view" contentMode="scaleToFill" id="78n-Ly-Jjt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cn-EQ-TEV">
+                                <rect key="frame" x="20" y="350" width="374" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Lf4-sI-crx">
+                                <rect key="frame" x="20" y="269" width="374" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="Eks-KE-DfG"/>
+                                    <constraint firstAttribute="width" constant="374" id="PAp-OO-Gyo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-wp-fby">
+                                <rect key="frame" x="143" y="133" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="CkK-7a-LUY"/>
+                                    <constraint firstAttribute="height" constant="128" id="zSc-tm-JR8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lf4-sI-crx" firstAttribute="top" secondItem="r8e-wp-fby" secondAttribute="bottom" constant="8" id="ATJ-Jq-gkL"/>
+                            <constraint firstItem="7Cn-EQ-TEV" firstAttribute="top" secondItem="Lf4-sI-crx" secondAttribute="bottom" constant="8" id="DZT-y2-qU2"/>
+                            <constraint firstItem="9BF-Qa-acz" firstAttribute="trailing" secondItem="7Cn-EQ-TEV" secondAttribute="trailing" constant="20" id="GLo-YL-J6z"/>
+                            <constraint firstItem="Lf4-sI-crx" firstAttribute="centerX" secondItem="78n-Ly-Jjt" secondAttribute="centerX" id="N1V-9E-1Up"/>
+                            <constraint firstItem="7Cn-EQ-TEV" firstAttribute="leading" secondItem="9BF-Qa-acz" secondAttribute="leading" constant="20" id="Rga-Nv-uiv"/>
+                            <constraint firstItem="9BF-Qa-acz" firstAttribute="bottom" secondItem="7Cn-EQ-TEV" secondAttribute="bottom" constant="20" id="U9K-FY-oqi"/>
+                            <constraint firstItem="r8e-wp-fby" firstAttribute="top" secondItem="9BF-Qa-acz" secondAttribute="top" constant="45" id="bEd-ex-X5v"/>
+                            <constraint firstItem="r8e-wp-fby" firstAttribute="centerX" secondItem="78n-Ly-Jjt" secondAttribute="centerX" id="h70-hJ-YYc"/>
+                            <constraint firstItem="7Cn-EQ-TEV" firstAttribute="centerX" secondItem="78n-Ly-Jjt" secondAttribute="centerX" id="xdq-ub-E2q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9BF-Qa-acz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="HmS-Mx-hzS"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Lf4-sI-crx" id="d0B-8R-3SS"/>
+                        <outlet property="secondBox" destination="7Cn-EQ-TEV" id="WiO-90-L12"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbX-ws-iBn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2583" y="-747"/>
+            <point key="canvasLocation" x="-2584.057971014493" y="-747.32142857142856"/>
         </scene>
         <!--Master Tab Bar View Controller-->
         <scene sceneID="ia3-PX-eWT">
@@ -364,14 +405,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmX-f1-zHe">
-                                <rect key="frame" x="113" y="730" width="188" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="to app"/>
-                                <connections>
-                                    <segue destination="zQ8-Md-ccu" kind="presentation" identifier="toMainSegue" modalPresentationStyle="fullScreen" id="uTa-0e-jKc"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro3" translatesAutoresizingMaskIntoConstraints="NO" id="K7p-S9-MCh">
                                 <rect key="frame" x="123.66666666666667" y="273" width="166.66666666666663" height="128"/>
                                 <constraints>
@@ -1273,7 +1306,7 @@ and view your current data.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-67-ohf">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-Gr-2EE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-Gr-2EE">
                                         <rect key="frame" x="8" y="71" width="224" height="123"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="224" id="cb1-6b-cmb"/>
@@ -1516,6 +1549,7 @@ and view your current data.</string>
         <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
         <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
         <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="user" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qKz-zS-IZP"/>
