@@ -678,8 +678,8 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 print(loggedConsecutiveDays)
             } else {
                 //do the function
-//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
-                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: "02-29-2020 14:23:53", newDay: "03-01-2020 14:23:53", consecutiveDays: loggedConsecutiveDays)
+                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: "02-29-2020 14:23:53", newDay: "03-01-2020 14:23:53", consecutiveDays: loggedConsecutiveDays)
 
 //                print(loggedConsecutiveDays)
                 saveConsecutiveDays()

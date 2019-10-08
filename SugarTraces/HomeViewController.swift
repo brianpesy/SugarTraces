@@ -24,6 +24,12 @@ class HomeViewController: UIViewController {
 //    @IBOutlet weak var firstBox: UILabel!
     @IBOutlet weak var secondBox: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var readingNumLabel: UILabel!
+    @IBOutlet weak var lastReadingLabel: UILabel!
+    @IBOutlet weak var achNumLabel: UILabel!
+    @IBOutlet weak var consecutiveDaysLabel: UILabel!
+    
+    
     
     func loadLoggedData(){
         var savedReadings = defaults.array(forKey: Keys.savedReadings) as? [Int] ?? [Int]()
@@ -66,14 +72,36 @@ class HomeViewController: UIViewController {
         loadAchievements()
         loadConsecutiveDays()
         loadName()
-        
+                
 //        print(loggedName)
         nameLabel.text = loggedName
         print(loggedReadings)
+        readingNumLabel.text = "Recorded readings: \(loggedReadings.count)"
         print(loggedDates)
+        if loggedReadings.indices.contains(0){
+            if loggedReadings[0] < 70 {
+                lastReadingLabel.text = "Last reading at \(loggedDates[0]), below"
+            } else if loggedReadings[0] > 150 {
+                lastReadingLabel.text = "Last reading at \(loggedDates[0]), above"
+            } else if loggedReadings[0] > 69 && loggedReadings[0] < 151 {
+                lastReadingLabel.text = "Last reading at \(loggedDates[0]), normal"
+            }
+        } else {
+            lastReadingLabel.text = "No readings yet!"
+        }
         print(loggedAchievements)
         print(loggedAchDates)
         print(loggedConsecutiveDays)
+        var ctr = 0
+        for val in loggedAchievements {
+            if val == true {
+                ctr = ctr + 1
+            }
+        }
+        
+        achNumLabel.text = "Achievements unlocked: \(ctr)"
+        
+        consecutiveDaysLabel.text = "Consecutive Days: \(loggedConsecutiveDays)"
     }
     
     /*
