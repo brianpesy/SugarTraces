@@ -7,24 +7,111 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--SugarTraces-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SugarTraces_WatchKit_App" customModuleProvider="target">
+                <controller title="SugarTraces" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SugarTraces_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="1" height="66" alignment="left" text="Hello" textAlignment="center" id="09A-ee-CKA">
-                            <variation key="device=watch44mm" text="Hello">
-                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        <label width="1" height="31" alignment="center" text="Last Reading" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="09A-ee-CKA">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                            <variation key="device=watch44mm" text="Last Reading">
+                                <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
                             </variation>
                         </label>
-                        <button width="1" alignment="left" title="Button" id="e8n-3l-wV9"/>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="pdq-5r-z5S"/>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="AZm-QT-fZT">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="ov0-9r-fNT"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Record Readings" id="e8n-3l-wV9">
+                            <connections>
+                                <action selector="btnTest" destination="AgC-eL-Hgc" id="OVZ-8Q-BiI"/>
+                                <segue destination="sXI-8g-RVH" kind="push" id="Foh-cW-Bqq"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="date0Label" destination="AZm-QT-fZT" id="2WE-aE-Jb3"/>
+                        <outlet property="feedbackLabel" destination="ov0-9r-fNT" id="sEB-hS-8yg"/>
                         <outlet property="lastReadingLabel" destination="09A-ee-CKA" id="2fS-uy-gIE"/>
+                        <outlet property="reading0Label" destination="pdq-5r-z5S" id="vZy-Ru-Lj9"/>
+                        <segue destination="woV-lw-Ole" kind="relationship" relationship="nextPage" id="KWF-PO-ooG"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-182.56521739130434" y="356.69642857142856"/>
+        </scene>
+        <!--Back-->
+        <scene sceneID="fHk-Af-fm7">
+            <objects>
+                <controller title="Back" id="sXI-8g-RVH">
+                    <items>
+                        <label alignment="center" text="Add Reading" id="PaT-LB-DuG">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <textField width="1" alignment="center" placeholder="mg/DL" textContentType="name" id="PpK-PN-4uy"/>
+                        <button width="1" alignment="left" title="Enter Reading" id="mCV-98-Xgh"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-497" y="746"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="L9Q-jp-f9S">
+            <objects>
+                <controller id="woV-lw-Ole">
+                    <items>
+                        <table alignment="left" id="ACN-Ls-D01"/>
+                        <label width="1" alignment="center" text="Last 5 Readings" textAlignment="center" id="zhj-qO-kBo">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <table alignment="left" id="5Nq-Qj-pET">
+                            <items>
+                                <tableRow id="zPD-iG-rft">
+                                    <group key="rootItem" width="1" alignment="left" id="0pp-NX-vI8"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <segue destination="H0E-yr-4eb" kind="relationship" relationship="nextPage" id="Tkh-g3-enY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-183" y="746"/>
+        </scene>
+        <!--Achievement Interface Controller-->
+        <scene sceneID="Jdw-b4-k7g">
+            <objects>
+                <controller id="H0E-yr-4eb" customClass="AchievementInterfaceController" customModule="SugarTraces_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="lld-Vd-JOs"/>
+                        <label alignment="left" text="Label" id="AhC-yI-BXa"/>
+                        <table alignment="left" id="Ci8-V8-uBX">
+                            <items>
+                                <tableRow id="RZZ-vk-ePz">
+                                    <group key="rootItem" width="1" alignment="left" id="zGM-B4-eHo">
+                                        <items>
+                                            <label alignment="left" text="Label" id="jet-xj-DgA"/>
+                                        </items>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="left" text="Label" id="idG-1Y-UPR"/>
+                        <table alignment="left" id="LVc-qW-vNW">
+                            <items>
+                                <tableRow id="qvV-dZ-hhy">
+                                    <group key="rootItem" width="1" alignment="left" id="ViW-qe-Sqq"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="162" y="362"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -58,4 +145,5 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

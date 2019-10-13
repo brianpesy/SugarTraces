@@ -1779,4 +1779,5 @@ and view your current data.</string>
         <segue reference="qKz-zS-IZP"/>
         <segue reference="iMC-54-3gc"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -47,6 +47,7 @@
 		F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C83A2320DFB5001A9CF2 /* NotificationController.swift */; };
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
 		F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */; };
+		F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */; };
 		F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */; };
 		F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */; };
 		F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */; };
@@ -166,6 +167,7 @@
 		F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInterfaceController.swift; sourceTree = "<group>"; };
 		F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGlucoseViewController.swift; sourceTree = "<group>"; };
 		F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarViewController.swift; sourceTree = "<group>"; };
 		F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				F163C83C2320DFB5001A9CF2 /* Assets.xcassets */,
 				F163C83E2320DFB5001A9CF2 /* Info.plist */,
 				F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */,
+				F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */,
 			);
 			path = "SugarTraces WatchKit Extension";
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */,
 				F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */,
 				F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */,
+				F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */,
 				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

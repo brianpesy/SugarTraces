@@ -78,6 +78,8 @@ struct Keys {
 
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
+    var wcSession: WCSession!
+    
     var audioPlayer: AVAudioPlayer!
     var achAudioPlayer: AVAudioPlayer!
     
@@ -89,8 +91,10 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
 
     var loggedConsecutiveDays = 0
     
+    var transferToWatch: [String: [Any]] = [:]
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        print("test1")
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
@@ -98,11 +102,33 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        
+
     }
     
+    func sessionReachabilityDidChange(_ session: WCSession) {
+        print("test2")
+        print("wcSession.isReachable \(wcSession.isReachable)")
+    }
     
-    var wcSession: WCSession!
+//    func sessionWatchStateDidChange(_ session: WCSession) {
+//        if wcSession.isReachable {
+//            print("boop")
+//        } else {
+//            print("no boop")
+//        }
+//    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        print(message["test"])
+        print("hi")
+    }
+    
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        //Doesn't work for some reason.
+        print(applicationContext["test"])
+        print("hi")
+    }
+    
     @IBOutlet weak var glucoseInput: UITextField!
     @IBOutlet weak var feedback: UILabel!
     @IBOutlet weak var secondBox: UILabel!
@@ -127,12 +153,13 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         self.wcSession.delegate = self
         self.wcSession.activate()
         
-//        print(wcSession.isReachable)
-//        if wcSession.isReachable {
-//            print("hahayes")
-//        } else {
-//            print("haha NO!")
-//        }
+        
+        print(wcSession.isReachable)
+        if wcSession.isReachable {
+            print("hahayes")
+        } else {
+            print("haha NO!")
+        }
         
         //Gives drop shadow to label
         feedback.textDropShadow()
@@ -189,6 +216,21 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         sendAnim.pulsate()
+        if wcSession.isReachable {
+            print("reachable!")
+            transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
+            //when I send a message over with the Text Field, I can send it to the WC Session.
+            
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
+            do {
+                try wcSession.updateApplicationContext(transferToWatch)
+
+            } catch {
+                print("err")
+            }
+        } else {
+            print("session not reachable!")
+        }
     }
     
     func saveLoggedData(){
@@ -749,17 +791,20 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //This can check if the watch is reachable. It'll have an error if it isn't!
         print(wcSession.isReachable)
-
-        //SAVING IS NOT WORKING YET
         
         //I need my values to have a key! This is a dictionary
-        let strReadings = "\(loggedReadings)"
-        let strDates = "\(loggedDates)"
-        let readings = ["readings": strReadings, "dates": strDates]
-        
-        //when I send a message over with the Text Field, I can send it to the WC Session.
-        //the same command for watch to iOS as well!
-        wcSession.sendMessage(readings, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
+        if wcSession.isReachable {
+            transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
+            //when I send a message over with the Text Field, I can send it to the WC Session.
+            
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
+            do {
+                try wcSession.updateApplicationContext(transferToWatch)
+
+            } catch {
+                print("err")
+            }
+        }
 
     }
     /*
