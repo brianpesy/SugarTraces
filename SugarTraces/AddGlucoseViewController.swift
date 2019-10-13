@@ -221,13 +221,15 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
-            do {
-                try wcSession.updateApplicationContext(transferToWatch)
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
 
-            } catch {
-                print("err")
-            }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
         } else {
             print("session not reachable!")
         }
@@ -797,13 +799,15 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in print(error.localizedDescription)})
-            do {
-                try wcSession.updateApplicationContext(transferToWatch)
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
 
-            } catch {
-                print("err")
-            }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
         }
 
     }
