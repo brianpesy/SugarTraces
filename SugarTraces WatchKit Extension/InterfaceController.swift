@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import WatchConnectivity
+import ClockKit
 
 struct Keys {
     static let savedReadings = "savedReadings"
@@ -58,11 +59,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
         
         var nowDate = formatter.string(from:date)
-//        var dummyConsDays = consecutiveDays
         print(nowDate)
         
         //the same day means that it just returns consecutiveDays
-        print(consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2))
+//        print(consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2))
         
         if loggedReadings.isEmpty || consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2) != 2{ //no entries at all yet or no entry today yet (consecutiveDays is the same)
             reading0Label.setText("")
@@ -205,6 +205,18 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 ////        }
 //    }
     
+    private func reloadComplications() {
+        if let complications: [CLKComplication] = CLKComplicationServer.sharedInstance().activeComplications {
+            if complications.count > 0 {
+                for complication in complications {
+                    CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
+                    NSLog("Reloading complication \(complication.description)...")
+                }
+                WKInterfaceDevice.current().play(WKHapticType.click) // haptic only for debugging
+            }
+        }
+    }
+    
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         print("AC")
 //        print(applicationContext["readings"])
@@ -217,6 +229,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         
         saveLoggedData()
+        reloadComplications()
         
         print(loggedReadings)
         print(loggedDates)
@@ -269,6 +282,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         
         saveLoggedData()
+        reloadComplications()
         
         print(loggedReadings)
         print(loggedDates)

@@ -20,7 +20,6 @@
 		F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA92341D59D003B4838 /* DeviceHelper.swift */; };
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
 		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
-		F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B9012233B5313009FEED1 /* ComplicationController.swift */; };
 		F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
 		F12D332D234494C100FE3C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12D332623446D1000FE3C3F /* AVFoundation.framework */; };
@@ -48,6 +47,7 @@
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
 		F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */; };
 		F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */; };
+		F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BA99CD2354286F0016F034 /* ComplicationController.swift */; };
 		F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */; };
 		F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */; };
 		F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */; };
@@ -132,7 +132,6 @@
 		F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SugarTraces.entitlements; sourceTree = "<group>"; };
 		F12B8FF5233B14AA009FEED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../temp Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
-		F12B9012233B5313009FEED1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F12D332623446D1000FE3C3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F12D332923446D6D00FE3C3F /* DING.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DING.mp3; sourceTree = "<group>"; };
 		F13474AD23483D1600B99663 /* Intro3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +167,7 @@
 		F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInterfaceController.swift; sourceTree = "<group>"; };
+		F1BA99CD2354286F0016F034 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGlucoseViewController.swift; sourceTree = "<group>"; };
 		F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarViewController.swift; sourceTree = "<group>"; };
 		F1EE6A912341CBBB0089EC66 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -357,10 +357,10 @@
 		F163C8352320DFB5001A9CF2 /* SugarTraces WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F1BA99CD2354286F0016F034 /* ComplicationController.swift */,
 				F163C8362320DFB5001A9CF2 /* InterfaceController.swift */,
 				F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */,
 				F163C83A2320DFB5001A9CF2 /* NotificationController.swift */,
-				F12B9012233B5313009FEED1 /* ComplicationController.swift */,
 				F163C83C2320DFB5001A9CF2 /* Assets.xcassets */,
 				F163C83E2320DFB5001A9CF2 /* Info.plist */,
 				F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */,
@@ -745,8 +745,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */,
-				F12B9024233B545E009FEED1 /* ComplicationController.swift in Sources */,
 				F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */,
+				F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */,
 				F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */,
 				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,
 			);
