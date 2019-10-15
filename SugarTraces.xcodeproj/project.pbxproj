@@ -18,6 +18,7 @@
 		F115C37423465492001CB683 /* Intro3fViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115C37323465492001CB683 /* Intro3fViewController.swift */; };
 		F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA72341D565003B4838 /* NSLayoutHelper.swift */; };
 		F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1169DA92341D59D003B4838 /* DeviceHelper.swift */; };
+		F11E573123555B27009D9F06 /* Last5ReadingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11E573023555B27009D9F06 /* Last5ReadingsController.swift */; };
 		F12B8FF6233B14AA009FEED1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B8FF5233B14AA009FEED1 /* HealthKit.framework */; };
 		F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */; };
 		F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F12D332923446D6D00FE3C3F /* DING.mp3 */; };
@@ -129,6 +130,7 @@
 		F115C37323465492001CB683 /* Intro3fViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3fViewController.swift; sourceTree = "<group>"; };
 		F1169DA72341D565003B4838 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
 		F1169DA92341D59D003B4838 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		F11E573023555B27009D9F06 /* Last5ReadingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Last5ReadingsController.swift; sourceTree = "<group>"; };
 		F12B8FF4233B14A9009FEED1 /* SugarTraces.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SugarTraces.entitlements; sourceTree = "<group>"; };
 		F12B8FF5233B14AA009FEED1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExtensionDelegate.swift; path = "../temp Extension/ExtensionDelegate.swift"; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				F1BA99CD2354286F0016F034 /* ComplicationController.swift */,
+				F11E573023555B27009D9F06 /* Last5ReadingsController.swift */,
 				F163C8362320DFB5001A9CF2 /* InterfaceController.swift */,
 				F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */,
 				F163C83A2320DFB5001A9CF2 /* NotificationController.swift */,
@@ -746,6 +749,7 @@
 			files = (
 				F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */,
 				F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */,
+				F11E573123555B27009D9F06 /* Last5ReadingsController.swift in Sources */,
 				F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */,
 				F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */,
 				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,

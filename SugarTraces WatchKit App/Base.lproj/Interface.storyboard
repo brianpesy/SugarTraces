@@ -52,28 +52,54 @@
                             <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
                         </label>
                         <textField width="1" alignment="center" placeholder="mg/DL" textContentType="name" id="PpK-PN-4uy"/>
-                        <button width="1" alignment="left" title="Enter Reading" id="mCV-98-Xgh"/>
+                        <button width="1" alignment="left" title="Enter" id="mCV-98-Xgh"/>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-497" y="746"/>
         </scene>
-        <!--Interface Controller-->
+        <!--SugarTraces-->
         <scene sceneID="L9Q-jp-f9S">
             <objects>
-                <controller id="woV-lw-Ole">
+                <controller title="SugarTraces" id="woV-lw-Ole" customClass="Last5ReadingsController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="ACN-Ls-D01"/>
                         <label width="1" alignment="center" text="Last 5 Readings" textAlignment="center" id="zhj-qO-kBo">
                             <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
-                        <table alignment="left" id="5Nq-Qj-pET">
-                            <items>
-                                <tableRow id="zPD-iG-rft">
-                                    <group key="rootItem" width="1" alignment="left" id="0pp-NX-vI8"/>
-                                </tableRow>
-                            </items>
-                        </table>
+                        <table alignment="left" id="5Nq-Qj-pET"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="VWx-PG-mwh"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="6Lm-nC-cBf">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <separator alignment="left" id="lXQ-Th-vyv">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="zON-XL-Iq0"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="zRJ-NN-0xQ">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <separator alignment="left" id="bp4-HG-gKv">
+                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="PLb-pp-Fef"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="yvp-TU-Fq9">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <separator alignment="left" id="hYR-Ht-H3b">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="BaP-sL-TvW"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="tXM-hv-Jkv">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <separator alignment="left" id="6np-Hn-TQX">
+                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="IB2-ME-f25"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="wsv-uH-ici">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
                     </items>
                     <connections>
                         <segue destination="H0E-yr-4eb" kind="relationship" relationship="nextPage" id="Tkh-g3-enY"/>
@@ -82,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="-183" y="746"/>
         </scene>
-        <!--Achievement Interface Controller-->
+        <!--SugarTraces-->
         <scene sceneID="Jdw-b4-k7g">
             <objects>
-                <controller id="H0E-yr-4eb" customClass="AchievementInterfaceController" customModule="SugarTraces_WatchKit_Extension">
+                <controller title="SugarTraces" id="H0E-yr-4eb" customClass="AchievementInterfaceController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="lld-Vd-JOs"/>
                         <label alignment="left" text="Label" id="AhC-yI-BXa"/>
