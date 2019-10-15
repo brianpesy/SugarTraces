@@ -63,45 +63,41 @@
             <objects>
                 <controller title="SugarTraces" id="woV-lw-Ole" customClass="Last5ReadingsController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="ACN-Ls-D01"/>
                         <label width="1" alignment="center" text="Last 5 Readings" textAlignment="center" id="zhj-qO-kBo">
                             <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </label>
-                        <table alignment="left" id="5Nq-Qj-pET"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="VWx-PG-mwh"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="6Lm-nC-cBf">
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="PDR-AP-92j"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="R4f-mT-J9S">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
-                        <separator alignment="left" id="lXQ-Th-vyv">
-                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </separator>
-                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="zON-XL-Iq0"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="zRJ-NN-0xQ">
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="6gL-QU-xxn"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="g3O-by-3TH">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
-                        <separator alignment="left" id="bp4-HG-gKv">
-                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </separator>
-                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="PLb-pp-Fef"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="yvp-TU-Fq9">
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="jPO-tB-z3P"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="Tjs-O4-FPB">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
-                        <separator alignment="left" id="hYR-Ht-H3b">
-                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </separator>
-                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="BaP-sL-TvW"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="tXM-hv-Jkv">
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="8w4-Pw-Pti"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="wbk-Kl-RKr">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
-                        <separator alignment="left" id="6np-Hn-TQX">
-                            <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </separator>
-                        <label width="1" alignment="left" text="Label" numberOfLines="0" minimumScaleFactor="0.5" id="IB2-ME-f25"/>
-                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="wsv-uH-ici">
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="hvI-c6-tmC"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="sqq-U5-5jA">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
                     </items>
                     <connections>
+                        <outlet property="d0Label" destination="R4f-mT-J9S" id="PPe-e3-05s"/>
+                        <outlet property="d1Label" destination="g3O-by-3TH" id="I55-aF-Tgl"/>
+                        <outlet property="d2Label" destination="Tjs-O4-FPB" id="I7c-b8-C9H"/>
+                        <outlet property="d3Label" destination="wbk-Kl-RKr" id="M4D-AT-muk"/>
+                        <outlet property="d4Label" destination="sqq-U5-5jA" id="vbT-QC-QEc"/>
+                        <outlet property="r0Label" destination="PDR-AP-92j" id="303-d5-h2i"/>
+                        <outlet property="r1Label" destination="6gL-QU-xxn" id="x04-LL-qUu"/>
+                        <outlet property="r2Label" destination="jPO-tB-z3P" id="ROC-FR-pWQ"/>
+                        <outlet property="r3Label" destination="8w4-Pw-Pti" id="YwB-Qs-bya"/>
+                        <outlet property="r4Label" destination="hvI-c6-tmC" id="nmj-5L-9od"/>
                         <segue destination="H0E-yr-4eb" kind="relationship" relationship="nextPage" id="Tkh-g3-enY"/>
                     </connections>
                 </controller>

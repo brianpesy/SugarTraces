@@ -64,6 +64,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         //the same day means that it just returns consecutiveDays
 //        print(consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2))
         
+        
         if loggedReadings.isEmpty || consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2) != 2{ //no entries at all yet or no entry today yet (consecutiveDays is the same)
             reading0Label.setText("")
             date0Label.setText("No entry today yet!")
@@ -99,7 +100,37 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         }
         //get your data from the iPhone HERE (initial synchronization)
         
+        let date = Date()
+        let formatter = DateFormatter()
+        //Date formatting
+        formatter.timeZone = .current
+        formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
         
+        var nowDate = formatter.string(from:date)
+        
+        loadLoggedData()
+        if loggedReadings.isEmpty || consecutiveDaysCheck(prevDay: loggedDates[0], newDay: nowDate, consecutiveDays: 2) != 2{ //no entries at all yet or no entry today yet (consecutiveDays is the same)
+            reading0Label.setText("")
+            date0Label.setText("No entry today yet!")
+            date0Label.setTextColor(UIColor.white)
+            feedbackLabel.setText("")
+        } else {
+            reading0Label.setText("\(String(loggedReadings[0])) mg/DL")
+            if loggedReadings[0] < 70 { //below
+                reading0Label.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
+                feedbackLabel.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
+                feedbackLabel.setText("Sugar! Please!")
+            } else if loggedReadings[0] > 150 { //above
+                reading0Label.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
+                feedbackLabel.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
+                feedbackLabel.setText("Lower is power!")
+            } else { //normal
+                reading0Label.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
+                feedbackLabel.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
+                feedbackLabel.setText("You're amazing!")
+            }
+            date0Label.setText("On: \(loggedDates[0])")
+        }
     }
     
     func consecutiveDaysCheck(prevDay: String, newDay: String, consecutiveDays: Int) -> Int {
