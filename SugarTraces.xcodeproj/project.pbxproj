@@ -48,6 +48,7 @@
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
 		F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */; };
 		F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */; };
+		F1A80C772355996300AC77E2 /* AddReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A80C762355996300AC77E2 /* AddReadingController.swift */; };
 		F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BA99CD2354286F0016F034 /* ComplicationController.swift */; };
 		F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */; };
 		F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */; };
@@ -169,6 +170,7 @@
 		F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInterfaceController.swift; sourceTree = "<group>"; };
+		F1A80C762355996300AC77E2 /* AddReadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReadingController.swift; sourceTree = "<group>"; };
 		F1BA99CD2354286F0016F034 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F1E131C023388F9800E23BEA /* AddGlucoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGlucoseViewController.swift; sourceTree = "<group>"; };
 		F1E131C22338910100E23BEA /* MasterTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTabBarViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				F1BA99CD2354286F0016F034 /* ComplicationController.swift */,
+				F1A80C762355996300AC77E2 /* AddReadingController.swift */,
 				F11E573023555B27009D9F06 /* Last5ReadingsController.swift */,
 				F163C8362320DFB5001A9CF2 /* InterfaceController.swift */,
 				F12B900E233B5313009FEED1 /* ExtensionDelegate.swift */,
@@ -752,6 +755,7 @@
 				F11E573123555B27009D9F06 /* Last5ReadingsController.swift in Sources */,
 				F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */,
 				F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */,
+				F1A80C772355996300AC77E2 /* AddReadingController.swift in Sources */,
 				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -944,7 +948,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -967,7 +971,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 5.3;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
