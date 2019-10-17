@@ -119,14 +119,69 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
 //    }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        print(message["test"])
-        print("hi")
+//        replyHandler(["success":"yay"])
+        var tempLoggedReadings = [Int]()
+        var tempLoggedDates = [String]()
+        var numLoggedReadings:Int
+        var strLoggedDates:String
+        
+        if message.keys.contains("readings"){
+            tempLoggedReadings = message["readings"] as! [Int]
+            numLoggedReadings = tempLoggedReadings[0]
+            loggedReadings.insert(numLoggedReadings, at: 0)
+            writeBloodGlucose(bloodGlucose: Double(numLoggedReadings))
+        }
+        
+        
+        if message.keys.contains("dates") {
+            tempLoggedDates = message["dates"] as! [String]
+            strLoggedDates = tempLoggedDates[0]
+            loggedDates.insert(strLoggedDates, at: 0)
+        }
+        
+        saveLoggedData()
+        
+        
+//        achievementCheck()
+        print("sendMessage")
+
+        print(loggedReadings)
+        print(loggedDates)
+        
+//        print(message["readings"])
+        print("---------")
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        //Doesn't work for some reason.
-        print(applicationContext["test"])
-        print("hi")
+        
+        var tempLoggedReadings = [Int]()
+        var tempLoggedDates = [String]()
+        var numLoggedReadings:Int
+        var strLoggedDates:String
+                
+        if applicationContext.keys.contains("readings"){
+            tempLoggedReadings = applicationContext["readings"] as! [Int]
+            numLoggedReadings = tempLoggedReadings[0]
+            loggedReadings.insert(numLoggedReadings, at: 0)
+        }
+        
+        
+        if applicationContext.keys.contains("dates") {
+            tempLoggedDates = applicationContext["dates"] as! [String]
+            strLoggedDates = tempLoggedDates[0]
+            loggedDates.insert(strLoggedDates, at: 0)
+        }
+        
+        saveLoggedData()
+        achievementCheck()
+//        consecutiveDaysCheck(prevDay: <#T##String#>, newDay: <#T##String#>, consecutiveDays: loggedConsecutive)
+                
+//        print(applicationContext["readings"])
+        print("applicationContext")
+        print(loggedReadings)
+        print(loggedDates)
+        print("---------")
+
     }
     
     @IBOutlet weak var glucoseInput: UITextField!

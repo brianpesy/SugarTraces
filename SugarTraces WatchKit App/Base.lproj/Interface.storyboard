@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-182.56521739130434" y="356.69642857142856"/>
         </scene>
-        <!--Back-->
+        <!--Done-->
         <scene sceneID="fHk-Af-fm7">
             <objects>
-                <controller title="Back" id="sXI-8g-RVH" customClass="AddReadingController" customModule="SugarTraces_WatchKit_Extension">
+                <controller title="Done" id="sXI-8g-RVH" customClass="AddReadingController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Add Reading" id="PaT-LB-DuG">
                             <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,6 +53,7 @@
                         </label>
                         <label width="1" height="39" alignment="center" text="Type down your reading!" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="4jH-5A-Uss">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                         </label>
                         <textField width="1" alignment="center" placeholder="mg/DL" textContentType="name" id="PpK-PN-4uy">
                             <connections>

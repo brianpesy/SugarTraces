@@ -46,14 +46,14 @@ class StatsViewController: UIViewController, ChartViewDelegate {
     func setColor(value: Double) -> UIColor{
         //Red: Below, Blue: Normal, Yellow: Above
 
-        if(value > 69 && value < 151){
+        if(value > 69 && value < 151){ //normal
+            return UIColor.yellow
+        }
+        else if(value < 70){ //below
             return UIColor.blue
         }
-        else if(value < 70){
+        else if(value > 150){ //above
             return UIColor.red
-        }
-        else if(value > 150){
-            return UIColor.yellow
         }
 
         else { //In case anything goes wrong
@@ -72,12 +72,12 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         let normalLegend = LegendEntry()
         normalLegend.label = "Normal"
         normalLegend.form = .square
-        normalLegend.formColor = UIColor.blue
+        normalLegend.formColor = UIColor.yellow
         
         let belowLegend = LegendEntry()
         belowLegend.label = "Below"
         belowLegend.form = .square
-        belowLegend.formColor = UIColor.yellow
+        belowLegend.formColor = UIColor.blue
 
         barChartView.legend.extraEntries = [aboveLegend, normalLegend, belowLegend]
     }
