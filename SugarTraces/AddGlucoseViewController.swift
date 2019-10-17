@@ -141,7 +141,24 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         saveLoggedData()
         
-        
+        loadConsecutiveDays()
+        print("before \(loggedConsecutiveDays)")
+        if !tempLoggedReadings.isEmpty {
+            if tempLoggedReadings[0] > 69 && tempLoggedReadings[0] < 151 {
+                if loggedConsecutiveDays == 0 {
+                    loggedConsecutiveDays = 1
+                } else {
+                    loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+                }
+            }
+        } else {
+            loggedConsecutiveDays = 0
+        }
+
+        print("after \(loggedConsecutiveDays)")
+
+        saveConsecutiveDays()
+
 //        achievementCheck()
         print("sendMessage")
 
@@ -173,8 +190,11 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         }
         
         saveLoggedData()
-        achievementCheck()
-//        consecutiveDaysCheck(prevDay: <#T##String#>, newDay: <#T##String#>, consecutiveDays: loggedConsecutive)
+        
+        loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+        saveConsecutiveDays()
+//        achievementCheck()
+
                 
 //        print(applicationContext["readings"])
         print("applicationContext")
