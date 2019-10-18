@@ -10,9 +10,26 @@ import UIKit
 import HealthKit
 import MessageUI
 import AVFoundation
+import WatchConnectivity
 
 
-class InfoViewController: UIViewController {
+
+class InfoViewController: UIViewController, WCSessionDelegate {
+    
+    var wcSession: WCSession!
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
 
     @IBOutlet weak var bgBox: UILabel!
     @IBOutlet weak var aboutBtn: UIButton!
@@ -26,6 +43,8 @@ class InfoViewController: UIViewController {
     var loggedAchievements = [Bool](repeating: false, count: 11)
     var loggedAchDates = [String](repeating: "", count: 11)
     
+    var transferToWatch: [String: [Any]] = [:]
+    
     var dob:Any?
     var sex:Any?
     
@@ -34,6 +53,12 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Watch Connectivity
+        self.wcSession = WCSession.default
+        self.wcSession.delegate = self
+        self.wcSession.activate()
+        
         bgBox.textDropShadow()
         // Do any additional setup after loading the view.
         
@@ -76,9 +101,7 @@ class InfoViewController: UIViewController {
         (dob, sex) = readProfile()
                 
         loadLoggedData()
-        
-        sendEmail()
-        
+                
         if (loggedAchievements[9] != true){
             achAudioPlayer.play()
             print("ACHIEVEMENT")
@@ -102,8 +125,22 @@ class InfoViewController: UIViewController {
 //            self.present(alert, animated: true, completion: nil)
             
             saveAchievements()
+            
+            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+            
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
 
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
         }
+        
+        sendEmail()
+
         
         
     }
@@ -236,6 +273,18 @@ class InfoViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             
             saveAchievements()
+            
+            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+            
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
 
         }
     }

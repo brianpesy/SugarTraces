@@ -139,25 +139,42 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             loggedDates.insert(strLoggedDates, at: 0)
         }
         
-        saveLoggedData()
-        
-        loadConsecutiveDays()
-        print("before \(loggedConsecutiveDays)")
-        if !tempLoggedReadings.isEmpty {
-            if tempLoggedReadings[0] > 69 && tempLoggedReadings[0] < 151 {
-                if loggedConsecutiveDays == 0 {
-                    loggedConsecutiveDays = 1
-                } else {
-                    loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
-                }
-            }
-        } else {
-            loggedConsecutiveDays = 0
+        if message.keys.contains("ach") {
+            loggedAchievements = message["ach"] as! [Bool]
+            print(loggedAchievements)
         }
-
-        print("after \(loggedConsecutiveDays)")
-
+        
+        if message.keys.contains("achDates") {
+            loggedAchDates = message["achDates"] as! [String]
+            print(loggedAchDates)
+        }
+        
+        if message.keys.contains("consecutiveDays") {
+            loggedConsecutiveDays = message["consecutiveDays"] as! Int
+            print(loggedConsecutiveDays)
+        }
+        
+        saveLoggedData()
         saveConsecutiveDays()
+
+//        loadConsecutiveDays()
+//        print("before \(loggedConsecutiveDays)")
+//        if !tempLoggedReadings.isEmpty {
+//            if tempLoggedReadings[0] > 69 && tempLoggedReadings[0] < 151 {
+//                if loggedConsecutiveDays == 0 {
+//                    loggedConsecutiveDays = 1
+//                } else {
+//                    loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+//                }
+//            }
+//        } else {
+//            loggedConsecutiveDays = 0
+//        }
+
+//        print("after \(loggedConsecutiveDays)")
+//
+//        saveConsecutiveDays()
+        saveAchievements()
 
 //        achievementCheck()
         print("sendMessage")
@@ -189,10 +206,28 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             loggedDates.insert(strLoggedDates, at: 0)
         }
         
-        saveLoggedData()
+        if applicationContext.keys.contains("ach") {
+            loggedAchievements = applicationContext["ach"] as! [Bool]
+            print(loggedAchievements)
+        }
         
-        loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+        if applicationContext.keys.contains("achDates") {
+            loggedAchDates = applicationContext["achDates"] as! [String]
+            print(loggedAchDates)
+        }
+        
+        if applicationContext.keys.contains("consecutiveDays") {
+            loggedConsecutiveDays = applicationContext["consecutiveDays"] as! Int
+            print(loggedConsecutiveDays)
+        }
+        
+        saveLoggedData()
+        saveAchievements()
         saveConsecutiveDays()
+
+        
+//        loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+//        saveConsecutiveDays()
 //        achievementCheck()
 
                 
@@ -293,13 +328,23 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         sendAnim.pulsate()
         if wcSession.isReachable {
             print("reachable!")
-            transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
+            transferToWatch = ["readings": loggedReadings, "dates": loggedDates, "ach": loggedAchievements, "achDates": loggedAchDates]
+            var transferConsDays = ["consecutiveDays": loggedConsecutiveDays]
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
             wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
 //                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
+            wcSession.sendMessage(transferConsDays, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(transferConsDays)
 
                 } catch {
                     print(error.localizedDescription)
@@ -871,13 +916,24 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //I need my values to have a key! This is a dictionary
         if wcSession.isReachable {
-            transferToWatch = ["readings": loggedReadings, "dates": loggedDates]
+            transferToWatch = ["readings": loggedReadings, "dates": loggedDates, "ach": loggedAchievements, "achDates": loggedAchDates]
+            var transferConsDays = ["consecutiveDays": loggedConsecutiveDays]
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
             wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
 //                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print(error.localizedDescription)
+                }
+            })
+            
+            wcSession.sendMessage(transferConsDays, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(transferConsDays)
 
                 } catch {
                     print(error.localizedDescription)

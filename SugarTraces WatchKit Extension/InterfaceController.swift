@@ -28,6 +28,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var loggedReadings: [Int] = []
     var loggedDates: [String] = []
     
+    var loggedAchievements = [Bool](repeating: false, count: 11)
+    var loggedAchDates = [String](repeating: "", count: 11)
+    
+    var loggedConsecutiveDays = 0
+
     @IBOutlet weak var reading0Label: WKInterfaceLabel!
     @IBOutlet weak var date0Label: WKInterfaceLabel!
     @IBOutlet weak var feedbackLabel: WKInterfaceLabel!
@@ -48,9 +53,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
         // Configure interface objects here.
         loadLoggedData()
+        loadAchievements()
+        loadConsecutiveDays()
+        
+        if loggedAchievements.isEmpty {
+            loggedAchievements = [Bool](repeating: false, count: 11)
+        }
+        if loggedAchDates.isEmpty {
+            loggedAchDates = [String](repeating: "", count: 11)
+        }
+        
+        saveAchievements()
+        
         print("START OF THE APP") //works yay!
         print(loggedReadings)
         print(loggedDates)
+        print(loggedAchievements)
+        print(loggedAchDates)
         
         let date = Date()
         let formatter = DateFormatter()
@@ -217,6 +236,15 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         defaults.set(loggedDates, forKey: Keys.savedDates)
     }
     
+    func saveAchievements(){
+        defaults.set(loggedAchievements, forKey: Keys.savedAchievements)
+        defaults.set(loggedAchDates, forKey: Keys.savedAchDates)
+    }
+    
+    func saveConsecutiveDays(){
+        defaults.set(loggedConsecutiveDays, forKey: Keys.savedConsecutiveDays)
+    }
+    
     func loadLoggedData(){
         var savedReadings = defaults.array(forKey: Keys.savedReadings) as? [Int] ?? [Int]()
         loggedReadings = savedReadings
@@ -224,6 +252,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         var savedDates = defaults.array(forKey: Keys.savedDates) as? [String] ?? [String]()
         loggedDates = savedDates
     }
+    
+    func loadAchievements(){
+        var savedAchievements = defaults.array(forKey: Keys.savedAchievements) as? [Bool] ?? [Bool]()
+        loggedAchievements = savedAchievements
+        
+        var savedAchDates = defaults.array(forKey: Keys.savedAchDates) as? [String] ?? [String]()
+        loggedAchDates = savedAchDates
+    }
+    
+    func loadConsecutiveDays(){
+        var savedConsecutiveDays = defaults.integer(forKey: Keys.savedConsecutiveDays)
+        loggedConsecutiveDays = savedConsecutiveDays
+    }
+
     
 //    @IBAction func btnTest() {
 //        var testdict = ["test": "ss"]
@@ -259,13 +301,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             loggedDates = applicationContext["dates"] as! [String]
         }
         
+        if applicationContext.keys.contains("ach") {
+            loggedAchievements = applicationContext["ach"] as! [Bool]
+        }
+        
+        if applicationContext.keys.contains("achDates") {
+            loggedAchDates = applicationContext["achDates"] as! [String]
+        }
+        
+        if applicationContext.keys.contains("consecutiveDays") {
+            loggedConsecutiveDays = applicationContext["consecutiveDays"] as! Int
+        }
+        
         saveLoggedData()
+        saveAchievements()
+        saveConsecutiveDays()
         reloadComplications()
         
         print(loggedReadings)
         print(loggedDates)
         print(loggedReadings[0])
         print(loggedDates[0])
+        print(loggedAchievements)
+        print(loggedAchDates)
+        print("cons days \(loggedConsecutiveDays)")
         print("-------")
         
         let date = Date()
@@ -312,13 +371,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             loggedDates = message["dates"] as! [String]
         }
         
+        if message.keys.contains("ach") {
+            loggedAchievements = message["ach"] as! [Bool]
+        }
+        
+        if message.keys.contains("achDates") {
+            loggedAchDates = message["achDates"] as! [String]
+        }
+        
+        if message.keys.contains("consecutiveDays") {
+            loggedConsecutiveDays = message["consecutiveDays"] as! Int
+        }
+        
         saveLoggedData()
+        saveAchievements()
+        saveConsecutiveDays()
         reloadComplications()
         
         print(loggedReadings)
         print(loggedDates)
         print(loggedReadings[0])
         print(loggedDates[0])
+        print(loggedAchievements)
+        print(loggedAchDates)
+        print("cons days \(loggedConsecutiveDays)")
         print("-------")
         
         let date = Date()
