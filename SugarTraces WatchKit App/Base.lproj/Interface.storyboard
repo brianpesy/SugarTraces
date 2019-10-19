@@ -118,14 +118,18 @@
             <objects>
                 <controller title="SugarTraces" id="H0E-yr-4eb" customClass="AchievementInterfaceController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="center" text="Consecutive Days" id="AhC-yI-BXa"/>
+                        <label width="1" alignment="center" text="Consecutive Days" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="AhC-yI-BXa">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
                         <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="V8z-EW-BeH">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </label>
                         <separator alignment="left" id="mww-oF-KUd">
                             <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </separator>
-                        <label width="1" alignment="center" text="Achievements" id="idG-1Y-UPR"/>
+                        <label width="1" alignment="center" text="Achievements" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="idG-1Y-UPR">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
                         <table alignment="left" id="LVc-qW-vNW">
                             <items>
                                 <tableRow identifier="RowController" id="qvV-dZ-hhy" customClass="RowController" customModule="SugarTraces_WatchKit_Extension">
