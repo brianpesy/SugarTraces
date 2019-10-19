@@ -46,6 +46,8 @@
 		F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C8362320DFB5001A9CF2 /* InterfaceController.swift */; };
 		F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F163C83A2320DFB5001A9CF2 /* NotificationController.swift */; };
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
+		F16A0F13235AD3560084ACA0 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0F12235AD3560084ACA0 /* RowController.swift */; };
+		F16A0F15235AD7880084ACA0 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0F14235AD7880084ACA0 /* DetailInterfaceController.swift */; };
 		F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */; };
 		F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */; };
 		F1A80C772355996300AC77E2 /* AddReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A80C762355996300AC77E2 /* AddReadingController.swift */; };
@@ -167,6 +169,8 @@
 		F163C83C2320DFB5001A9CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F163C83E2320DFB5001A9CF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F16A0F12235AD3560084ACA0 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		F16A0F14235AD7880084ACA0 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
 		F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInterfaceController.swift; sourceTree = "<group>"; };
@@ -371,6 +375,8 @@
 				F163C83E2320DFB5001A9CF2 /* Info.plist */,
 				F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */,
 				F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */,
+				F16A0F12235AD3560084ACA0 /* RowController.swift */,
+				F16A0F14235AD7880084ACA0 /* DetailInterfaceController.swift */,
 			);
 			path = "SugarTraces WatchKit Extension";
 			sourceTree = "<group>";
@@ -752,9 +758,11 @@
 			files = (
 				F163C83B2320DFB5001A9CF2 /* NotificationController.swift in Sources */,
 				F12B9022233B544A009FEED1 /* ExtensionDelegate.swift in Sources */,
+				F16A0F13235AD3560084ACA0 /* RowController.swift in Sources */,
 				F11E573123555B27009D9F06 /* Last5ReadingsController.swift in Sources */,
 				F1BA99CE2354286F0016F034 /* ComplicationController.swift in Sources */,
 				F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */,
+				F16A0F15235AD7880084ACA0 /* DetailInterfaceController.swift in Sources */,
 				F1A80C772355996300AC77E2 /* AddReadingController.swift in Sources */,
 				F163C8372320DFB5001A9CF2 /* InterfaceController.swift in Sources */,
 			);

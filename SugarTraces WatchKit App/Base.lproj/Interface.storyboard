@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14868" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14643"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--SugarTraces-->
@@ -119,31 +118,61 @@
             <objects>
                 <controller title="SugarTraces" id="H0E-yr-4eb" customClass="AchievementInterfaceController" customModule="SugarTraces_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="lld-Vd-JOs"/>
-                        <label alignment="left" text="Label" id="AhC-yI-BXa"/>
-                        <table alignment="left" id="Ci8-V8-uBX">
-                            <items>
-                                <tableRow id="RZZ-vk-ePz">
-                                    <group key="rootItem" width="1" alignment="left" id="zGM-B4-eHo">
-                                        <items>
-                                            <label alignment="left" text="Label" id="jet-xj-DgA"/>
-                                        </items>
-                                    </group>
-                                </tableRow>
-                            </items>
-                        </table>
-                        <label alignment="left" text="Label" id="idG-1Y-UPR"/>
+                        <label width="1" alignment="center" text="Consecutive Days" id="AhC-yI-BXa"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="V8z-EW-BeH">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <separator alignment="left" id="mww-oF-KUd">
+                            <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label width="1" alignment="center" text="Achievements" id="idG-1Y-UPR"/>
                         <table alignment="left" id="LVc-qW-vNW">
                             <items>
-                                <tableRow id="qvV-dZ-hhy">
-                                    <group key="rootItem" width="1" alignment="left" id="ViW-qe-Sqq"/>
+                                <tableRow identifier="RowController" id="qvV-dZ-hhy" customClass="RowController" customModule="SugarTraces_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ViW-qe-Sqq">
+                                        <items>
+                                            <imageView width="45" alignment="left" id="BgC-Lc-ueX"/>
+                                            <label height="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="3ER-mQ-0Z5"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="achLabel" destination="3ER-mQ-0Z5" id="2KR-gR-XXC"/>
+                                        <outlet property="imgAchLabel" destination="BgC-Lc-ueX" id="jcx-Pi-iwK"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="consecutiveDaysLabel" destination="V8z-EW-BeH" id="TNd-Ab-n3f"/>
+                        <outlet property="tableView" destination="LVc-qW-vNW" id="ltC-EH-ZV0"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="162" y="362"/>
+        </scene>
+        <!--DetailInterfaceController-->
+        <scene sceneID="gxn-CT-Gh1">
+            <objects>
+                <controller identifier="DetailInterfaceController" id="g8q-yK-pbB" customClass="DetailInterfaceController" customModule="SugarTraces_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="center" text="Achievement Details" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="Bcy-QS-ifL">
+                            <color key="textColor" red="0.1333333333" green="0.71372549019999998" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <imageView width="45" alignment="center" id="mbg-sF-M0q"/>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="nGS-DN-fUF"/>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.5" id="AeE-dB-0EM">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="AeE-dB-0EM" id="XhY-jV-Lmd"/>
+                        <outlet property="detailLabel" destination="nGS-DN-fUF" id="P3e-TM-ft2"/>
+                        <outlet property="imgAch" destination="mbg-sF-M0q" id="Zdg-FC-DUn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="479" y="362"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -160,21 +189,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="456" y="1033"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="SugarTraces_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="820" y="1033"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="SugarTraces_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="820" y="746"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
