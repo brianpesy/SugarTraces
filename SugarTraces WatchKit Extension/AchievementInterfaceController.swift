@@ -24,7 +24,9 @@ class AchievementInterfaceController: WKInterfaceController, WCSessionDelegate {
     var loggedConsecutiveDays = 0
     
     var wcSession: WCSession!
-
+    
+    var imgArr = ["imgAch0", "imgAch1", "imgAch2", "imgAch3", "imgAch4", "imgAch5", "imgAch6", "imgAch7", "imgAch8", "imgAch9", "imgAch10"]
+    var descriptionArr = ["Entered your first reading!", "Entered 4 consecutive readings after an above normal reading!", "Entered 5 consecutive normal readings!", "Entered 4 consecutive normal readings after a below normal reading!", "Entered 10 consecutive readings!", "Entered normal readings for 3 days in a row!", "Entered a normal reading after an above reading!", "Entered a normal reading after a below reading!", "Entered 15 consecutive normal readings!", "Checked out the Send Data option!", "Checked out the Acknowledgment option!"]
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -108,9 +110,11 @@ class AchievementInterfaceController: WKInterfaceController, WCSessionDelegate {
                 //also, array of strings that correspond to the image's filename
                 
                 if element == true {
-                    rowController.achLabel.setText("Achievement")
+                    rowController.achLabel.setText("Unlocked\nAchievement")
+                    rowController.imgAchLabel.setImage(UIImage(named: imgArr[index]))
                 } else if element == false {
                     rowController.achLabel.setText("Locked")
+                    rowController.imgAchLabel.setImage(UIImage(named: "lock"))
                 }
             }
         }
@@ -119,7 +123,14 @@ class AchievementInterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         //context is the data we're passing over. We'll pass the rowIndex number instead.
-        pushController(withName: "DetailInterfaceController", context: loggedAchievements[rowIndex])
+        var dummyInt = 2
+        if loggedAchievements[rowIndex] == true {
+            dummyInt = 1
+        } else {
+            dummyInt = 0
+        }
+        var multipleValues = [dummyInt, rowIndex] as [Int]
+        pushController(withName: "DetailInterfaceController", context: multipleValues)
     }
     
 }

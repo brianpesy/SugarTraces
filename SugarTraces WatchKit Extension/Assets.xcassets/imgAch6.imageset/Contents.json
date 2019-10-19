@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "idiom" : "watch",
+      "filename" : "icons8-drag_list_down_filled-1.png",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

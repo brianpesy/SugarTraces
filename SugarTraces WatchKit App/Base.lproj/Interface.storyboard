@@ -131,8 +131,10 @@
                                 <tableRow identifier="RowController" id="qvV-dZ-hhy" customClass="RowController" customModule="SugarTraces_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="ViW-qe-Sqq">
                                         <items>
-                                            <imageView width="45" alignment="left" id="BgC-Lc-ueX"/>
-                                            <label height="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.5" id="3ER-mQ-0Z5"/>
+                                            <imageView width="40" height="1" alignment="left" id="BgC-Lc-ueX"/>
+                                            <label height="1" alignment="left" text="Label" textAlignment="justified" numberOfLines="0" minimumScaleFactor="0.29999999999999999" id="3ER-mQ-0Z5">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
