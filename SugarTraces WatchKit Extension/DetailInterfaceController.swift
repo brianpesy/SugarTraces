@@ -19,6 +19,7 @@ class DetailInterfaceController: WKInterfaceController {
     
     var imgArr = ["imgAch0", "imgAch1", "imgAch2", "imgAch3", "imgAch4", "imgAch5", "imgAch6", "imgAch7", "imgAch8", "imgAch9", "imgAch10"]
     var descriptionArr = ["Entered your first reading!", "Entered 4 consecutive readings after an above normal reading!", "Entered 5 consecutive normal readings!", "Entered 4 consecutive normal readings after a below normal reading!", "Entered 10 consecutive readings!", "Entered normal readings for 3 days in a row!", "Entered a normal reading after an above reading!", "Entered a normal reading after a below reading!", "Entered 15 consecutive normal readings!", "Checked out the Send Data option!", "Checked out the Acknowledgment option!"]
+    var lockedDescriptionArr = ["Try entering your first reading!", "Try entering 4 consecutive readings after an above normal readings!", "Try entering 5 consecutive normal readings!", "Try entering 4 consecutive normal readings after a below normal reading!", "Try entering 10 consecutive readings!", "Try entering normal readings for 3 days in a row!", "Try entering a normal reading after an above reading!", "Try entering a normal reading after a below reading!", "Try entering 15 consecutive normal readings!", "Try checking out the Send Data option.", "Try checking out the Acknowledgment option."]
     
     var loggedAchievements = [Bool](repeating: false, count: 11)
     var loggedAchDates = [String](repeating: "", count: 11)
@@ -52,14 +53,16 @@ class DetailInterfaceController: WKInterfaceController {
                 imgAch.setImage(UIImage(named: "lock"))
                 
                 //Locked descriptions here.
+                detailLabel.setText("Locked")
                 
                 //Empty dateLabel required.
-                dateLabel.setText("")
+                dateLabel.setText(lockedDescriptionArr[detailData[1]])
             } else if detailData[0] == 1 {
 //                imgAch.setImage(UIImage(named: "imgAch0"))
                 print("hi")
                 
                 //image of the unlocked achievement here
+                imgAch.setImage(UIImage(named: imgArr[detailData[1]]))
                 
                 //Unlocked descriptions here.
                 detailLabel.setText(descriptionArr[detailData[1]])
