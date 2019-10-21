@@ -79,9 +79,9 @@
       "subtype" : "44mm"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "watch-marketing",
       "filename" : "icon-1024-1024@1x.png",
+      "size" : "1024x1024",
       "scale" : "1x"
     }
   ],

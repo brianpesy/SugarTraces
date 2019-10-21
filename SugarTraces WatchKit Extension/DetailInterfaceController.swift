@@ -39,7 +39,6 @@ class DetailInterfaceController: WKInterfaceController {
         print(loggedAchDates)
         
         if let detailData = context as? [Int] {
-//            detailLabel.setText(detailData as! String)
             
             //we can start doing our operations in here. We passed if the achievement is 1 or 0 (1: true, 0: false). We can base the deatil off this value.
             //detailData[0] is if the achievement is true or false
@@ -49,7 +48,6 @@ class DetailInterfaceController: WKInterfaceController {
             
             if detailData[0] == 0 {
 //                imgAch.setImage("lock")
-                print("in")
                 imgAch.setImage(UIImage(named: "lock"))
                 
                 //Locked descriptions here.
@@ -59,8 +57,6 @@ class DetailInterfaceController: WKInterfaceController {
                 dateLabel.setText(lockedDescriptionArr[detailData[1]])
             } else if detailData[0] == 1 {
 //                imgAch.setImage(UIImage(named: "imgAch0"))
-                print("hi")
-                
                 //image of the unlocked achievement here
                 imgAch.setImage(UIImage(named: imgArr[detailData[1]]))
                 
