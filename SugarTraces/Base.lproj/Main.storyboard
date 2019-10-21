@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSg-O9-XgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSg-O9-XgW">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -219,7 +219,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -235,7 +235,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="257" id="RjK-lX-jLT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -251,7 +251,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="257" id="vfi-Dz-Etn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -267,7 +267,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="257" id="vTO-re-N8s"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
