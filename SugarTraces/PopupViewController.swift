@@ -23,6 +23,7 @@ class PopupViewController: UIViewController {
     "You checked out the Send Data option. Thanks!",
     "You checked out the Acknowledgment option. Thanks!"]
     var loggedAchDates = [String](repeating: "", count: 11)
+    var isFront = true
 
     
     @IBOutlet weak var popupView: UIView!
@@ -33,6 +34,7 @@ class PopupViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        popupView.isHidden = false
         popupView.layer.cornerRadius = 10
         popupView.layer.masksToBounds = true
     }
@@ -41,7 +43,7 @@ class PopupViewController: UIViewController {
         //clickedAch has our variable that we clicked
         print(clickedAch)
         loadAchievements()
-        achDescription.text = "\(descriptions[Int(clickedAch)!])\nObtained: \(loggedAchDates[Int(clickedAch)!])"
+        achDescription.text = "Description:\n\(descriptions[Int(clickedAch)!])"
         
     }
     
@@ -52,6 +54,22 @@ class PopupViewController: UIViewController {
     
     @IBAction func closePopup(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func flipPopup(_ sender: Any) {
+        if isFront == true {
+            isFront = false
+            print("flip")
+            UIView.transition(with: popupView, duration: 1.0, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            //\nObtained: \(loggedAchDates[Int(clickedAch)!])
+            achDescription.text = "Obtained:\n\(loggedAchDates[Int(clickedAch)!])\nCongrats!"
+
+        } else {
+            isFront = true
+            print("flipd")
+            UIView.transition(with: popupView, duration: 1.0, options: .transitionFlipFromRight, animations: nil, completion: nil)
+            achDescription.text = "Description:\n\(descriptions[Int(clickedAch)!])"
+
+        }
     }
     
     /*

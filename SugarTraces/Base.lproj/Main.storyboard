@@ -1560,6 +1560,23 @@ and view your current data.</string>
                                             <action selector="closePopup:" destination="6V7-WO-NYt" eventType="touchUpInside" id="dNZ-6n-hYy"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swap" translatesAutoresizingMaskIntoConstraints="NO" id="3lF-zL-1iL">
+                                        <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ICF-0V-dt6"/>
+                                            <constraint firstAttribute="width" constant="40" id="Pxs-Jp-ppT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goG-sa-NP6">
+                                        <rect key="frame" x="200" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="LHk-7g-e1z"/>
+                                            <constraint firstAttribute="height" constant="40" id="XDq-Io-wGY"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="flipPopup:" destination="6V7-WO-NYt" eventType="touchUpInside" id="DkB-Tg-r3l"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1568,10 +1585,14 @@ and view your current data.</string>
                                     <constraint firstAttribute="trailing" secondItem="t3t-Zu-c7t" secondAttribute="trailing" id="8wp-p5-Gkl"/>
                                     <constraint firstAttribute="height" constant="240" id="9og-4k-z28"/>
                                     <constraint firstAttribute="bottom" secondItem="t3t-Zu-c7t" secondAttribute="bottom" id="BIP-tX-4A4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3lF-zL-1iL" secondAttribute="trailing" id="H4v-Y3-MmF"/>
                                     <constraint firstItem="t3t-Zu-c7t" firstAttribute="top" secondItem="aO5-Gr-2EE" secondAttribute="bottom" constant="4" id="M0i-kV-oDM"/>
+                                    <constraint firstItem="3lF-zL-1iL" firstAttribute="top" secondItem="NI3-67-ohf" secondAttribute="top" id="O7D-3p-6cU"/>
                                     <constraint firstItem="t3t-Zu-c7t" firstAttribute="leading" secondItem="NI3-67-ohf" secondAttribute="leading" id="Y7d-Qd-bmU"/>
                                     <constraint firstAttribute="trailing" secondItem="aO5-Gr-2EE" secondAttribute="trailing" constant="8" id="ZTc-X7-Oes"/>
                                     <constraint firstItem="7pA-WD-hhE" firstAttribute="centerX" secondItem="NI3-67-ohf" secondAttribute="centerX" id="aOL-82-3rj"/>
+                                    <constraint firstAttribute="trailing" secondItem="goG-sa-NP6" secondAttribute="trailing" id="cqM-mJ-R8t"/>
+                                    <constraint firstItem="goG-sa-NP6" firstAttribute="top" secondItem="NI3-67-ohf" secondAttribute="top" id="dXw-gZ-kJT"/>
                                     <constraint firstItem="aO5-Gr-2EE" firstAttribute="top" secondItem="7pA-WD-hhE" secondAttribute="bottom" constant="8" id="pbI-yy-759"/>
                                     <constraint firstItem="7pA-WD-hhE" firstAttribute="leading" secondItem="NI3-67-ohf" secondAttribute="leading" id="qS3-ac-tIs"/>
                                     <constraint firstItem="aO5-Gr-2EE" firstAttribute="leading" secondItem="NI3-67-ohf" secondAttribute="leading" constant="8" id="r6u-9J-eBl"/>
@@ -1773,6 +1794,7 @@ and view your current data.</string>
         <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
         <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
         <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="swap" width="33.333332061767578" height="33.333332061767578"/>
         <image name="user" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>

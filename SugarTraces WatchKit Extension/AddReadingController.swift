@@ -462,6 +462,18 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         
     }
     
+    private func reloadComplications() {
+        if let complications: [CLKComplication] = CLKComplicationServer.sharedInstance().activeComplications {
+            if complications.count > 0 {
+                for complication in complications {
+                    CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
+                    NSLog("Reloading complication \(complication.description)...")
+                }
+                WKInterfaceDevice.current().play(WKHapticType.click) // haptic only for debugging
+            }
+        }
+    }
+    
     
     @IBAction func textField(_ value: NSString?) {
         //whatever value is typed here will be saved to the loggedReading and date, sent over to the main app as well.
@@ -511,6 +523,7 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                 saveConsecutiveDays()
                 
                 achievementCheck()
+                reloadComplications()
                 
                 //send over data to the iPhone app
                 

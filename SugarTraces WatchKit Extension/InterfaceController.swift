@@ -150,6 +150,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             }
             date0Label.setText("On: \(loggedDates[0])")
         }
+        reloadComplications()
     }
     
     func consecutiveDaysCheck(prevDay: String, newDay: String, consecutiveDays: Int) -> Int {
