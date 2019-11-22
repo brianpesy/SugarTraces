@@ -7,11 +7,33 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class AchievementsViewController: UIViewController {
+class AchievementsViewController: UIViewController, WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        NSLog("%@", "activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
+    }
 
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("%@", "sessionDidBecomeInactive: \(session)")
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("%@", "sessionDidDeactivate: \(session)")
+    }
+
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        print("%@", "sessionWatchStateDidChange: \(session)")
+    }
+    
+
+    var wcSession: WCSession!
+    
     var loggedAchievements = [Bool](repeating: false, count: 11)
     var loggedAchDates = [String](repeating: "", count: 11)
+    
+    var transferToWatch: [String: [Any]] = [:]
     
     var clickedAch = ""
     
@@ -37,9 +59,16 @@ class AchievementsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
+        if WCSession.isSupported() {
+            self.wcSession = WCSession.default
+            self.wcSession.delegate = self
+            self.wcSession.activate()
+        }
+        
+        loadAchievements()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +83,37 @@ class AchievementsViewController: UIViewController {
         
         print(loggedAchievements)
         print(loggedAchDates)
+        
+        transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+        print(transferToWatch)
+        
+        if wcSession.isReachable {
+            print("reach")
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print("errrr")
+
+                    print(error.localizedDescription)
+                }
+            })
+
+        }
+        
+        //optional value when running the file itself on its first run through?
+//        wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+////                print(error.localizedDescription)
+//            do {
+//                try self.wcSession.updateApplicationContext(self.transferToWatch)
+//
+//            } catch {
+//                print("errrr")
+//
+//                print(error.localizedDescription)
+//            }
+//        })
         
         //Change the icons of each achievement according to the loggedAchievements and loggedAchDates, both of which are of indices 0-10, corresponding to a specific achievement
         if (loggedAchievements[0] == true){

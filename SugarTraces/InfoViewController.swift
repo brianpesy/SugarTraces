@@ -137,6 +137,34 @@ class InfoViewController: UIViewController, WCSessionDelegate {
                     print(error.localizedDescription)
                 }
             })
+        } else {
+            print("went in")
+            
+            loggedAchievements[9] = true
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[9] = formatter.string(from:date)
+            
+            saveAchievements()
+            
+            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+            
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print("errrr")
+
+                    print(error.localizedDescription)
+                }
+            })
         }
         
         sendEmail()
@@ -286,6 +314,32 @@ class InfoViewController: UIViewController, WCSessionDelegate {
                 }
             })
 
+        } else {
+            print("went in")
+            
+            loggedAchievements[10] = true
+            let date = Date()
+            let formatter = DateFormatter()
+            //Date formatting
+            formatter.timeZone = .current
+            formatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            
+            //Date when achievement was gotten
+            loggedAchDates[10] = formatter.string(from:date)
+            
+            saveAchievements()
+            
+            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+                do {
+                    try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+                } catch {
+                    print("err")
+                    print(error.localizedDescription)
+                }
+            })
         }
     }
     /*

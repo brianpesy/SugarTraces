@@ -310,10 +310,10 @@ class Last5ReadingsController: WKInterfaceController, WCSessionDelegate {
 
         saveLoggedData()
 
-        print(loggedReadings)
-        print(loggedDates)
-        print(loggedReadings[0])
-        print(loggedDates[0])
+//        print(loggedReadings)
+//        print(loggedDates)
+//        print(loggedReadings[0])
+//        print(loggedDates[0])
         print("-------")
         
         if loggedReadings.isEmpty {
@@ -471,11 +471,11 @@ class Last5ReadingsController: WKInterfaceController, WCSessionDelegate {
 
         saveLoggedData()
 
-        print(loggedReadings)
-        print(loggedDates)
-        print(loggedReadings[0])
-        print(loggedDates[0])
-        print("-------")
+//        print(loggedReadings)
+//        print(loggedDates)
+//        print(loggedReadings[0])
+//        print(loggedDates[0])
+//        print("-------")
         
         if loggedReadings.isEmpty {
             r0Label.setText("")

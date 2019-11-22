@@ -70,6 +70,7 @@ class AchievementInterfaceController: WKInterfaceController, WCSessionDelegate {
         consecutiveDaysLabel.setText("Days straight: \(strLoggedConsecutiveDays)")
 
         //loading of the table of achievements will go in here
+        saveAchievements()
         
         loadTableData()
 

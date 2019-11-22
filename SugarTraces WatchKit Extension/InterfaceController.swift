@@ -296,22 +296,32 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 //        print(applicationContext["readings"])
         if applicationContext.keys.contains("readings"){
             loggedReadings = applicationContext["readings"] as! [Int]
+//            print("r")
+
         }
         
         if applicationContext.keys.contains("dates") {
             loggedDates = applicationContext["dates"] as! [String]
+//            print("d")
+
         }
         
         if applicationContext.keys.contains("ach") {
             loggedAchievements = applicationContext["ach"] as! [Bool]
+//            print("a")
+
         }
         
         if applicationContext.keys.contains("achDates") {
             loggedAchDates = applicationContext["achDates"] as! [String]
+//            print("ad")
+
         }
         
         if applicationContext.keys.contains("consecutiveDays") {
             loggedConsecutiveDays = applicationContext["consecutiveDays"] as! Int
+//            print("cd")
+
         }
         
         saveLoggedData()
@@ -319,14 +329,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         saveConsecutiveDays()
         reloadComplications()
         
-        print(loggedReadings)
-        print(loggedDates)
-        print(loggedReadings[0])
-        print(loggedDates[0])
-        print(loggedAchievements)
-        print(loggedAchDates)
-        print("cons days \(loggedConsecutiveDays)")
-        print("-------")
+//        print(loggedReadings)
+//        print(loggedDates)
+//        print(loggedReadings[0])
+//        print(loggedDates[0])
+//        print(loggedAchievements)
+//        print(loggedAchDates)
+//        print("cons days \(loggedConsecutiveDays)")
+//        print("-------")
         
         let date = Date()
         let formatter = DateFormatter()
@@ -362,26 +372,35 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("AC")
+        print("RM")
         //        print(applicationContext["readings"])
         if message.keys.contains("readings"){
             loggedReadings = message["readings"] as! [Int]
+//            print("r")
         }
         
         if message.keys.contains("dates") {
             loggedDates = message["dates"] as! [String]
+//            print("d")
+
         }
         
         if message.keys.contains("ach") {
             loggedAchievements = message["ach"] as! [Bool]
+//            print("a")
+
         }
         
         if message.keys.contains("achDates") {
             loggedAchDates = message["achDates"] as! [String]
+//            print("ad")
+
         }
         
         if message.keys.contains("consecutiveDays") {
             loggedConsecutiveDays = message["consecutiveDays"] as! Int
+//            print("cd")
+
         }
         
         saveLoggedData()
@@ -389,13 +408,13 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         saveConsecutiveDays()
         reloadComplications()
         
-        print(loggedReadings)
-        print(loggedDates)
-        print(loggedReadings[0])
-        print(loggedDates[0])
-        print(loggedAchievements)
-        print(loggedAchDates)
-        print("cons days \(loggedConsecutiveDays)")
+//        print(loggedReadings)
+//        print(loggedDates)
+//        print(loggedReadings[0])
+//        print(loggedDates[0])
+//        print(loggedAchievements)
+//        print(loggedAchDates)
+//        print("cons days \(loggedConsecutiveDays)")
         print("-------")
         
         let date = Date()

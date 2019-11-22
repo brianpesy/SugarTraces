@@ -187,6 +187,7 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("recApp")
         
         var tempLoggedReadings = [Int]()
         var tempLoggedDates = [String]()
@@ -842,11 +843,17 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 print(loggedConsecutiveDays)
             } else {
                 //do the function
-                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+                if loggedDates.indices.contains(1){
+                    loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
+                    saveConsecutiveDays()
+                } else {
+                    loggedConsecutiveDays = 0
+                }
+//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
 //                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: "02-29-2020 14:23:53", newDay: "03-01-2020 14:23:53", consecutiveDays: loggedConsecutiveDays)
 
 //                print(loggedConsecutiveDays)
-                saveConsecutiveDays()
+//                saveConsecutiveDays()
             }
             
         }
