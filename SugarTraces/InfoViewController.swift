@@ -126,17 +126,6 @@ class InfoViewController: UIViewController, WCSessionDelegate {
             
             saveAchievements()
             
-            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
-            
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
-                do {
-                    try self.wcSession.updateApplicationContext(self.transferToWatch)
-
-                } catch {
-                    print(error.localizedDescription)
-                }
-            })
         } else {
             print("went in")
             
@@ -151,21 +140,21 @@ class InfoViewController: UIViewController, WCSessionDelegate {
             loggedAchDates[9] = formatter.string(from:date)
             
             saveAchievements()
-            
-            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
-            
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
-                do {
-                    try self.wcSession.updateApplicationContext(self.transferToWatch)
-
-                } catch {
-                    print("errrr")
-
-                    print(error.localizedDescription)
-                }
-            })
         }
+                    
+        transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+        
+        wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+            do {
+                try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+            } catch {
+                print("errrr")
+
+                print(error.localizedDescription)
+            }
+        })
         
         sendEmail()
 
@@ -302,18 +291,6 @@ class InfoViewController: UIViewController, WCSessionDelegate {
             
             saveAchievements()
             
-            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
-            
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
-                do {
-                    try self.wcSession.updateApplicationContext(self.transferToWatch)
-
-                } catch {
-                    print(error.localizedDescription)
-                }
-            })
-
         } else {
             print("went in")
             
@@ -328,19 +305,19 @@ class InfoViewController: UIViewController, WCSessionDelegate {
             loggedAchDates[10] = formatter.string(from:date)
             
             saveAchievements()
-            
-            transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
-            wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
-                do {
-                    try self.wcSession.updateApplicationContext(self.transferToWatch)
-
-                } catch {
-                    print("err")
-                    print(error.localizedDescription)
-                }
-            })
         }
+        
+        transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
+        wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
+//                print(error.localizedDescription)
+            do {
+                try self.wcSession.updateApplicationContext(self.transferToWatch)
+
+            } catch {
+                print("err")
+                print(error.localizedDescription)
+            }
+        })
     }
     /*
     // MARK: - Navigation
