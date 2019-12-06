@@ -308,8 +308,8 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
 //        self.tabBarItem.title = "Add Glucose"
         
         
-        let dingPath = Bundle.main.path(forResource: "DING.mp3", ofType: nil)
-        let swooshPath = Bundle.main.path(forResource: "SWOOSH3.mp3", ofType: nil)
+        let dingPath = Bundle.main.path(forResource: "adding.wav", ofType: nil)
+        let swooshPath = Bundle.main.path(forResource: "achivement.mp3", ofType: nil)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: dingPath!))
             achAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: swooshPath!))

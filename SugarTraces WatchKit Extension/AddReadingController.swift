@@ -486,7 +486,7 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                 print(value!)
                 var num = Int(value! as String)!
                 //sound effect
-                let dingPath = Bundle.main.path(forResource: "DING.mp3", ofType: nil)
+                let dingPath = Bundle.main.path(forResource: "adding.wav", ofType: nil)
                 do {
                     audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: dingPath!))
                 } catch {

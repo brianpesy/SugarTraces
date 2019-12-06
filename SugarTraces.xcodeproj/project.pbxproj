@@ -12,6 +12,12 @@
 		C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */; };
 		D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */; };
 		E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */; };
+		F1070D632399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
+		F1070D642399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
+		F1070D652399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
+		F1070D662399FB2400CA29F0 /* achivement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1070D622399FB2400CA29F0 /* achivement.mp3 */; };
+		F1070D672399FB2400CA29F0 /* achivement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1070D622399FB2400CA29F0 /* achivement.mp3 */; };
+		F1070D682399FB2400CA29F0 /* achivement.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F1070D622399FB2400CA29F0 /* achivement.mp3 */; };
 		F115C36A2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
 		F115C36B2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
 		F115C36C2345DC49001CB683 /* SWOOSH3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F115C3692345DC48001CB683 /* SWOOSH3.mp3 */; };
@@ -129,6 +135,8 @@
 		E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F1070D612399FB2400CA29F0 /* adding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adding.wav; sourceTree = "<group>"; };
+		F1070D622399FB2400CA29F0 /* achivement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achivement.mp3; sourceTree = "<group>"; };
 		F115C3692345DC48001CB683 /* SWOOSH3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SWOOSH3.mp3; sourceTree = "<group>"; };
 		F115C37323465492001CB683 /* Intro3fViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro3fViewController.swift; sourceTree = "<group>"; };
 		F1169DA72341D565003B4838 /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
@@ -264,6 +272,8 @@
 		F12D332823446D3500FE3C3F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F1070D622399FB2400CA29F0 /* achivement.mp3 */,
+				F1070D612399FB2400CA29F0 /* adding.wav */,
 				F115C3692345DC48001CB683 /* SWOOSH3.mp3 */,
 				F12D332923446D6D00FE3C3F /* DING.mp3 */,
 			);
@@ -537,10 +547,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F115C36A2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
+				F1070D662399FB2400CA29F0 /* achivement.mp3 in Resources */,
 				F12D3330234495B600FE3C3F /* DING.mp3 in Resources */,
 				F163C8082320DFB3001A9CF2 /* LaunchScreen.storyboard in Resources */,
 				F163C8052320DFB3001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8032320DFB0001A9CF2 /* Main.storyboard in Resources */,
+				F1070D632399FB2400CA29F0 /* adding.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +574,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1070D672399FB2400CA29F0 /* achivement.mp3 in Resources */,
 				F12D332B23446D6D00FE3C3F /* DING.mp3 in Resources */,
+				F1070D642399FB2400CA29F0 /* adding.wav in Resources */,
 				F163C82B2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
 				F163C8292320DFB4001A9CF2 /* Interface.storyboard in Resources */,
 				F115C36B2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
@@ -574,6 +588,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F12D332C23446D6D00FE3C3F /* DING.mp3 in Resources */,
+				F1070D682399FB2400CA29F0 /* achivement.mp3 in Resources */,
+				F1070D652399FB2400CA29F0 /* adding.wav in Resources */,
 				F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */,
 				F115C36C2345DC49001CB683 /* SWOOSH3.mp3 in Resources */,
 			);
@@ -944,7 +960,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -952,7 +968,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dist Profile";
@@ -971,7 +987,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -979,7 +995,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dist Profile";
@@ -999,11 +1015,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				IBSC_MODULE = SugarTraces_WatchKit_Extension;
 				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces WatchKit Dist Profile";
@@ -1023,11 +1039,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				IBSC_MODULE = SugarTraces_WatchKit_Extension;
 				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces WatchKit Dist Profile";
@@ -1047,7 +1063,7 @@
 				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = SugarTraces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1055,7 +1071,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dist Profile";
@@ -1072,7 +1088,7 @@
 				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = SugarTraces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1080,7 +1096,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dist Profile";

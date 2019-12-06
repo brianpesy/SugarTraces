@@ -74,7 +74,7 @@ class InfoViewController: UIViewController, WCSessionDelegate {
 //        sendDataOutlet.layer.borderWidth = 1
 //        sendDataOutlet.layer.borderColor = UIColor.gray.cgColor
         
-        let swooshPath = Bundle.main.path(forResource: "SWOOSH3.mp3", ofType: nil)
+        let swooshPath = Bundle.main.path(forResource: "achivement.mp3", ofType: nil)
         do {
             achAudioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: swooshPath!))
         } catch {
