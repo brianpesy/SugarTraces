@@ -72,7 +72,7 @@ class HomeViewController: UIViewController {
         loadAchievements()
         loadConsecutiveDays()
         loadName()
-                
+//        print("dev mode")
 //        print(loggedName)
         nameLabel.text = loggedName
         print(loggedReadings)

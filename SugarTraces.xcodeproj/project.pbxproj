@@ -12,6 +12,9 @@
 		C1C276C4510BB7BE8A905284 /* Pods_SugarTraces_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */; };
 		D06621E3FE3E8B04160B2666 /* Pods_SugarTraces_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455DD8519646C731BCF58D8C /* Pods_SugarTraces_WatchKit_Extension.framework */; };
 		E420EE0C4227A95B88A8C837 /* Pods_SugarTraces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE340D9D2FB681F531190238 /* Pods_SugarTraces.framework */; };
+		F106E77F23E27270004C3E66 /* ConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E77E23E27270004C3E66 /* ConsentViewController.swift */; };
+		F106E78123E28D01004C3E66 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E78023E28D01004C3E66 /* ConsentTask.swift */; };
+		F106E78323E2BF65004C3E66 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106E78223E2BF65004C3E66 /* SurveyTask.swift */; };
 		F1070D632399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
 		F1070D642399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
 		F1070D652399FB2400CA29F0 /* adding.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1070D612399FB2400CA29F0 /* adding.wav */; };
@@ -54,6 +57,7 @@
 		F163C83D2320DFB5001A9CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F163C83C2320DFB5001A9CF2 /* Assets.xcassets */; };
 		F16A0F13235AD3560084ACA0 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0F12235AD3560084ACA0 /* RowController.swift */; };
 		F16A0F15235AD7880084ACA0 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0F14235AD7880084ACA0 /* DetailInterfaceController.swift */; };
+		F171BE8823E25C52001998FE /* SurveyParticipationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F171BE8723E25C52001998FE /* SurveyParticipationViewController.swift */; };
 		F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */; };
 		F1A5440D234ED53C0048BAD9 /* AchievementInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */; };
 		F1A80C772355996300AC77E2 /* AddReadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A80C762355996300AC77E2 /* AddReadingController.swift */; };
@@ -135,6 +139,9 @@
 		E2AF988011775E59BACA97F1 /* Pods_SugarTraces_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugarTraces_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB0F237EB9359DD9B53D16 /* Pods-SugarTraces WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		F02208944BDBEE61391A1827 /* Pods-SugarTraces WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugarTraces WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-SugarTraces WatchKit App/Pods-SugarTraces WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F106E77E23E27270004C3E66 /* ConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentViewController.swift; sourceTree = "<group>"; };
+		F106E78023E28D01004C3E66 /* ConsentTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		F106E78223E2BF65004C3E66 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		F1070D612399FB2400CA29F0 /* adding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adding.wav; sourceTree = "<group>"; };
 		F1070D622399FB2400CA29F0 /* achivement.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = achivement.mp3; sourceTree = "<group>"; };
 		F115C3692345DC48001CB683 /* SWOOSH3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SWOOSH3.mp3; sourceTree = "<group>"; };
@@ -179,6 +186,7 @@
 		F163C83F2320DFB5001A9CF2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		F16A0F12235AD3560084ACA0 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		F16A0F14235AD7880084ACA0 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
+		F171BE8723E25C52001998FE /* SurveyParticipationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyParticipationViewController.swift; sourceTree = "<group>"; };
 		F17ADB4D234BFEBF00662D93 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		F19F1F1A23389FAD00B91233 /* MMTabBarAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MMTabBarAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A5440C234ED53C0048BAD9 /* AchievementInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementInterfaceController.swift; sourceTree = "<group>"; };
@@ -327,6 +335,10 @@
 				F163C7FD2320DFB0001A9CF2 /* AppDelegate.swift */,
 				F163C7FF2320DFB0001A9CF2 /* ViewController.swift */,
 				F163C8012320DFB0001A9CF2 /* Main.storyboard */,
+				F106E77E23E27270004C3E66 /* ConsentViewController.swift */,
+				F171BE8723E25C52001998FE /* SurveyParticipationViewController.swift */,
+				F106E78223E2BF65004C3E66 /* SurveyTask.swift */,
+				F106E78023E28D01004C3E66 /* ConsentTask.swift */,
 				F1169DA72341D565003B4838 /* NSLayoutHelper.swift */,
 				F1169DA92341D59D003B4838 /* DeviceHelper.swift */,
 				F14B9BC3233C517E00C877F1 /* StatsViewController.swift */,
@@ -732,21 +744,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F171BE8823E25C52001998FE /* SurveyParticipationViewController.swift in Sources */,
 				F14B9BC2233C515700C877F1 /* HomeViewController.swift in Sources */,
 				F1169DAA2341D59D003B4838 /* DeviceHelper.swift in Sources */,
 				F17ADB4E234BFEBF00662D93 /* PopupViewController.swift in Sources */,
 				F13474B2234841AD00B99663 /* Intro2ViewController.swift in Sources */,
 				F1E131C32338910100E23BEA /* MasterTabBarViewController.swift in Sources */,
 				F1EE6A942341D0AA0089EC66 /* UILabelExtension.swift in Sources */,
+				F106E77F23E27270004C3E66 /* ConsentViewController.swift in Sources */,
 				F1169DA82341D565003B4838 /* NSLayoutHelper.swift in Sources */,
 				F163C8002320DFB0001A9CF2 /* ViewController.swift in Sources */,
 				F13474B0234841A200B99663 /* Intro1ViewController.swift in Sources */,
+				F106E78323E2BF65004C3E66 /* SurveyTask.swift in Sources */,
 				F115C37423465492001CB683 /* Intro3fViewController.swift in Sources */,
 				F1E131C123388F9800E23BEA /* AddGlucoseViewController.swift in Sources */,
 				F14B9BC4233C517E00C877F1 /* StatsViewController.swift in Sources */,
 				F1EE6A922341CBBB0089EC66 /* UIButtonExtension.swift in Sources */,
 				F14B9BC6233C518900C877F1 /* AchievementsViewController.swift in Sources */,
 				F14B9BC8233C519700C877F1 /* InfoViewController.swift in Sources */,
+				F106E78123E28D01004C3E66 /* ConsentTask.swift in Sources */,
 				F163C7FE2320DFB0001A9CF2 /* AppDelegate.swift in Sources */,
 				F13474AE23483D1600B99663 /* Intro3ViewController.swift in Sources */,
 			);
@@ -958,9 +974,9 @@
 			baseConfigurationReference = 1412AC74179C79A9DFF57179 /* Pods-SugarTraces WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -968,10 +984,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dev Profile";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -985,9 +1001,9 @@
 			baseConfigurationReference = 9B969CAF7CA2C6B72750BE5C /* Pods-SugarTraces WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = "SugarTraces WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -995,10 +1011,10 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Extension Dev Profile";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1013,16 +1029,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				IBSC_MODULE = SugarTraces_WatchKit_Extension;
 				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces WatchKit Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Watchkit Dev Profile";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1037,16 +1053,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				IBSC_MODULE = SugarTraces_WatchKit_Extension;
 				INFOPLIST_FILE = "SugarTraces WatchKit App/Info.plist";
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces WatchKit Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Watchkit Dev Profile";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1061,9 +1077,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = SugarTraces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1071,10 +1087,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dev Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1086,9 +1102,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SugarTraces/SugarTraces.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = M6U2VVKPKR;
 				INFOPLIST_FILE = SugarTraces/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1096,10 +1112,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ph.edu.up.sugartraces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dist Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "SugarTraces Dev Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

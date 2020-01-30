@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-SugarTraces/Pods-SugarTraces-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework
+${BUILT_PRODUCTS_DIR}/ResearchKit/ResearchKit.framework
 ${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework

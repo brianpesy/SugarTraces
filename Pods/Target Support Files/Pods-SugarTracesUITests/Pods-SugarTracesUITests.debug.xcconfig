@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/MMTabBarAnimation" "${PODS_CONFIGURATION_BUILD_DIR}/SAConfettiView"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts" "${PODS_CONFIGURATION_BUILD_DIR}/MMTabBarAnimation" "${PODS_CONFIGURATION_BUILD_DIR}/ResearchKit" "${PODS_CONFIGURATION_BUILD_DIR}/SAConfettiView"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SAConfettiView/SAConfettiView.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Charts" -framework "MMTabBarAnimation" -framework "QuartzCore" -framework "SAConfettiView" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Charts/Charts.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/ResearchKit/ResearchKit.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SAConfettiView/SAConfettiView.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "Charts" -framework "MMTabBarAnimation" -framework "QuartzCore" -framework "ResearchKit" -framework "SAConfettiView" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

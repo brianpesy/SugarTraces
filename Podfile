@@ -9,6 +9,7 @@ target 'SugarTraces' do
   pod 'MMTabBarAnimation'
   pod 'SAConfettiView'
   pod 'Charts'
+  pod 'ResearchKit'
 
   target 'SugarTracesTests' do
     inherit! :search_paths

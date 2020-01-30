@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSg-O9-XgW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSg-O9-XgW">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -469,6 +469,16 @@
                                     <action selector="sendData:" destination="sc5-es-Ghr" eventType="touchUpInside" id="rBD-cQ-pLn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2C-RP-CBP">
+                                <rect key="frame" x="138" y="687" width="138" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Survey Participation">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7dO-xC-YR6" kind="show" id="xzG-JH-reG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -486,6 +496,8 @@
                                 </userDefinedRuntimeAttributes>
                             </constraint>
                             <constraint firstItem="AMU-1l-qTm" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="5GP-Qe-4r6"/>
+                            <constraint firstItem="d2C-RP-CBP" firstAttribute="top" secondItem="AMU-1l-qTm" secondAttribute="bottom" constant="26" id="7xe-K7-16X"/>
+                            <constraint firstItem="d2C-RP-CBP" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="8jg-y5-dDz"/>
                             <constraint firstItem="S8Z-Jy-gdr" firstAttribute="top" secondItem="sPl-0d-Blt" secondAttribute="top" constant="16" id="D91-VV-kpu"/>
                             <constraint firstItem="sPl-0d-Blt" firstAttribute="bottom" secondItem="S8Z-Jy-gdr" secondAttribute="bottom" constant="33" id="axC-ds-j0h"/>
                             <constraint firstItem="FO3-sw-Ooc" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="bWp-lB-7fz"/>
@@ -494,13 +506,22 @@
                             <constraint firstItem="AMU-1l-qTm" firstAttribute="top" secondItem="FO3-sw-Ooc" secondAttribute="bottom" constant="26" id="gZG-cS-cr4"/>
                             <constraint firstItem="b6P-pd-JL5" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="lXp-Xa-iPI"/>
                             <constraint firstItem="S8Z-Jy-gdr" firstAttribute="leading" secondItem="sPl-0d-Blt" secondAttribute="leading" constant="20" id="nT4-xn-scZ"/>
-                            <constraint firstItem="b6P-pd-JL5" firstAttribute="top" secondItem="IbP-PC-PKU" secondAttribute="bottom" constant="43" id="nnA-If-zhC"/>
+                            <constraint firstItem="b6P-pd-JL5" firstAttribute="top" secondItem="IbP-PC-PKU" secondAttribute="bottom" constant="43" id="nnA-If-zhC" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                        <real key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="FO3-sw-Ooc" firstAttribute="top" secondItem="b6P-pd-JL5" secondAttribute="bottom" constant="26" id="rQk-uB-f4T"/>
                             <constraint firstItem="eGG-5a-qGc" firstAttribute="centerX" secondItem="Ttj-Ew-ozf" secondAttribute="centerX" id="sWx-Cq-Nkb"/>
                             <constraint firstItem="eGG-5a-qGc" firstAttribute="top" secondItem="sPl-0d-Blt" secondAttribute="top" constant="100" id="yJP-3Y-nmk" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
-                                        <real key="value" value="40"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
                                         <real key="value" value="63"/>
@@ -617,6 +638,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ld-jO-JFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2457.971014492754" y="-747.32142857142856"/>
+        </scene>
+        <!--Survey Participation-->
+        <scene sceneID="W7E-11-92t">
+            <objects>
+                <viewController id="7dO-xC-YR6" customClass="SurveyParticipationViewController" customModule="SugarTraces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mB1-jh-XQh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="survey" translatesAutoresizingMaskIntoConstraints="NO" id="sap-oi-U7o">
+                                <rect key="frame" x="132" y="188" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="O3s-3h-WgU" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="150" id="R2G-wJ-mKU" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                                <real key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help us improve on our  goal to help users!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-s9-WWz">
+                                <rect key="frame" x="81" y="374" width="252" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtA-jY-8RY">
+                                <rect key="frame" x="145" y="473" width="124" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="consentTask:" destination="7dO-xC-YR6" eventType="touchUpInside" id="BcE-rn-Qyj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmg-r8-Z2z">
+                                <rect key="frame" x="128" y="523" width="158" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Answer survey">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="surveyTask:" destination="7dO-xC-YR6" eventType="touchUpInside" id="bxp-Kv-NTI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sap-oi-U7o" firstAttribute="top" secondItem="I1S-9n-ahM" secondAttribute="top" constant="100" id="8H4-rY-LUU" customClass="NSLayoutHelper" customModule="SugarTraces" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                        <real key="value" value="63"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                        <real key="value" value="63"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="LPa-s9-WWz" firstAttribute="centerX" secondItem="mB1-jh-XQh" secondAttribute="centerX" id="ITe-fg-8U7"/>
+                            <constraint firstItem="sap-oi-U7o" firstAttribute="centerX" secondItem="mB1-jh-XQh" secondAttribute="centerX" id="May-Ba-Nka"/>
+                            <constraint firstItem="DtA-jY-8RY" firstAttribute="centerX" secondItem="mB1-jh-XQh" secondAttribute="centerX" id="PLe-rA-UiI"/>
+                            <constraint firstItem="xmg-r8-Z2z" firstAttribute="centerX" secondItem="mB1-jh-XQh" secondAttribute="centerX" id="bu0-Xz-pUd"/>
+                            <constraint firstItem="LPa-s9-WWz" firstAttribute="top" secondItem="sap-oi-U7o" secondAttribute="bottom" constant="36" id="fOe-hv-8to"/>
+                            <constraint firstItem="xmg-r8-Z2z" firstAttribute="top" secondItem="DtA-jY-8RY" secondAttribute="bottom" constant="8" id="kQS-iV-PRr"/>
+                            <constraint firstItem="DtA-jY-8RY" firstAttribute="top" secondItem="LPa-s9-WWz" secondAttribute="bottom" constant="39" id="xFV-XC-WFu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I1S-9n-ahM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Survey Participation" id="nb5-Xj-dxv"/>
+                    <connections>
+                        <outlet property="consentBtn" destination="DtA-jY-8RY" id="PDJ-8R-ozb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTK-wA-fm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3413.04347826087" y="-746.65178571428567"/>
+        </scene>
+        <!--Consent-->
+        <scene sceneID="dhP-ZG-zBo">
+            <objects>
+                <viewController id="W1e-jM-rNY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="63P-9Q-yPP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="OFX-eR-Idd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Consent" id="2JS-HE-BEE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAr-8C-hcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4474" y="-747"/>
         </scene>
         <!--Intro3 View Controller-->
         <scene sceneID="sxv-EE-Frt">
@@ -1794,6 +1919,7 @@ and view your current data.</string>
         <image name="paper" width="170.66667175292969" height="170.66667175292969"/>
         <image name="question-mark-bg" width="33.333332061767578" height="33.333332061767578"/>
         <image name="stats" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="survey" width="33.333332061767578" height="33.333332061767578"/>
         <image name="swap" width="33.333332061767578" height="33.333332061767578"/>
         <image name="user" width="25" height="25"/>
     </resources>
