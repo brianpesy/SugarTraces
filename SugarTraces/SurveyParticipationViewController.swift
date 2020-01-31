@@ -13,6 +13,23 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
     
     var surveyStart = false
     @IBOutlet weak var consentBtn: UIButton!
+    
+    let defaults = UserDefaults.standard
+    
+    func saveSurveyStart(){
+        defaults.set(surveyStart, forKey: Keys.savedSurveyStart)
+        print("saved")
+    }
+    
+    func loadSurveyStart(){
+//        var savedSurveyStart = (defaults.array(forKey: Keys.savedAchievements) != nil) as Bool
+        var savedSurveyStart = defaults.bool(forKey: Keys.savedSurveyStart)
+        print("-START-")
+        print(savedSurveyStart)
+        print("-DONE-")
+        surveyStart = savedSurveyStart
+
+    }
 
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         
@@ -38,6 +55,7 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
                         let consentDone = consentDoneAnswerResult.consented
                         surveyStart = consentDone
                         print(consentDone)
+                        saveSurveyStart()
                         consentBtn.setTitle("Leave Research", for: .normal)
                         consentBtn.titleLabel?.adjustsFontSizeToFitWidth = true
 
@@ -80,6 +98,21 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadSurveyStart()
+        print("didLoad", surveyStart)
+        if surveyStart == true {
+            consentBtn.setTitle("Leave Research", for: .normal)
+            consentBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadSurveyStart()
+        print("didAppear", surveyStart)
+        if surveyStart == true {
+            consentBtn.setTitle("Leave Research", for: .normal)
+            consentBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        }
     }
     
     //consent task
@@ -91,7 +124,30 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
         }
         else if surveyStart == true {
             //alert if they want to stop
+            
+            // create the alert
+            let alert = UIAlertController(title: "Leave Research?", message: "Would you like to leave the research?", preferredStyle: UIAlertController.Style.alert)
 
+            // add the actions (buttons)
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: { action in
+                  switch action.style{
+                  case .default:
+                    self.surveyStart = false
+                    self.saveSurveyStart()
+                    self.consentBtn.setTitle("Get Started", for: .normal)
+                    self.consentBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+                    
+                  case .cancel:
+                        print("cancel")
+
+                  case .destructive:
+                        print("destructive")
+
+            }}))
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -104,7 +160,20 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
         }
         else if surveyStart == false {
             //alert that they need consent first before starting
-            
+            let alert = UIAlertController(title: "Consent needed!", message: "We need your consent before you can start!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                  switch action.style{
+                  case .default:
+                        print("default")
+
+                  case .cancel:
+                        print("cancel")
+
+                  case .destructive:
+                        print("destructive")
+
+            }}))
+            self.present(alert, animated: true, completion: nil)
         }
 
     }
