@@ -40,7 +40,7 @@ public var SurveyTask: ORKOrderedTask {
     question1Step.isOptional = false
     steps += [question1Step]
     
-    //multiple choice. Question 2. 
+    //multiple choice. Question 2.
     let question2 = "Question 2?"
     let question2AnswerFormat: ORKTextChoiceAnswerFormat = ORKAnswerFormat.choiceAnswerFormat(with: .singleChoice, textChoices: textChoices)
     let question2Step = ORKQuestionStep(identifier: "Question2Step", title: question2, answer: question2AnswerFormat)
@@ -49,8 +49,8 @@ public var SurveyTask: ORKOrderedTask {
     
     //Summary
     let completionStep = ORKCompletionStep(identifier: "SummaryStep")
-    completionStep.title = "Thank You!!"
-    completionStep.text = "You have completed the survey"
+    completionStep.title = "Thank You!"
+    completionStep.text = "You have completed the survey."
     steps += [completionStep]
     
     return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
