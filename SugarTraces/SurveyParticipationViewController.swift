@@ -13,6 +13,7 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
     
     var surveyStart = false
     @IBOutlet weak var consentBtn: UIButton!
+    var answers = [String:String]()
     
     let defaults = UserDefaults.standard
     
@@ -44,7 +45,10 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
               let taskResult = taskViewController.result.results
               print(taskResult)
               
+              var ctr = 0
+              
               for stepResults in taskResult! as! [ORKStepResult]{
+                print(ctr)
                   print("---")
                   for result in stepResults.results! {
                     
@@ -75,11 +79,32 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
 
                     }
                     
-                    if result.identifier == "Breathing"{
-                         print(result)
+                    //Dictionary for every single question to prevent any duplicate answers
+                    
+                    if result.identifier == "Question1Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question1"] = ansString
                     }
+                    
+                    if result.identifier == "Question2Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question2"] = ansString
+                    }
+                    
                   }
               }
+              //this is the answer array
+              ctr = ctr + 1
+            print(answers)
+
             
         case .saved:
             break
