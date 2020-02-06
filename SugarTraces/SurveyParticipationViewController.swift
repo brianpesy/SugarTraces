@@ -45,10 +45,10 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
               let taskResult = taskViewController.result.results
               print(taskResult)
               
-              var ctr = 0
+//              var ctr = 0
               
               for stepResults in taskResult! as! [ORKStepResult]{
-                print(ctr)
+//                print(ctr)
                   print("---")
                   for result in stepResults.results! {
                     
@@ -101,9 +101,12 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
                     
                   }
               }
-              //this is the answer array
-              ctr = ctr + 1
-            print(answers)
+//              ctr = ctr + 1
+              
+              //turning into json to send over on AWS/email (depending on implementationa)
+              let jsonData = try! JSONSerialization.data(withJSONObject: answers)
+              let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)
+              print(jsonString!, "\n", type(of: jsonString))
 
             
         case .saved:
