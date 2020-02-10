@@ -98,6 +98,102 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
                         ansString = ansString.filter("12345.".contains)
                         answers["Question2"] = ansString
                     }
+                    if result.identifier == "Question3Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question3"] = ansString
+                    }
+                    if result.identifier == "Question4Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question4"] = ansString
+                    }
+                    if result.identifier == "Question5Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question5"] = ansString
+                    }
+                    if result.identifier == "Question6Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question6"] = ansString
+                    }
+                    if result.identifier == "Question7Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question7"] = ansString
+                    }
+                    if result.identifier == "Question8Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question8"] = ansString
+                    }
+                    if result.identifier == "Question9Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question9"] = ansString
+                    }
+                    if result.identifier == "Question10Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question10"] = ansString
+                    }
+                    if result.identifier == "Question11Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question11"] = ansString
+                    }
+                    if result.identifier == "Question12Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question12"] = ansString
+                    }
+                    if result.identifier == "Question13Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question13"] = ansString
+                    }
+                    if result.identifier == "Question14Step"{
+                        print(result)
+                        let questionAnswerResult = result as! ORKChoiceQuestionResult
+                        let answer = questionAnswerResult.answer!
+                        var ansString = String(describing: answer)
+                        ansString = ansString.filter("12345.".contains)
+                        answers["Question14"] = ansString
+                    }
                     
                   }
               }
