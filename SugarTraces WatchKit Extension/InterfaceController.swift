@@ -20,6 +20,59 @@ struct Keys {
     static let savedName = "savedName"
 }
 
+//Below 70
+var belowFeedback = ["I think you should sit down, reflect on your blood sugar and munch on a banana.",
+"You need sugar too you know! Don’t reduce your sugar intake by that much!",
+"There’s a secret I want to tell you. Go get yourself some sugar.",
+"I told you that too much sugar is not healthy. Did you think too less is better? Work on getting that to a normal level.",
+"If you want this relationship to work, you have to munch on some bananas to get your sugar to normal.",
+"Next time you go for a drink, be sure to eat first. Your body needs some glucose to be produced!",
+"Fruits are a great way to get your blood sugar back up! (They are also a really tasty way too)",
+"Be sure to eat enough before you exercise. Your body needs fuel too, you know? ",
+"Low blood sugar isn’t any better than a high blood sugar. Bump that glucose up!",
+"Maybe you took the tips a bit too much to heart. Loosen up and drink a small glass of orange juice!",
+"You’re running low on sugar. You are doing it wrong!",
+"Low blood sugar levels kill, you know!",
+"You think skipping meals is good for you? Not always! See what you did?"]
+
+//Range of 70-150
+var normalFeedback = ["Good job! Now we just have to keep this up until FOREVER!",
+"That’s what I’m talking about! I heard that keeping a normal blood sugar will earn you something nice.",
+"Looks like someone’s got a normal blood sugar! Yes, that’s you! Good job!",
+"I have good news for you: you`re NORMAL! Both blood sugar and everything else.",
+"I would like to use this opportunity to give you a digital pat for having a normal blood sugar level. *pats*",
+"Hey, you! Yes, you! I like that blood sugar of yours. *wink*",
+"A trip to the gym a day keeps the blood sugar levels stay!",
+"Don’t just keep drinking water. Keep doing it consistently to maintain your blood sugar!",
+"Systems? Check. Blood sugar? Check. We’re all set and ready!",
+"Seeing normal here makes me do the dance of joy.",
+"It worked! Whatever you did, it made your blood sugar level normalize! Keep it up!",
+"That 30-minute brisk walking did wonders! Good job!",
+"Don’t you feel amazing right now? Share the joy!",
+"Congratulations! *high five* ",
+"You just made everyone happy that you are not sick!",
+"Your mom would be proud of you! Do it again."]
+
+//Range above 150
+var aboveFeedback = ["Too much carbs actually turn into glucose. Sounda familiar? Control what you eat",
+"Stress increases your blood sugar levels. Relax for a bit!",
+"A reminder from your friendly neighborhood app that eating too much is not good for you.",
+"You can't go back to old habits. You're so close! I believe in you!",
+"I'm pretty sure I saw that soda in your pantry. That won't help you out.",
+"Something doesn't seem right. I can't put my finger on it, but I'm sure you know what's wrong.",
+"Don't get glued to glucose. Get it? You really need to lower this!",
+"You may be trying really hard right now, but it's not good enough! I'll help you out!",
+"We’re looking at long term health here. Living a long and healthy life should be your goal!",
+"Drink some water and flush that glucose out of your system. Fun fact: It has no sugar!",
+"I think diets are pretty neat. I think you could use one?",
+"That extra serving does not look appetizing now, huh? Now go for a 30-minute jog!",
+"“Ready, set, go!“ is for marathons, not for buffets! Stop it!",
+"“Unlimited” is only good for your phone’s internet, not for your belly! ",
+"GLUTTON!!!! You are now one step closer to a hospital vacation! ",
+"Buy one, take one is meant to be shared! You over-eater you!",
+"Fruit juices are not substitutes to the actual fruits! Stop juicing!",
+"Do you have a death wish? No? Then stop and lower your blood sugar level!"]
+
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
@@ -95,14 +148,20 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
                 reading0Label.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
                 feedbackLabel.setText("Sugar! Please!")
+                belowFeedback.shuffle()
+                feedbackLabel.setText(belowFeedback[0])
             } else if loggedReadings[0] > 150 { //above
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
                 feedbackLabel.setText("Lower is power!")
+                aboveFeedback.shuffle()
+                feedbackLabel.setText(aboveFeedback[0])
             } else { //normal
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
                 feedbackLabel.setText("You're amazing!")
+                normalFeedback.shuffle()
+                feedbackLabel.setText(normalFeedback[0])
             }
             date0Label.setText("On: \(loggedDates[0])")
         }
@@ -138,15 +197,23 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             if loggedReadings[0] < 70 { //below
                 reading0Label.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
-                feedbackLabel.setText("Sugar! Please!")
+//                feedbackLabel.setText("Sugar! Please!")
+                belowFeedback.shuffle()
+                feedbackLabel.setText(belowFeedback[0])
+                
             } else if loggedReadings[0] > 150 { //above
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
-                feedbackLabel.setText("Lower is power!")
+//                feedbackLabel.setText("Lower is power!")
+                aboveFeedback.shuffle()
+                feedbackLabel.setText(aboveFeedback[0])
             } else { //normal
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
-                feedbackLabel.setText("You're amazing!")
+//                feedbackLabel.setText("You're amazing!")
+                normalFeedback.shuffle()
+                feedbackLabel.setText(normalFeedback[0])
+
             }
             date0Label.setText("On: \(loggedDates[0])")
         }
@@ -356,15 +423,21 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             if loggedReadings[0] < 70 { //below
                 reading0Label.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
-                feedbackLabel.setText("Sugar! Please!")
+//                feedbackLabel.setText("Sugar! Please!")
+                belowFeedback.shuffle()
+                feedbackLabel.setText(belowFeedback[0])
             } else if loggedReadings[0] > 150 { //above
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
-                feedbackLabel.setText("Lower is power!")
+//                feedbackLabel.setText("Lower is power!")
+                aboveFeedback.shuffle()
+                feedbackLabel.setText(aboveFeedback[0])
             } else { //normal
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
-                feedbackLabel.setText("You're amazing!")
+//                feedbackLabel.setText("You're amazing!")
+                normalFeedback.shuffle()
+                feedbackLabel.setText(normalFeedback[0])
             }
             date0Label.setText("On: \(loggedDates[0])")
         }
@@ -435,15 +508,21 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             if loggedReadings[0] < 70 { //below
                 reading0Label.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 70/255, green: 117/255, blue: 255/255, alpha: 1.0))
-                feedbackLabel.setText("Sugar! Please!")
+//                feedbackLabel.setText("Sugar! Please!")
+                belowFeedback.shuffle()
+                feedbackLabel.setText(belowFeedback[0])
             } else if loggedReadings[0] > 150 { //above
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 33/255, blue: 33/255, alpha: 1.0))
-                feedbackLabel.setText("Lower is power!")
+//                feedbackLabel.setText("Lower is power!")
+                aboveFeedback.shuffle()
+                feedbackLabel.setText(aboveFeedback[0])
             } else { //normal
                 reading0Label.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
                 feedbackLabel.setTextColor(UIColor(red: 255/255, green: 222/255, blue: 3/255, alpha: 1.0))
-                feedbackLabel.setText("You're amazing!")
+//                feedbackLabel.setText("You're amazing!")
+                normalFeedback.shuffle()
+                feedbackLabel.setText(normalFeedback[0])
             }
             date0Label.setText("On: \(loggedDates[0])")
         }
