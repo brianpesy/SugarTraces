@@ -8,12 +8,15 @@
 
 import UIKit
 import ResearchKit
+import MessageUI
+
 
 class SurveyParticipationViewController: UIViewController, ORKTaskViewControllerDelegate {
     
     var surveyStart = false
     @IBOutlet weak var consentBtn: UIButton!
     var answers = [String:String]()
+    
     
     let defaults = UserDefaults.standard
     
@@ -31,8 +34,39 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
         surveyStart = savedSurveyStart
 
     }
+    
+    func sendEmail(toSend: String) {
+        
+    //sending export data through email: wsl-research@dcs.upd.edu.ph || bpsy@up.edu.ph
+    
+    // Data consists of: date of birth, blood glucose levels and dates, and sex. HealthKit functionality required.
+    // Subject: SugarTraces Health Data
+        
+      if MFMailComposeViewController.canSendMail() {
+        let mail = MFMailComposeViewController()
+        mail.setToRecipients(["bpsy@up.edu.ph"])
+        mail.setSubject("SugarTraces Survey Answers")
+        
+        var messageBody = [String]()
+        
+        messageBody.append(toSend)
+        
+
+        mail.setMessageBody(messageBody.joined(separator:"|"), isHTML: true)
+
+        present(mail, animated: true)
+      } else {
+        // show failure alert
+      }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
 
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        
         
         //this seems to make it true even if the person presses cancel instead of done at the very end
 //        taskViewController.dismiss(animated: true, completion: {() in self.consentDone = true})
@@ -46,6 +80,7 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
               print(taskResult)
               
 //              var ctr = 0
+              var flg = false
               
               for stepResults in taskResult! as! [ORKStepResult]{
 //                print(ctr)
@@ -71,13 +106,13 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
                     
                     //extracting the answers from the survey itself now using the identifiers
                     
-                    if result.identifier == "NameStep"{
-                        print(result)
-                        let nameAnswerResult = result as! ORKTextQuestionResult
-                        let name = nameAnswerResult.answer!
-                        print(name)
-
-                    }
+//                    if result.identifier == "NameStep"{
+//                        print(result)
+//                        let nameAnswerResult = result as! ORKTextQuestionResult
+//                        let name = nameAnswerResult.answer!
+//                        print(name)
+//
+//                    }
                     
                     //Dictionary for every single question to prevent any duplicate answers
                     
@@ -193,6 +228,7 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
                         var ansString = String(describing: answer)
                         ansString = ansString.filter("12345.".contains)
                         answers["Question14"] = ansString
+                        flg = true
                     }
                     
                   }
@@ -200,9 +236,15 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
 //              ctr = ctr + 1
               
               //turning into json to send over on AWS/email (depending on implementationa)
-              let jsonData = try! JSONSerialization.data(withJSONObject: answers)
-              let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)
-              print(jsonString!, "\n", type(of: jsonString))
+              if flg == true {
+                flg = false
+                let jsonData = try! JSONSerialization.data(withJSONObject: answers)
+                let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)
+                print(jsonString!, "\n", type(of: jsonString))
+                var str = String(jsonString!)
+                sendEmail(toSend: str)
+              }
+
 
             
         case .saved:
