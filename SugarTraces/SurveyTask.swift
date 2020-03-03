@@ -15,16 +15,16 @@ public var SurveyTask: ORKOrderedTask {
     
     //Introduction
     let instructionStep = ORKInstructionStep(identifier: "IntroStep")
-    instructionStep.title = "Test Survey"
-    instructionStep.text = "Answer three questions to complete the survey."
+    instructionStep.title = "SugarTraces Survey"
+    instructionStep.text = "Answer the questions to complete the survey."
     steps += [instructionStep]
 
     //Text Input Question
-    let nameAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
-    nameAnswerFormat.multipleLines = false
-    let nameQuestionStepTitle = "What is your name?"
-    let nameQuestionStep = ORKQuestionStep(identifier: "NameStep", title: nameQuestionStepTitle, answer: nameAnswerFormat)
-    steps += [nameQuestionStep]
+//    let nameAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
+//    nameAnswerFormat.multipleLines = false
+//    let nameQuestionStepTitle = "What is your name?"
+//    let nameQuestionStep = ORKQuestionStep(identifier: "NameStep", title: nameQuestionStepTitle, answer: nameAnswerFormat)
+//    steps += [nameQuestionStep]
     
     //multiple choice. Question 1. Change all the "question1steps" to others
     let question1 = "The application can help influence users to maintain blood glucose levels."

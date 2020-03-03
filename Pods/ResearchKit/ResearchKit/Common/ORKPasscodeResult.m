@@ -29,22 +29,51 @@
  */
 
 
-#import "ORKToneAudiometryPracticeStep.h"
-#import "ORKToneAudiometryPracticeStepViewController.h"
+#import "ORKPasscodeResult.h"
+
+#import "ORKResult_Private.h"
+#import "ORKHelpers_Internal.h"
 
 
-@implementation ORKToneAudiometryPracticeStep
-
-+ (Class)stepViewControllerClass {
-    return [ORKToneAudiometryPracticeStepViewController class];
-}
-
-- (BOOL)startsFinished {
-    return NO;
-}
+@implementation ORKPasscodeResult
 
 + (BOOL)supportsSecureCoding {
     return YES;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [super encodeWithCoder:aCoder];
+    ORK_ENCODE_BOOL(aCoder, passcodeSaved);
+    ORK_ENCODE_BOOL(aCoder, touchIdEnabled);
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        ORK_DECODE_BOOL(aDecoder, passcodeSaved);
+        ORK_DECODE_BOOL(aDecoder, touchIdEnabled);
+    }
+    return self;
+}
+
+- (BOOL)isEqual:(id)object {
+    BOOL isParentSame = [super isEqual:object];
+    
+    __typeof(self) castObject = object;
+    return (isParentSame &&
+            self.isPasscodeSaved == castObject.isPasscodeSaved &&
+            self.isTouchIdEnabled == castObject.isTouchIdEnabled);
+}
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    ORKPasscodeResult *result = [super copyWithZone:zone];
+    result.passcodeSaved = self.isPasscodeSaved;
+    result.touchIdEnabled = self.isTouchIdEnabled;
+    return result;
+}
+
+- (NSString *)descriptionWithNumberOfPaddingSpaces:(NSUInteger)numberOfPaddingSpaces {
+    return [NSString stringWithFormat:@"%@; passcodeSaved: %d touchIDEnabled: %d%@", [self descriptionPrefixWithNumberOfPaddingSpaces:numberOfPaddingSpaces], self.isPasscodeSaved, self.isTouchIdEnabled, self.descriptionSuffix];
 }
 
 @end

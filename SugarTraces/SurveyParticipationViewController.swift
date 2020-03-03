@@ -11,7 +11,7 @@ import ResearchKit
 import MessageUI
 
 
-class SurveyParticipationViewController: UIViewController, ORKTaskViewControllerDelegate {
+class SurveyParticipationViewController: UIViewController, MFMailComposeViewControllerDelegate, ORKTaskViewControllerDelegate {
     
     var surveyStart = false
     @IBOutlet weak var consentBtn: UIButton!
@@ -38,12 +38,16 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
     func sendEmail(toSend: String) {
         
     //sending export data through email: wsl-research@dcs.upd.edu.ph || bpsy@up.edu.ph
-    
-    // Data consists of: date of birth, blood glucose levels and dates, and sex. HealthKit functionality required.
-    // Subject: SugarTraces Health Data
+        guard MFMailComposeViewController.canSendMail() else {
+            return
+        }
         
-      if MFMailComposeViewController.canSendMail() {
         let mail = MFMailComposeViewController()
+//        mail = MFMailComposeViewController.init()
+        mail.mailComposeDelegate = self
+//        mail.delegate = self
+//        mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+//        mail.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
         mail.setToRecipients(["bpsy@up.edu.ph"])
         mail.setSubject("SugarTraces Survey Answers")
         
@@ -54,15 +58,50 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
 
         mail.setMessageBody(messageBody.joined(separator:"|"), isHTML: true)
 
-        present(mail, animated: true)
-      } else {
-        // show failure alert
-      }
+        self.present(mail, animated: true)
+//      if MFMailComposeViewController.canSendMail() {
+//        let mail = MFMailComposeViewController()
+//        mail.mailComposeDelegate = self
+//        mail.setToRecipients(["bpsy@up.edu.ph"])
+//        mail.setSubject("SugarTraces Survey Answers")
+//
+//        var messageBody = [String]()
+//
+//        messageBody.append(toSend)
+//
+//
+//        mail.setMessageBody(messageBody.joined(separator:"|"), isHTML: true)
+//
+//        present(mail, animated: true)
+//      } else {
+//        // show failure alert
+//      }
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            print("Mail cancelled")
+        case .saved:
+            print("Mail saved")
+        case .sent:
+            print("Mail sent")
+        case .failed:
+            print("Mail sent failure: \(error?.localizedDescription ?? "Mail not sent")")
+        default:
+            break
+        }
+          self.dismiss(animated: true, completion: nil)
+      }
+    
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//
+//        // Dismiss the mail compose view controller.
+//        controller.dismiss(animated: true)
+//    }
+//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//          controller.dismiss(animated: true, completion: nil)
+//      }
     
 
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
@@ -355,3 +394,7 @@ class SurveyParticipationViewController: UIViewController, ORKTaskViewController
     */
 
 }
+
+//extension ViewController: MFMailComposeViewControllerDelegate {
+//
+//}

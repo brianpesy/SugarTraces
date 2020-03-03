@@ -14,7 +14,7 @@ import WatchConnectivity
 
 
 
-class InfoViewController: UIViewController, WCSessionDelegate {
+class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate, WCSessionDelegate {
     
     var wcSession: WCSession!
     
@@ -184,6 +184,8 @@ class InfoViewController: UIViewController, WCSessionDelegate {
         
       if MFMailComposeViewController.canSendMail() {
         let mail = MFMailComposeViewController()
+//        mail.mailComposeDelegate = self
+        mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
         mail.setToRecipients(["bpsy@up.edu.ph"])
         mail.setSubject("SugarTraces Health Data")
         
@@ -208,9 +210,21 @@ class InfoViewController: UIViewController, WCSessionDelegate {
       }
     }
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            print("Mail cancelled")
+        case .saved:
+            print("Mail saved")
+        case .sent:
+            print("Mail sent")
+        case .failed:
+            print("Mail sent failure: \(error?.localizedDescription ?? "Mail not sent")")
+        default:
+            break
+        }
+          self.dismiss(animated: true, completion: nil)
+      }
     
     func loadLoggedData(){
         
