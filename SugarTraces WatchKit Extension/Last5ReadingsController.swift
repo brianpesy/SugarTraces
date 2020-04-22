@@ -19,20 +19,6 @@ class Last5ReadingsController: WKInterfaceController, WCSessionDelegate {
     var loggedDates: [String] = []
     var wcSession: WCSession!
     
-//    @IBOutlet weak var reading0Label: WKInterfaceLabel!
-//    @IBOutlet weak var date0Label: WKInterfaceLabel!
-//
-//    @IBOutlet weak var reading1Label: WKInterfaceLabel!
-//    @IBOutlet weak var date1Label: WKInterfaceLabel!
-//
-//    @IBOutlet weak var reading2Label: WKInterfaceLabel!
-//    @IBOutlet weak var date2Label: WKInterfaceLabel!
-//
-//    @IBOutlet weak var reading3Label: WKInterfaceLabel!
-//    @IBOutlet weak var date3Label: WKInterfaceLabel!
-//
-//    @IBOutlet weak var reading4Label: WKInterfaceLabel!
-//    @IBOutlet weak var date4Label: WKInterfaceLabel!
         
     @IBOutlet weak var r0Label: WKInterfaceLabel!
     @IBOutlet weak var d0Label: WKInterfaceLabel!
@@ -54,6 +40,8 @@ class Last5ReadingsController: WKInterfaceController, WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
+    
+    //setting areas to put the labels
     
     override func willActivate() { //viewdidappear of Watch
         // This method is called when watch view controller is about to be visible to user

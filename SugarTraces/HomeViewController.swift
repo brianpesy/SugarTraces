@@ -67,17 +67,15 @@ class HomeViewController: UIViewController {
 
     }
     
+    //loading and accessing previously saved data 
+    
     override func viewDidAppear(_ animated: Bool) {
         loadLoggedData()
         loadAchievements()
         loadConsecutiveDays()
         loadName()
-//        print("dev mode")
-//        print(loggedName)
         nameLabel.text = loggedName
-        print(loggedReadings)
         readingNumLabel.text = "Recorded readings: \(loggedReadings.count)"
-        print(loggedDates)
         if loggedReadings.indices.contains(0){
             if loggedReadings[0] < 70 {
                 lastReadingLabel.text = "Last reading at \(loggedDates[0]), below"
@@ -89,9 +87,7 @@ class HomeViewController: UIViewController {
         } else {
             lastReadingLabel.text = "No readings yet!"
         }
-        print(loggedAchievements)
-        print(loggedAchDates)
-        print(loggedConsecutiveDays)
+
         var ctr = 0
         for val in loggedAchievements {
             if val == true {

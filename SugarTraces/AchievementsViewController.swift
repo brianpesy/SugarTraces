@@ -81,12 +81,10 @@ class AchievementsViewController: UIViewController, WCSessionDelegate {
             loggedAchDates = [String](repeating: "", count: 11)
         }
         
-        print(loggedAchievements)
-        print(loggedAchDates)
         
         transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
-        print(transferToWatch)
-        
+
+        //synchronization with watch
         if wcSession.isReachable {
             print("reach")
             wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
@@ -94,26 +92,11 @@ class AchievementsViewController: UIViewController, WCSessionDelegate {
                     try self.wcSession.updateApplicationContext(self.transferToWatch)
 
                 } catch {
-                    print("errrr")
-
                     print(error.localizedDescription)
                 }
             })
 
         }
-        
-        //optional value when running the file itself on its first run through?
-//        wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-////                print(error.localizedDescription)
-//            do {
-//                try self.wcSession.updateApplicationContext(self.transferToWatch)
-//
-//            } catch {
-//                print("errrr")
-//
-//                print(error.localizedDescription)
-//            }
-//        })
         
         //Change the icons of each achievement according to the loggedAchievements and loggedAchDates, both of which are of indices 0-10, corresponding to a specific achievement
         if (loggedAchievements[0] == true){

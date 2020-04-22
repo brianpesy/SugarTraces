@@ -10,8 +10,6 @@ import UIKit
 
 class Intro3ViewController: UIViewController {
 
-//    var pageNumber = 2
-//    var name = ""
 
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -39,9 +37,7 @@ class Intro3ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         pageControl.currentPage = 2
         understoodBtn.pulsate()
-//        if (name != "") {
-//            performSegue(withIdentifier: "toMainSegue", sender: self)
-//        }
+
     }
     
     

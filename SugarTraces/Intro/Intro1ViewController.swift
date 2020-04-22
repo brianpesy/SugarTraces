@@ -8,6 +8,8 @@
 
 import UIKit
 
+//intro view controller
+
 class Intro1ViewController: UIViewController {
     
     var loggedName = ""
@@ -29,13 +31,11 @@ class Intro1ViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-//        loadName()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         pageControl.currentPage = 0
         loadName()
-        print(loggedName)
         if (loggedName != "") {
             performSegue(withIdentifier: "toMainSegue", sender: self)
         }

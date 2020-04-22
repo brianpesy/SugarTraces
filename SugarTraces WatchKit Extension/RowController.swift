@@ -9,6 +9,8 @@
 import Foundation
 import WatchKit
 
+//what goes in a row
+
 class RowController: NSObject {
     @IBOutlet weak var achLabel: WKInterfaceLabel!
     @IBOutlet weak var imgAchLabel: WKInterfaceImage!

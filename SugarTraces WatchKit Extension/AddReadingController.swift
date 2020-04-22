@@ -18,6 +18,7 @@ extension NSString {
     }
 }
 
+//functionality for add reading here
 class AddReadingController: WKInterfaceController, WCSessionDelegate {
     
     @IBOutlet weak var readingTextField: WKInterfaceTextField!
@@ -54,9 +55,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         }
         
         saveAchievements()
-        print(loggedAchievements)
-        print(loggedAchDates)
-        print("awake: \(loggedConsecutiveDays)")
 
         loadConsecutiveDays()
     }
@@ -109,7 +107,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         //ADD GLUCOSE
         //entered your first reading 0
         if (!(loggedReadings.indices.contains(1)) && loggedAchievements[0] != true){
-            print("ACHIEVEMENT 1 GET")
             
             //Achievement get
             loggedAchievements[0] = true
@@ -142,7 +139,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                         break
                     }
                     if (i == 3){
-                        print("ACHIEVEMENT")
                         //Achievement get
                         loggedAchievements[1] = true
                         
@@ -175,7 +171,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                     break
                 }
                 if (i == 4){
-                    print("ACHIEVEMENT")
                     
                     //Achievement get
                     loggedAchievements[2] = true
@@ -210,7 +205,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                         break
                     }
                     if (i == 3){
-                        print("ACHIEVEMENT")
                         //Achievement get
                         loggedAchievements[3] = true
                         
@@ -243,7 +237,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                     break
                 }
                 if (i == 9){
-                    print("ACHIEVEMENT")
                     
                     //Achievement get
                     loggedAchievements[4] = true
@@ -301,7 +294,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         //entered a normal reading after an above reading 6
         if (loggedReadings.indices.contains(1) && loggedAchievements[6] != true){
             if (loggedReadings[1] > 150 && loggedReadings[0] > 69 && loggedReadings[0] < 151){
-                print("ACHIEVEMENT")
                 //Achievement get
                 loggedAchievements[6] = true
                 
@@ -327,7 +319,7 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         //entered a normal reading after a below reading 7
         if (loggedReadings.indices.contains(1) && loggedAchievements[7] != true){
             if (loggedReadings[1] < 70 && loggedReadings[0] > 69 && loggedReadings[0] < 151){
-                print("ACHIEVEMENT")
+                
                 //Achievement get
                 loggedAchievements[7] = true
                 
@@ -451,13 +443,9 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
         
         //changing years, consecutive days supposedly
         if (newDayArr[2] == prevDayArr[2] + 1 && newDayArr[0] == 1 && prevDayArr[0] == 12 && newDayArr[1] == 1 && prevDayArr[1] == 31){
-            print("HAPPY NEW YEAR")
             return consecutiveDays + 1
         }
         
-        print(newDayArr)
-
-        print("Not consecutive, reset")
         return 1
         
     }
@@ -536,17 +524,7 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                 transferToPhone = ["readings": loggedReadings, "dates": loggedDates, "ach": loggedAchievements, "achDates": loggedAchDates]
                 var transferConsDays = ["consecutiveDays": loggedConsecutiveDays]
                 //when I send a message over with the Text Field, I can send it to the WC Session.
-                
-//                wcSession.sendMessage(transferToPhone, replyHandler: nil, errorHandler: error in print(error.localizedDescription))
-//                    replyHandler()
-//                wcSession.sendMessage(transferToPhone, replyHandler: {(_ replyMessage: [String: Any]) -> Void in
-//
-//                    print("ReplyHandler called = \(replyMessage)")
-//                },
-//                errorHandler: {(_ error: Error) -> Void in
-//
-//                    print("Error = \(error.localizedDescription)")
-//                })
+
                 if wcSession.isReachable {
                     wcSession.sendMessage(transferToPhone, replyHandler: {reply in print("done")}, errorHandler: {error in
                         
@@ -558,7 +536,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                         }
                     })
                     
-                    print("sent data over to phone")
                     
                     wcSession.sendMessage(transferConsDays, replyHandler: {reply in print("done")}, errorHandler: {error in
                         
@@ -570,7 +547,6 @@ class AddReadingController: WKInterfaceController, WCSessionDelegate {
                         }
                     })
                 }
-                print("bam")
             }
         }
     }

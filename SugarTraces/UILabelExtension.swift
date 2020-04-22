@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//Label extensions for drop shadows
+
 extension UILabel {
     func textDropShadow() {
         self.layer.masksToBounds = false

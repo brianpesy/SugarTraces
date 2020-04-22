@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class Intro3fViewController: UIViewController {
 
     var name = ""
@@ -21,13 +22,7 @@ class Intro3fViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        pageControl.numberOfPages = 3
-//        pageControl.pageIndicatorTintColor = UIColor.darkGray
-//        pageControl.currentPage = 3
-        //pageControl.currentPage = Int(pageNumber)
-//        for index in 0..<images.count {
-//            frame.origin.x = scrollView.frame
-//        }
+
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeLeft.direction = .left

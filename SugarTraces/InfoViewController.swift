@@ -61,18 +61,12 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
         
         bgBox.textDropShadow()
         // Do any additional setup after loading the view.
-        
-        //animate buttons
-//        aboutBtn.pulsate()
-//        ackBtn.pulsate()
-//        tpBtn.pulsate()
+
         
         //change appearance of the sendDataOutlet
         sendDataOutlet.layer.cornerRadius = 13
         sendDataOutlet.pulsate()
 
-//        sendDataOutlet.layer.borderWidth = 1
-//        sendDataOutlet.layer.borderColor = UIColor.gray.cgColor
         
         let swooshPath = Bundle.main.path(forResource: "achivement.mp3", ofType: nil)
         do {
@@ -96,6 +90,7 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
         sendDataOutlet.pulsate()
     }
     
+    //send data functionality, getting information for dob and sex
     @IBAction func sendData(_ sender: Any) {
         
         (dob, sex) = readProfile()
@@ -104,7 +99,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
                 
         if (loggedAchievements[9] != true){
             achAudioPlayer.play()
-            print("ACHIEVEMENT")
             //Achievement get
             loggedAchievements[9] = true
             
@@ -116,13 +110,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
             
             //Date when achievement was gotten
             loggedAchDates[9] = formatter.string(from:date)
-            
-//            // create the alert
-//            let alert = UIAlertController(title: "Woah! An achievement!", message: "You checked out the Send Data option. Thanks! Check out the achievement tab", preferredStyle: UIAlertController.Style.alert)
-//            // add an action (button)
-//            alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertAction.Style.default, handler: nil))
-//            // show the alert
-//            self.present(alert, animated: true, completion: nil)
             
             saveAchievements()
             
@@ -142,6 +129,7 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
             saveAchievements()
         }
                     
+        //sync
         transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
         
         wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
@@ -150,7 +138,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
                 try self.wcSession.updateApplicationContext(self.transferToWatch)
 
             } catch {
-                print("errrr")
 
                 print(error.localizedDescription)
             }
@@ -177,14 +164,13 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
 
     func sendEmail() {
         
-    //sending export data through email: wsl-research@dcs.upd.edu.ph || bpsy@up.edu.ph
+    //sending export data through email: bpsy@up.edu.ph
     
     // Data consists of: date of birth, blood glucose levels and dates, and sex. HealthKit functionality required.
     // Subject: SugarTraces Health Data
         
       if MFMailComposeViewController.canSendMail() {
         let mail = MFMailComposeViewController()
-//        mail.mailComposeDelegate = self
         mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
         mail.setToRecipients(["bpsy@up.edu.ph"])
         mail.setSubject("SugarTraces Health Data")
@@ -247,7 +233,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
         do {
             dateOfBirth = try healthKitStore.dateOfBirthComponents()
             dateOfBirth = try healthKitStore.dateOfBirth()
-            print(dateOfBirth)
         } catch {
             print("Error in getting date of birth")
         }
@@ -269,7 +254,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
                     sexInp = nil
             }
             
-            print(sexInp)
         } catch {
             print("Error in getting sex")
         }
@@ -281,7 +265,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
         
         if (loggedAchievements[10] != true){
             achAudioPlayer.play()
-            print("ACHIEVEMENT")
             //Achievement get
             loggedAchievements[10] = true
             
@@ -306,7 +289,6 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
             saveAchievements()
             
         } else {
-            print("went in")
             
             loggedAchievements[10] = true
             let date = Date()
@@ -323,12 +305,10 @@ class InfoViewController: UIViewController, MFMailComposeViewControllerDelegate,
         
         transferToWatch = ["ach": loggedAchievements, "achDates": loggedAchDates]
         wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
             do {
                 try self.wcSession.updateApplicationContext(self.transferToWatch)
 
             } catch {
-                print("err")
                 print(error.localizedDescription)
             }
         })

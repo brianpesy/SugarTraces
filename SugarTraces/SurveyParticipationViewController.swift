@@ -10,7 +10,7 @@ import UIKit
 import ResearchKit
 import MessageUI
 
-
+//participation in the survey and being able to ask for consent
 class SurveyParticipationViewController: UIViewController, MFMailComposeViewControllerDelegate, ORKTaskViewControllerDelegate {
     
     var surveyStart = false
@@ -26,28 +26,20 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
     }
     
     func loadSurveyStart(){
-//        var savedSurveyStart = (defaults.array(forKey: Keys.savedAchievements) != nil) as Bool
         var savedSurveyStart = defaults.bool(forKey: Keys.savedSurveyStart)
-        print("-START-")
-        print(savedSurveyStart)
-        print("-DONE-")
         surveyStart = savedSurveyStart
 
     }
     
     func sendEmail(toSend: String) {
         
-    //sending export data through email: wsl-research@dcs.upd.edu.ph || bpsy@up.edu.ph
+    //sending export data through email: bpsy@up.edu.ph
         guard MFMailComposeViewController.canSendMail() else {
             return
         }
         
         let mail = MFMailComposeViewController()
-//        mail = MFMailComposeViewController.init()
         mail.mailComposeDelegate = self
-//        mail.delegate = self
-//        mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
-//        mail.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
         mail.setToRecipients(["bpsy@up.edu.ph"])
         mail.setSubject("SugarTraces Survey Answers")
         
@@ -59,23 +51,6 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
         mail.setMessageBody(messageBody.joined(separator:"|"), isHTML: true)
 
         self.present(mail, animated: true)
-//      if MFMailComposeViewController.canSendMail() {
-//        let mail = MFMailComposeViewController()
-//        mail.mailComposeDelegate = self
-//        mail.setToRecipients(["bpsy@up.edu.ph"])
-//        mail.setSubject("SugarTraces Survey Answers")
-//
-//        var messageBody = [String]()
-//
-//        messageBody.append(toSend)
-//
-//
-//        mail.setMessageBody(messageBody.joined(separator:"|"), isHTML: true)
-//
-//        present(mail, animated: true)
-//      } else {
-//        // show failure alert
-//      }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -94,21 +69,9 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
           self.dismiss(animated: true, completion: nil)
       }
     
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//
-//        // Dismiss the mail compose view controller.
-//        controller.dismiss(animated: true)
-//    }
-//    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-//          controller.dismiss(animated: true, completion: nil)
-//      }
-    
 
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
-        
-        
-        //this seems to make it true even if the person presses cancel instead of done at the very end
-//        taskViewController.dismiss(animated: true, completion: {() in self.consentDone = true})
+
         taskViewController.dismiss(animated: true, completion: nil)
 
         switch (reason) {
@@ -116,14 +79,11 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
             
             //extracting the results from the survey
               let taskResult = taskViewController.result.results
-              print(taskResult)
               
-//              var ctr = 0
               var flg = false
               
               for stepResults in taskResult! as! [ORKStepResult]{
-//                print(ctr)
-                  print("---")
+
                   for result in stepResults.results! {
                     
                     //Check if consent is done. consentDone = true means YES!
@@ -144,14 +104,7 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
                     }
                     
                     //extracting the answers from the survey itself now using the identifiers
-                    
-//                    if result.identifier == "NameStep"{
-//                        print(result)
-//                        let nameAnswerResult = result as! ORKTextQuestionResult
-//                        let name = nameAnswerResult.answer!
-//                        print(name)
-//
-//                    }
+
                     
                     //Dictionary for every single question to prevent any duplicate answers
                     
@@ -272,7 +225,6 @@ class SurveyParticipationViewController: UIViewController, MFMailComposeViewCont
                     
                   }
               }
-//              ctr = ctr + 1
               
               //turning into json to send over on AWS/email (depending on implementationa)
               if flg == true {

@@ -20,28 +20,9 @@ public var ConsentTask: ORKOrderedTask {
     let sectionTypes: [ORKConsentSectionType] = [
         .overview,
         .dataGathering,
-        .privacy,
-//        .dataUse,
-//        .timeCommitment,
-//        .studySurvey,
-//        .studyTasks,
-//        .withdrawing
+        .privacy
     ]
     
-    //content of the different sections
-//    let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
-//        let consentSection = ORKConsentSection(type: contentSectionType)
-//        consentSection.summary = "Complete the study"
-//        consentSection.content = "This survey will ask you three questions and you will also measure your tapping speed by performing a small activity."
-//        return consentSection
-//    }
-    
-//    let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
-//        let consentSection = ORKConsentSection(type: contentSectionType)
-//        consentSection.summary = "Complete the study"
-//        consentSection.content = "This survey will ask you three questions and you will also measure your tapping speed by performing a small activity."
-//        return consentSection
-//    }
     
     let consentSections: [ORKConsentSection] = sectionTypes.map { contentSectionType in
         let consentSection = ORKConsentSection(type: contentSectionType)

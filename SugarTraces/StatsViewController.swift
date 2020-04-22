@@ -31,6 +31,8 @@ class StatsViewController: UIViewController, ChartViewDelegate {
         
     }
     
+    //loading data function
+    
     func loadLoggedData(){
         var savedReadings = defaults.array(forKey: Keys.savedReadings) as? [Int] ?? [Int]()
         loggedReadings = savedReadings

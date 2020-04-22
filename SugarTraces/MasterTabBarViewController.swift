@@ -9,6 +9,8 @@
 import UIKit
 import MMTabBarAnimation
 
+//tab bar view controller
+
 class MasterTabBarViewController: MMTabBarAnimateController {
     
     var name = "f"
@@ -23,12 +25,10 @@ class MasterTabBarViewController: MMTabBarAnimateController {
         //if name name == "", we start the app with the segue to the intro. If not, we don't have to.
         
         if (name == "") {
-//            performSegue(withIdentifier: "introSegue", sender: self)
             performSegue(withIdentifier: "introSegue", sender: self)
             name = "p"
             print("in")
         }
-        print("out")
         navigationItem.hidesBackButton = true
 
                 

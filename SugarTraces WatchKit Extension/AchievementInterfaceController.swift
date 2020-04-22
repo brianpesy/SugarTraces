@@ -105,7 +105,6 @@ class AchievementInterfaceController: WKInterfaceController, WCSessionDelegate {
         for (index, element) in loggedAchievements.enumerated() {
             print(element)
             if let rowController = tableView.rowController(at: index) as? RowController {
-//                rowController.achLabel.setText(String(element))
                 
                 //we can change the text to the description here... array of descriptions!
                 //also, array of strings that correspond to the image's filename

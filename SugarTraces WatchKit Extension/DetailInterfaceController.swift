@@ -47,7 +47,6 @@ class DetailInterfaceController: WKInterfaceController {
             print(detailData)
             
             if detailData[0] == 0 {
-//                imgAch.setImage("lock")
                 imgAch.setImage(UIImage(named: "lock"))
                 
                 //Locked descriptions here.
@@ -56,7 +55,6 @@ class DetailInterfaceController: WKInterfaceController {
                 //Empty dateLabel required.
                 dateLabel.setText(lockedDescriptionArr[detailData[1]])
             } else if detailData[0] == 1 {
-//                imgAch.setImage(UIImage(named: "imgAch0"))
                 //image of the unlocked achievement here
                 imgAch.setImage(UIImage(named: imgArr[detailData[1]]))
                 

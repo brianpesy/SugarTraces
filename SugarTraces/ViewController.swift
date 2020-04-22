@@ -11,6 +11,8 @@ import HealthKit
 
 let healthKitStore:HKHealthStore = HKHealthStore()
 
+//authorization and initial setup for name
+
 class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var startBtnOutlet: UIButton!

@@ -9,6 +9,7 @@
 import ClockKit
 import WatchKit
 
+//complication controller
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
@@ -43,7 +44,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             
             let timelineEntry = CLKComplicationTimelineEntry(date: NSDate() as Date, complicationTemplate: template)
             handler(timelineEntry)
-//            handler(template)
 
         } else {
             handler(nil)
@@ -131,14 +131,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
 
         handler(template)
-        
-//        let template = CLKComplicationTemplateModularLargeStandardBody()
-//
-//        template.headerTextProvider = CLKTimeIntervalTextProvider(start: NSDate() as Date, end: NSDate(timeIntervalSinceNow: 60 * 60 * 1.5) as Date)
-//        template.body1TextProvider = CLKSimpleTextProvider(text: "Show Name", shortText: "Name")
-//        template.body2TextProvider = CLKSimpleTextProvider(text: "Show Genre", shortText: nil)
-//
-//        handler(template)
+
         
     }
     

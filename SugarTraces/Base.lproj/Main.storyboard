@@ -1924,7 +1924,7 @@ and view your current data.</string>
         <image name="user" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qKz-zS-IZP"/>
+        <segue reference="ZzI-kZ-0jM"/>
         <segue reference="iMC-54-3gc"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

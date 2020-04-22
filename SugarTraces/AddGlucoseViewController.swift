@@ -77,6 +77,8 @@ struct Keys {
     static let savedSurveyStart = "savedSurveyStart"
 }
 
+//Home screen that shows the add glucose feature along with the different feedback phrases and Apple Watch synchronization
+
 class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     
     var wcSession: WCSession!
@@ -107,20 +109,12 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
     }
     
     func sessionReachabilityDidChange(_ session: WCSession) {
-        print("test2")
         print("wcSession.isReachable \(wcSession.isReachable)")
     }
     
-//    func sessionWatchStateDidChange(_ session: WCSession) {
-//        if wcSession.isReachable {
-//            print("boop")
-//        } else {
-//            print("no boop")
-//        }
-//    }
     
+    //function handling watch sync
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-//        replyHandler(["success":"yay"])
         var tempLoggedReadings = [Int]()
         var tempLoggedDates = [String]()
         var numLoggedReadings:Int
@@ -142,54 +136,22 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         if message.keys.contains("ach") {
             loggedAchievements = message["ach"] as! [Bool]
-            print(loggedAchievements)
         }
         
         if message.keys.contains("achDates") {
             loggedAchDates = message["achDates"] as! [String]
-            print(loggedAchDates)
         }
         
         if message.keys.contains("consecutiveDays") {
             loggedConsecutiveDays = message["consecutiveDays"] as! Int
-            print(loggedConsecutiveDays)
         }
         
         saveLoggedData()
         saveConsecutiveDays()
-
-//        loadConsecutiveDays()
-//        print("before \(loggedConsecutiveDays)")
-//        if !tempLoggedReadings.isEmpty {
-//            if tempLoggedReadings[0] > 69 && tempLoggedReadings[0] < 151 {
-//                if loggedConsecutiveDays == 0 {
-//                    loggedConsecutiveDays = 1
-//                } else {
-//                    loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
-//                }
-//            }
-//        } else {
-//            loggedConsecutiveDays = 0
-//        }
-
-//        print("after \(loggedConsecutiveDays)")
-//
-//        saveConsecutiveDays()
         saveAchievements()
-
-//        achievementCheck()
-        print("sendMessage")
-
-        print(loggedReadings)
-        print(loggedDates)
-        
-//        print(message["readings"])
-        print("---------")
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("recApp")
-        
         var tempLoggedReadings = [Int]()
         var tempLoggedDates = [String]()
         var numLoggedReadings:Int
@@ -227,18 +189,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         saveAchievements()
         saveConsecutiveDays()
 
-        
-//        loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
-//        saveConsecutiveDays()
-//        achievementCheck()
-
-                
-//        print(applicationContext["readings"])
-        print("applicationContext")
-        print(loggedReadings)
-        print(loggedDates)
-        print("---------")
-
     }
     
     @IBOutlet weak var glucoseInput: UITextField!
@@ -265,13 +215,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         self.wcSession.delegate = self
         self.wcSession.activate()
         
-        
-        print(wcSession.isReachable)
-        if wcSession.isReachable {
-            print("hahayes")
-        } else {
-            print("haha NO!")
-        }
         
         //Gives drop shadow to label
         feedback.textDropShadow()
@@ -306,7 +249,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         if loggedAchDates.isEmpty {
             loggedAchDates = [String](repeating: "", count: 11)
         }
-//        self.tabBarItem.title = "Add Glucose"
         
         
         let dingPath = Bundle.main.path(forResource: "adding.wav", ofType: nil)
@@ -318,11 +260,8 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             print(error)
         }
         
-        print(loggedAchievements)
-        print(loggedAchDates)
         
         loadConsecutiveDays()
-        print(loggedConsecutiveDays)
         
     }
     
@@ -335,7 +274,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
             wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(self.transferToWatch)
 
@@ -344,7 +282,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 }
             })
             wcSession.sendMessage(transferConsDays, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(transferConsDays)
 
@@ -480,13 +417,10 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         //changing years, consecutive days supposedly
         if (newDayArr[2] == prevDayArr[2] + 1 && newDayArr[0] == 1 && prevDayArr[0] == 12 && newDayArr[1] == 1 && prevDayArr[1] == 31){
-            print("HAPPY NEW YEAR")
             return consecutiveDays + 1
         }
         
-        print(newDayArr)
-
-        print("Not consecutive, reset")
+        //not consecutive, reset
         return 1
         
     }
@@ -850,11 +784,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
                 } else {
                     loggedConsecutiveDays = 0
                 }
-//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: loggedDates[1], newDay: loggedDates[0], consecutiveDays: loggedConsecutiveDays)
-//                loggedConsecutiveDays = consecutiveDaysCheck(prevDay: "02-29-2020 14:23:53", newDay: "03-01-2020 14:23:53", consecutiveDays: loggedConsecutiveDays)
-
-//                print(loggedConsecutiveDays)
-//                saveConsecutiveDays()
             }
             
         }
@@ -913,9 +842,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
         
         glucoseInput.text = ""
         
-        print(loggedReadings)
-        print(loggedDates)
-        
         
         //Watch Connectivity part
         
@@ -929,7 +855,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             //when I send a message over with the Text Field, I can send it to the WC Session.
             
             wcSession.sendMessage(transferToWatch, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(self.transferToWatch)
 
@@ -939,7 +864,6 @@ class AddGlucoseViewController: UIViewController, WCSessionDelegate {
             })
             
             wcSession.sendMessage(transferConsDays, replyHandler: nil, errorHandler: {error in
-//                print(error.localizedDescription)
                 do {
                     try self.wcSession.updateApplicationContext(transferConsDays)
 
